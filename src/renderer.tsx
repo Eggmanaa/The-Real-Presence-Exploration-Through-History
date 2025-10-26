@@ -17,13 +17,26 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           :root {
-            --red: #a20927;
+            /* Rich liturgical color palette */
+            --burgundy: #7C1D2E;
+            --deep-red: #9B2226;
             --white: #FFFFFF;
-            --black: #000000;
-            --light-grey: #DDDDDD;
-            --cream: #FAF9F6;
-            --gold: #D4AF37;
-            --shadow: rgba(162, 9, 39, 0.1);
+            --off-white: #FAF9F6;
+            --warm-black: #1A1A1A;
+            --charcoal: #2C2C2C;
+            --light-grey: #E8E8E8;
+            --medium-grey: #C0C0C0;
+            --gold: #C9A961;
+            --rich-gold: #B8860B;
+            --bronze: #8C6A4A;
+            --cream: #F5F1E8;
+            --parchment: #F0EBD8;
+            --light-blue: #E3F2FD;
+            --soft-green: #E8F5E9;
+            --soft-purple: #F3E5F5;
+            --soft-orange: #FFF3E0;
+            --shadow: rgba(124, 29, 46, 0.15);
+            --shadow-dark: rgba(26, 26, 26, 0.2);
           }
 
           html {
@@ -33,17 +46,18 @@ export const renderer = jsxRenderer(({ children }) => {
           body {
             font-family: 'Georgia', 'Garamond', serif;
             line-height: 1.8;
-            color: var(--black);
-            background-color: var(--cream);
+            color: var(--warm-black);
+            background-color: var(--parchment);
           }
 
           /* Hero Section */
           .hero {
-            background: linear-gradient(135deg, var(--red) 0%, #8B0A1F 100%);
-            color: var(--white);
+            background: linear-gradient(135deg, var(--burgundy) 0%, var(--deep-red) 100%);
+            color: var(--off-white);
             padding: 4rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 6px var(--shadow);
+            box-shadow: 0 8px 16px var(--shadow-dark);
+            border-bottom: 4px solid var(--gold);
           }
 
           .hero-content h1 {
@@ -76,18 +90,19 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           .main-nav a {
-            color: var(--red);
+            color: var(--burgundy);
             text-decoration: none;
             padding: 0.5rem 1rem;
-            border: 2px solid var(--red);
+            border: 2px solid var(--burgundy);
             border-radius: 4px;
             font-weight: 600;
             transition: all 0.3s ease;
           }
 
           .main-nav a:hover {
-            background-color: var(--red);
-            color: var(--white);
+            background-color: var(--burgundy);
+            color: var(--off-white);
+            border-color: var(--gold);
           }
 
           /* Content Layout */
@@ -103,22 +118,22 @@ export const renderer = jsxRenderer(({ children }) => {
 
           .section h2 {
             font-size: 2.5rem;
-            color: var(--red);
+            color: var(--burgundy);
             margin-bottom: 1.5rem;
-            border-bottom: 3px solid var(--gold);
+            border-bottom: 3px solid var(--rich-gold);
             padding-bottom: 0.5rem;
           }
 
           .section h3 {
             font-size: 1.8rem;
-            color: var(--black);
+            color: var(--charcoal);
             margin-top: 2rem;
             margin-bottom: 1rem;
           }
 
           .section h4 {
             font-size: 1.4rem;
-            color: var(--red);
+            color: var(--deep-red);
             margin-top: 1.5rem;
             margin-bottom: 0.8rem;
           }
@@ -129,17 +144,19 @@ export const renderer = jsxRenderer(({ children }) => {
             padding: 2rem;
             margin-bottom: 2rem;
             border-radius: 8px;
-            box-shadow: 0 4px 6px var(--shadow);
-            border-left: 5px solid var(--red);
+            box-shadow: 0 4px 8px var(--shadow);
+            border-left: 5px solid var(--burgundy);
           }
 
           .card.highlight {
-            background-color: #FFF9F0;
-            border-left-color: var(--gold);
+            background-color: var(--cream);
+            border-left-color: var(--rich-gold);
+            box-shadow: 0 4px 8px var(--shadow), 0 0 0 1px var(--gold) inset;
           }
 
           .intro-card {
-            background: linear-gradient(135deg, #FFF 0%, #FAF9F6 100%);
+            background: linear-gradient(135deg, var(--white) 0%, var(--cream) 100%);
+            border-left-color: var(--rich-gold);
           }
 
           /* Typography */
@@ -147,7 +164,7 @@ export const renderer = jsxRenderer(({ children }) => {
             font-size: 1.3rem;
             font-weight: 500;
             margin-bottom: 1.5rem;
-            color: var(--red);
+            color: var(--deep-red);
           }
 
           p {
@@ -172,30 +189,31 @@ export const renderer = jsxRenderer(({ children }) => {
 
           /* Scripture Boxes */
           .scripture-box {
-            background: linear-gradient(135deg, #FFF 0%, #F5F5F5 100%);
-            border-left: 4px solid var(--gold);
+            background: linear-gradient(135deg, var(--cream) 0%, var(--parchment) 100%);
+            border-left: 4px solid var(--rich-gold);
             padding: 1.5rem;
             margin: 1.5rem 0;
             border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px var(--shadow);
           }
 
           .scripture-box.critical {
-            border-left-color: var(--red);
-            background: linear-gradient(135deg, #FFF5F5 0%, #FFE5E5 100%);
+            border-left-color: var(--deep-red);
+            background: linear-gradient(135deg, #FFF5F5 0%, #FFEBE8 100%);
+            box-shadow: 0 2px 4px var(--shadow), 0 0 0 1px var(--deep-red) inset;
           }
 
           .verse {
             font-size: 1.15rem;
             font-style: italic;
             line-height: 1.6;
-            color: var(--black);
+            color: var(--charcoal);
           }
 
           /* Blockquotes */
           blockquote {
-            background-color: #F9F9F9;
-            border-left: 5px solid var(--red);
+            background-color: var(--cream);
+            border-left: 5px solid var(--bronze);
             padding: 1.5rem;
             margin: 1.5rem 0;
             font-style: italic;
@@ -207,27 +225,30 @@ export const renderer = jsxRenderer(({ children }) => {
             margin-top: 1rem;
             font-style: normal;
             font-weight: 600;
-            color: var(--red);
+            color: var(--bronze);
           }
 
           .key-quote {
             font-size: 1.25rem;
-            background: linear-gradient(135deg, #FFF5F5 0%, #FFE5E5 100%);
-            border-left-color: var(--gold);
+            background: linear-gradient(135deg, var(--cream) 0%, var(--parchment) 100%);
+            border-left-color: var(--rich-gold);
+            border-width: 5px;
             text-align: center;
+            box-shadow: 0 4px 8px var(--shadow);
           }
 
           .final-quote {
             font-size: 1.4rem;
             text-align: center;
-            background: linear-gradient(135deg, var(--red) 0%, #8B0A1F 100%);
-            color: var(--white);
-            border: none;
+            background: linear-gradient(135deg, var(--burgundy) 0%, var(--deep-red) 100%);
+            color: var(--off-white);
+            border: 3px solid var(--gold);
             padding: 2rem;
+            box-shadow: 0 8px 16px var(--shadow-dark);
           }
 
           .final-quote cite {
-            color: var(--gold);
+            color: var(--rich-gold);
           }
 
           /* Insight Boxes */
@@ -289,8 +310,8 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           th {
-            background-color: var(--red);
-            color: var(--white);
+            background-color: var(--burgundy);
+            color: var(--off-white);
             padding: 1rem;
             text-align: left;
             font-weight: 600;
@@ -302,7 +323,7 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           tbody tr:hover {
-            background-color: #FFF9F0;
+            background-color: var(--cream);
           }
 
           .comparison-table th {
@@ -314,7 +335,7 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           .comparison-table strong {
-            color: var(--red);
+            color: var(--deep-red);
             font-size: 1.1rem;
           }
 
@@ -334,7 +355,7 @@ export const renderer = jsxRenderer(({ children }) => {
 
           .greek-text strong {
             font-size: 1.5rem;
-            color: var(--red);
+            color: var(--burgundy);
           }
 
           .greek-text em {
@@ -344,15 +365,16 @@ export const renderer = jsxRenderer(({ children }) => {
 
           /* Definition Box */
           .definition-box {
-            background: linear-gradient(135deg, #FFF5F5 0%, #FFE5E5 100%);
-            border: 3px solid var(--red);
+            background: linear-gradient(135deg, var(--cream) 0%, var(--parchment) 100%);
+            border: 3px solid var(--burgundy);
             padding: 2rem;
             margin: 2rem 0;
             border-radius: 8px;
+            box-shadow: 0 4px 8px var(--shadow);
           }
 
           .definition-box h4 {
-            color: var(--red);
+            color: var(--burgundy);
             margin-top: 0;
           }
 
@@ -360,7 +382,7 @@ export const renderer = jsxRenderer(({ children }) => {
             display: block;
             margin-top: 1rem;
             font-weight: 600;
-            color: var(--red);
+            color: var(--bronze);
           }
 
           /* Philosophy Box */
@@ -379,7 +401,7 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           .concept h5 {
-            color: var(--red);
+            color: var(--burgundy);
             font-size: 1.3rem;
             margin-bottom: 1rem;
           }
@@ -408,13 +430,13 @@ export const renderer = jsxRenderer(({ children }) => {
             top: 0;
             width: 4px;
             height: 100%;
-            background: linear-gradient(to bottom, var(--red) 0%, var(--gold) 100%);
+            background: linear-gradient(to bottom, var(--burgundy) 0%, var(--rich-gold) 100%);
           }
 
           .date {
             display: inline-block;
-            background-color: var(--red);
-            color: var(--white);
+            background-color: var(--burgundy);
+            color: var(--off-white);
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-weight: 600;
@@ -436,7 +458,7 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           .timeline-period h3 {
-            color: var(--red);
+            color: var(--burgundy);
             font-size: 1.6rem;
           }
 
@@ -455,26 +477,27 @@ export const renderer = jsxRenderer(({ children }) => {
             content: '✓';
             position: absolute;
             left: 0;
-            color: var(--red);
+            color: var(--burgundy);
             font-weight: bold;
           }
 
           .major-event {
             font-size: 1.3rem;
             font-weight: 600;
-            color: var(--red);
+            color: var(--burgundy);
             text-align: center;
             margin: 1rem 0;
           }
 
           /* Summary Box */
           .summary-box {
-            background: linear-gradient(135deg, #FFF5F5 0%, #FFE5E5 100%);
-            border: 3px solid var(--gold);
+            background: linear-gradient(135deg, var(--cream) 0%, var(--parchment) 100%);
+            border: 3px solid var(--rich-gold);
+            box-shadow: 0 4px 8px var(--shadow);
           }
 
           .summary-box h3 {
-            color: var(--red);
+            color: var(--burgundy);
             margin-top: 0;
           }
 
@@ -484,8 +507,8 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           .reflection-box {
-            background-color: #FFF9F0;
-            border: 2px solid var(--gold);
+            background-color: var(--cream);
+            border: 2px solid var(--rich-gold);
             padding: 1.5rem;
             margin: 2rem 0;
             border-radius: 8px;
@@ -493,7 +516,7 @@ export const renderer = jsxRenderer(({ children }) => {
 
           .reflection-box p {
             font-weight: 600;
-            color: var(--red);
+            color: var(--deep-red);
             margin-bottom: 1rem;
           }
 
@@ -503,8 +526,9 @@ export const renderer = jsxRenderer(({ children }) => {
             text-align: center;
             margin-top: 2rem;
             padding: 1rem;
-            background-color: #FFF9F0;
+            background-color: var(--cream);
             border-radius: 4px;
+            border: 2px solid var(--gold);
           }
 
           /* Resources Section */
@@ -523,16 +547,17 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           .resources-list strong {
-            color: var(--red);
+            color: var(--burgundy);
           }
 
           /* Footer */
           .site-footer {
-            background: linear-gradient(135deg, var(--red) 0%, #8B0A1F 100%);
-            color: var(--white);
+            background: linear-gradient(135deg, var(--burgundy) 0%, var(--deep-red) 100%);
+            color: var(--off-white);
             text-align: center;
             padding: 2rem;
             margin-top: 4rem;
+            border-top: 4px solid var(--gold);
           }
 
           .site-footer p {
@@ -587,7 +612,7 @@ export const renderer = jsxRenderer(({ children }) => {
             }
 
             .hero {
-              background: var(--red);
+              background: var(--burgundy);
               -webkit-print-color-adjust: exact;
               print-color-adjust: exact;
             }

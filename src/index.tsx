@@ -18,9 +18,11 @@ app.get('/', (c) => {
       <nav className="main-nav">
         <a href="#introduction">Introduction</a>
         <a href="#old-testament">Old Testament</a>
+        <a href="#didache">Didache</a>
         <a href="#john-6">John 6</a>
         <a href="#institution">Institution</a>
         <a href="#church-fathers">Church Fathers</a>
+        <a href="#reservation">Reservation</a>
         <a href="#transubstantiation">Transubstantiation</a>
         <a href="#timeline">Timeline</a>
       </nav>
@@ -128,6 +130,128 @@ app.get('/', (c) => {
               (1 Corinthians 5:7). Therefore, when Jesus institutes the memorial of His sacrifice, the command to 
               eat His Body and drink His Blood is the necessary fulfillment of the Passover pattern, not an optional 
               symbol.
+            </p>
+          </div>
+        </section>
+        <section id="didache" className="section">
+          <h2>The Didache: The Earliest Liturgical Witness</h2>
+          
+          <div className="intro-card card">
+            <p className="lead">
+              The Didache, or "Teaching of the Twelve Apostles," provides our earliest extant liturgical prayers 
+              for the Eucharist (c. 50-125 AD). This first or early second-century document offers an invaluable 
+              window into how the immediate post-apostolic Church understood and celebrated the sacred mysteries.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>Liturgical Prayers: Eucharistia as Thanksgiving</h3>
+            <p>
+              The prayers prescribed in the Didache center on the concept of <em>eucharistia</em>—thanksgiving. 
+              This is not merely gratitude for food, but a profound recognition of God's salvific work:
+            </p>
+            <blockquote>
+              "Celebrate the Eucharist as follows: Say over the cup: 'We give you thanks, Father, for the holy 
+              vine of David, your servant, which you made known to us through Jesus your servant. To you be glory 
+              for ever.'"
+              <cite>— Didache 9:2</cite>
+            </blockquote>
+            <blockquote>
+              "Over the broken bread: 'We give you thanks, Father, for the life and the knowledge which you have 
+              revealed to us through Jesus your servant. To you be glory for ever.'"
+              <cite>— Didache 9:3</cite>
+            </blockquote>
+            <p className="analysis">
+              <strong>Analysis:</strong> The prayers emphasize what God has accomplished—creation and, preeminently, 
+              salvation through Jesus. The meal is framed as grateful response to grace, not a means to earn favor. 
+              This establishes the Eucharist as fundamentally oriented toward God's action, not human merit.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>The Eucharist as the "Pure Sacrifice"</h3>
+            <div className="scripture-box">
+              <p className="verse">"On the Lord's day, when you have been gathered together, break bread and 
+              celebrate the Eucharist. But first confess your sins so that your offering may be pure... In this 
+              regard, the Lord has said: In every place and time offer me a pure sacrifice." — Didache 14:1-3</p>
+            </div>
+            <p>
+              The Didache is the <strong>earliest Christian text outside the New Testament</strong> to explicitly 
+              identify the Eucharistic celebration as a "sacrifice" (Greek: <em>thysia</em>). It directly applies 
+              the prophecy of Malachi 1:11 to the weekly Sunday gathering.
+            </p>
+            <p className="insight">
+              <strong>The "Pure" Sacrifice:</strong> The purity of this sacrifice is linked to the moral and 
+              spiritual state of the worshipers. Reconciliation is mandatory before participation: "If anyone has 
+              a quarrel with his neighbor, that person should not join you until he has been reconciled. Your 
+              sacrifice must not be defiled" (Didache 14:2).
+            </p>
+            <p>
+              This reveals that the "pure sacrifice" encompasses both the sacred elements and the entire act of 
+              worship offered by a purified and reconciled community. The horizontal (reconciliation with neighbor) 
+              is inseparable from the vertical (acceptable worship to God).
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>Unity Through the Eucharist</h3>
+            <blockquote>
+              "As this broken bread scattered on the mountains was gathered and became one, so too, may your Church 
+              be gathered together from the ends of the earth into your kingdom."
+              <cite>— Didache 9:4</cite>
+            </blockquote>
+            <p className="analysis">
+              <strong>Analysis:</strong> This powerful image draws on the agricultural process—grain harvested from 
+              scattered fields, ground into flour, and baked into a single loaf. The Eucharist is presented as both 
+              symbol and agent of the Church's unity. The meal constitutes the community as one body, making visible 
+              the spiritual reality of our union in Christ.
+            </p>
+          </div>
+
+          <div className="card highlight">
+            <h3>Baptism as Gateway to the Eucharist</h3>
+            <div className="scripture-box critical">
+              <p className="verse">"Do not let anyone eat or drink of your eucharist except those who have been 
+              baptized in the name of the Lord. For the statement of the Lord applies here also: Do not give to 
+              dogs what is holy." — Didache 9:5</p>
+            </div>
+            <p>
+              From the very beginning, access to the Eucharist was strictly regulated. The sacrament is reserved 
+              for the initiated—those incorporated into Christ's body through baptism. This isn't arbitrary 
+              exclusion but recognition that the Eucharist presupposes sacramental union with Christ.
+            </p>
+            <p className="insight">
+              <strong>Spiritual Food:</strong> The text refers to the Eucharist as "spiritual food and drink" 
+              which God has favored the Church with, granting "eternal life" (Didache 10:3). This language points 
+              to the supernatural effect of the meal—it nourishes the soul for immortality, not merely the body 
+              for earthly life.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>Significance for the Real Presence</h3>
+            <p>
+              While the Didache's language is primarily liturgical and devotional rather than explicitly doctrinal, 
+              several elements point toward belief in the Real Presence:
+            </p>
+            <ol>
+              <li><strong>Sacrificial Language:</strong> Calling the Eucharist a "sacrifice" implies it's more 
+              than a memorial meal—it's a sacred offering to God</li>
+              <li><strong>Strict Access Control:</strong> The emphasis on purity and baptismal requirement suggests 
+              something holy and powerful is being handled</li>
+              <li><strong>Life-Giving Effect:</strong> Attributing eternal life to the "spiritual food" indicates 
+              supernatural reality beyond mere symbolism</li>
+              <li><strong>Unity-Creating Power:</strong> The Eucharist doesn't just symbolize unity—it effects it, 
+              gathering scattered members into one body</li>
+              <li><strong>Fulfillment of Prophecy:</strong> Applying Malachi 1:11 to the Eucharist suggests this 
+              is the new and perfect sacrifice God foretold</li>
+            </ol>
+            <p className="analysis">
+              <strong>Historical Context:</strong> The Didache represents the Church's worship before theological 
+              controversies forced explicit doctrinal formulations. Its matter-of-fact treatment of Eucharistic 
+              worship reveals what the earliest Christians simply did and believed, before they needed to defend 
+              or explain it against heretics. This makes it an invaluable witness to the apostolic faith in its 
+              most pristine form.
             </p>
           </div>
         </section>
@@ -480,6 +604,63 @@ app.get('/', (c) => {
             </div>
 
             <div className="timeline-item card">
+              <div className="date">c. 251 AD</div>
+              <h3>St. Cyprian of Carthage</h3>
+              <p className="context">Bishop of Carthage, martyr, confronting the crisis of the lapsi (Christians who denied Christ under persecution)</p>
+              <blockquote>
+                "He who eats my flesh and drinks my blood has eternal life. Therefore the Eucharist is our life."
+                <cite>— St. Cyprian, On the Lapsed 16</cite>
+              </blockquote>
+              <p className="analysis">
+                <strong>Context of the Lapsi Crisis:</strong> During the Decian persecution (250-251 AD), many Christians 
+                denied Christ under threat of death. When these <em>lapsi</em> ("fallen ones") sought readmission to the 
+                Church, a critical question arose: Should they be allowed to receive the Eucharist immediately, or must 
+                they undergo penance first? Cyprian's answer reveals his profound belief in the Real Presence.
+              </p>
+              <blockquote>
+                "Do not think, dearest brother, that either the courage of the brethren will be lessened, or that 
+                martyrdoms will fail for this cause, that penance is relaxed to the lapsed, and that the hope of peace 
+                is offered to the penitent... Some of the lapsed, either voluntarily or on being exhorted by us, have 
+                not withdrawn from the Church... I am preserving them entire for thy sentence."
+                <cite>— St. Cyprian, Epistle 10</cite>
+              </blockquote>
+              <p className="analysis">
+                <strong>Unworthy Communion as Sacrilege:</strong> Cyprian insists the lapsi must undergo lengthy penance 
+                before receiving communion again. Why such severity? Because he understood the Eucharist as the actual 
+                Body and Blood of Christ—to receive unworthily was to commit a new act of violence against the Lord.
+              </p>
+              <blockquote>
+                "They do violence to his body and blood, a sin more heinous against the Lord with their hands and mouths 
+                than when they denied him."
+                <cite>— St. Cyprian, On the Lapsed 16</cite>
+              </blockquote>
+              <p className="analysis">
+                <strong>Analysis:</strong> This is extraordinary. Cyprian declares that unworthy reception of the Eucharist 
+                is <em>worse than apostasy itself</em>—worse than denying Christ under threat of death. This makes sense 
+                only if the Eucharist is truly Christ's Body and Blood. To approach His flesh with defiled hands and mouths 
+                is to crucify Him again, to do violence to His very body.
+              </p>
+              <p className="analysis">
+                Notice Cyprian's consistent appeal to John 6:53: "He who eats my flesh and drinks my blood." For him, this 
+                verse is the key to understanding both the necessity and the danger of the Eucharist. It grants eternal 
+                life to the worthy, but condemns the unworthy to an even graver sin than apostasy.
+              </p>
+              <blockquote>
+                "For how can he who is himself unclean cleanse another? Or how can he who has lost the Holy Spirit 
+                himself grant the Holy Spirit to another? Wherefore, with prayers and fasting, let us beg and entreat the 
+                Lord, who is both merciful and patient, that, as He has condescended to number us among His people, He 
+                may also be pleased to restore to us His grace."
+                <cite>— St. Cyprian, Epistle 69</cite>
+              </blockquote>
+              <p className="analysis">
+                <strong>Eucharist as Test of Communion:</strong> Throughout the crisis, Cyprian used the Eucharist as the 
+                acid test of true communion with Christ. The lapsi could attend services and pray, but they could not 
+                receive communion until properly reconciled. The Eucharist wasn't a symbol of membership—it was union with 
+                Christ Himself, reserved only for those in a state of grace.
+              </p>
+            </div>
+
+            <div className="timeline-item card">
               <div className="date">c. 350 AD</div>
               <h3>St. Cyril of Jerusalem</h3>
               <p className="context">Bishop, taught catechumens preparing for baptism</p>
@@ -614,6 +795,213 @@ app.get('/', (c) => {
           </div>
         </section>
 
+        <section id="reservation" className="section">
+          <h2>Reservation Practices: Belief in the Abiding Presence</h2>
+          
+          <div className="intro-card card">
+            <p className="lead">
+              The early Church's practice of reserving the consecrated Eucharist—setting it aside after the liturgy 
+              for later use—provides powerful testimony to belief in the Real and abiding Presence of Christ. These 
+              practices reveal that the Church believed Christ remained present in the elements even after the 
+              liturgical celebration concluded.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>The Pastoral Origin: Communion for the Absent</h3>
+            <p>
+              Reservation didn't begin as a devotional practice but arose from pastoral charity—the desire to bring 
+              communion to those who couldn't attend the liturgy: the sick, the dying, the imprisoned, and those 
+              unable to travel.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>St. Justin Martyr (c. 155 AD): Deacons Carry the Eucharist</h3>
+            <p className="context">First detailed account of the Mass, written to the Roman Emperor</p>
+            <blockquote>
+              "When the president has given thanks and the people have assented, those whom we call deacons give 
+              to each of those present a portion of the consecrated bread and wine and water, and they take it to 
+              those who are absent."
+              <cite>— St. Justin Martyr, First Apology 67</cite>
+            </blockquote>
+            <p className="analysis">
+              <strong>Theological Significance:</strong> This is the earliest explicit documentary evidence for 
+              reservation. The practice would be theologically incoherent if Christ's presence were believed to 
+              be confined only to the moment of liturgical action or immediate reception. The fact that deacons 
+              carried the Eucharist away from the assembly demonstrates belief that the consecrated elements 
+              remained the Body and Blood of Christ after the liturgy concluded. This simple pastoral provision 
+              contains a profound doctrinal affirmation: the Real Presence abides.
+            </p>
+          </div>
+
+          <div className="card highlight">
+            <h3>Tertullian (c. 210 AD): Home Reservation During Persecution</h3>
+            <p className="context">North African theologian during the age of persecution</p>
+            <blockquote>
+              "The faithful know well the practice of taking part in the sacrifice before eating, and partaking 
+              (accepto) of the Body of the Lord and reserving it (et reservato)."
+              <cite>— Tertullian, Ad Uxorem 2:5</cite>
+            </blockquote>
+            <p>
+              Tertullian provides crucial evidence for <strong>domestic reservation</strong>—the practice of 
+              Christians taking the Eucharist to their homes for private communion. This was particularly common 
+              on "station days" (days of fasting) when public liturgy might not be celebrated.
+            </p>
+            <blockquote>
+              "Will your husband not know what it is which you secretly eat of before (taking) any food? And if 
+              he knows it to be bread, then what will he think of you in his arrogance?"
+              <cite>— Tertullian, Ad Uxorem 2:5</cite>
+            </blockquote>
+            <p className="insight">
+              <strong>Historical Context:</strong> In this passage, Tertullian warns a Christian widow against 
+              marrying a pagan, highlighting the practical difficulty it would pose for her Eucharistic devotion. 
+              The pagan husband would notice her eating "bread" before any other food and question the practice. 
+              This confirms not only home reservation but also self-communication by the laity—a necessity born 
+              of persecution.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>St. Cyprian of Carthage (c. 251 AD): The Casket of Fire</h3>
+            <p className="context">Bishop during Decian persecution, addressing the crisis of the lapsi</p>
+            <blockquote>
+              "Another woman, when she tried to open her box (arca), in which was the holy (body) of the Lord, 
+              with unworthy hands, fire rising from it deterred her from daring to touch it."
+              <cite>— St. Cyprian, On the Lapsed 26</cite>
+            </blockquote>
+            <p>
+              Cyprian recounts miraculous divine judgments upon those who approached the reserved sacrament 
+              unworthily. One woman kept the Eucharist in a personal chest or casket (<em>arca</em>) at home. 
+              When she attempted to open it with "polluted hands" (having apostatized during persecution), flames 
+              burst forth, preventing her from touching the sacred species.
+            </p>
+            <blockquote>
+              "Another man who had secretly received communion while in a state of serious sin could not eat nor 
+              handle the holy of the Lord; but he found in his hands when opened that he had a cinder."
+              <cite>— St. Cyprian, On the Lapsed 26</cite>
+            </blockquote>
+            <p className="analysis">
+              <strong>Theological Implications:</strong> Whether understood as literal history or powerful pastoral 
+              warnings, these narratives communicate vital truths:
+            </p>
+            <ol>
+              <li><strong>Objective Reality:</strong> The Eucharist is an objective, powerful reality—not a passive 
+              symbol</li>
+              <li><strong>Moral Requirement:</strong> Approaching unworthily brings judgment, not just symbolic 
+              disrespect</li>
+              <li><strong>Abiding Holiness:</strong> The reserved Sacrament retains its sacred power and requires 
+              purity of heart</li>
+              <li><strong>Home Preservation:</strong> The practice of domestic reservation was widespread enough 
+              to be assumed in these warnings</li>
+            </ol>
+            <p className="insight">
+              <strong>Cyprian's Conclusion:</strong> He explicitly declares that unworthy reception is violence 
+              against Christ Himself: "They do violence to his body and blood, a sin more heinous against the Lord 
+              with their hands and mouths than when they denied him" (On the Lapsed 15-16). The Eucharist isn't 
+              just a sign of Christ—it is Christ, and to profane it is to assault the Lord directly.
+            </p>
+          </div>
+
+          <div className="card highlight">
+            <h3>St. Basil the Great (c. 379 AD): The Golden Dove</h3>
+            <p className="context">Cappadocian Father, Bishop of Caesarea</p>
+            <p>
+              St. Basil's biography records a significant development in reservation practice. When celebrating 
+              the liturgy, he would divide the consecrated Bread into three parts:
+            </p>
+            <ol>
+              <li>One part he consumed himself</li>
+              <li>One part he distributed to the monks</li>
+              <li><strong>The third he placed in a golden container shaped like a dove (peristerium), which was 
+              suspended over the altar</strong></li>
+            </ol>
+            <p className="analysis">
+              <strong>Historical Significance:</strong> This marks a crucial transition:
+            </p>
+            <ul>
+              <li><strong>From Private to Public:</strong> Reservation shifts from hidden necessity (home storage 
+              during persecution) to honored visibility within the church</li>
+              <li><strong>From Utilitarian to Devotional:</strong> While still practical (for communion of the sick), 
+              the golden dove and prominent placement signal reverence beyond mere convenience</li>
+              <li><strong>Symbolic Richness:</strong> The dove, symbol of the Holy Spirit, hovering over the altar 
+              creates powerful visual theology—the Spirit overshadows the sacred elements just as He overshadowed 
+              Mary at the Annunciation</li>
+              <li><strong>Foundation for Adoration:</strong> Honored, visible reservation within the sanctuary 
+              naturally leads to direct veneration and worship</li>
+            </ul>
+            <p className="insight">
+              <strong>The Peristerium Tradition:</strong> This vessel—the golden dove suspended over the altar—
+              became common in both East and West. Medieval churches often had elaborate dove-shaped tabernacles. 
+              The practice demonstrates that well before formal definitions, the Church was already housing Christ 
+              as an honored king in His temple.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>From Necessity to Devotion: The Arc of Development</h3>
+            <table className="development-table">
+              <thead>
+                <tr>
+                  <th>Period</th>
+                  <th>Practice</th>
+                  <th>Primary Location</th>
+                  <th>Primary Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>100-313 AD</strong><br/>Persecution</td>
+                  <td>Home reservation by faithful</td>
+                  <td>Private homes, personal caskets</td>
+                  <td>Self-communion, communion of sick</td>
+                </tr>
+                <tr>
+                  <td><strong>313-500 AD</strong><br/>Legalization</td>
+                  <td>Shift to church reservation</td>
+                  <td>Sacristy, locked rooms (pastoforium)</td>
+                  <td>Viaticum for dying, communion of sick</td>
+                </tr>
+                <tr>
+                  <td><strong>500-1000 AD</strong><br/>Honored Presence</td>
+                  <td>Visible sanctuary reservation</td>
+                  <td>Golden dove (peristerium) over altar</td>
+                  <td>Practical need + emerging devotion</td>
+                </tr>
+                <tr>
+                  <td><strong>1000+ AD</strong><br/>Devotional Focus</td>
+                  <td>Tabernacle, exposition, adoration</td>
+                  <td>Prominent tabernacle on/near altar</td>
+                  <td>Worship, adoration, Benediction</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="card">
+            <h3>What Reservation Proves About Belief</h3>
+            <p>
+              The consistent practice of reservation across centuries and diverse circumstances provides 
+              irrefutable evidence of the Church's unwavering belief in the Real and abiding Presence:
+            </p>
+            <ol>
+              <li><strong>If Merely Symbolic:</strong> Why reserve blessed bread? Ordinary bread could serve 
+              any symbolic purpose.</li>
+              <li><strong>If Presence Temporary:</strong> Why take it to the absent if Christ's presence expired 
+              after the liturgy?</li>
+              <li><strong>If Just Memorial:</strong> Why such elaborate vessels and honored placement?</li>
+              <li><strong>If No Real Presence:</strong> Why would unworthy approach bring divine judgment?</li>
+            </ol>
+            <p className="insight">
+              <strong>The Logic is Inescapable:</strong> The Church reserved the Eucharist because it believed 
+              the Eucharist was—and remained—Christ Himself. From Justin's deacons in the second century to 
+              Basil's golden dove in the fourth, from Tertullian's domestic practice to Cyprian's caskets of 
+              fire, one belief unifies all these practices: <strong>Christ abides in the consecrated species</strong>. 
+              This abiding presence is the necessary foundation for any later development of Eucharistic adoration, 
+              which St. Augustine would explicitly command: "No one eats that flesh unless he first adores it."
+            </p>
+          </div>
+        </section>
         <section id="transubstantiation" className="section">
           <h2>The Doctrine of Transubstantiation</h2>
           
