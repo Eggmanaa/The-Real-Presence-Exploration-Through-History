@@ -261,6 +261,39 @@ app.get('/', (c) => {
               is teaching it. The Real Presence becomes a test of faith in Christ's person and authority.
             </p>
           </div>
+
+
+          <div className="card">
+            <h3>Addressing John 6:63: "The flesh is of no avail"</h3>
+            <div className="scripture-box">
+              <p className="verse">"It is the Spirit that gives life; the flesh is of no avail. The words that I 
+              have spoken to you are spirit and life." — John 6:63</p>
+            </div>
+            <p>
+              This is the primary objection to the Real Presence from John 6. Critics argue Jesus is saying His 
+              previous literal language was wrong—that "the flesh" profits nothing.
+            </p>
+            <p className="rebuttal">
+              <strong>The Refutation:</strong>
+            </p>
+            <ol>
+              <li><strong>Internal Contradiction:</strong> Jesus cannot say His flesh is true food (v. 55) and then 
+              say His flesh profits nothing (v. 63). That would make Him incoherent.</li>
+              <li><strong>Biblical Usage of "Flesh vs. Spirit":</strong> Throughout Scripture (especially John and 
+              Paul), "flesh" doesn't mean "literal" versus "symbolic." It means the fallen, natural human perspective 
+              versus the supernatural, grace-filled perspective. "You judge according to the flesh" (John 8:15) means 
+              judging by worldly standards.</li>
+              <li><strong>The Diagnosis:</strong> Jesus is explaining why they can't accept His teaching—they're 
+              understanding it "according to the flesh" (carnally, naturalistically) rather than "according to the 
+              Spirit" (by supernatural faith). The verse explains the requirement for acceptance, not the nature of 
+              the teaching.</li>
+            </ol>
+            <p className="insight">
+              His words are "spirit and life" not because they're symbolic, but because they're divine truths that 
+              require the Holy Spirit's grace to believe. This verse actually reinforces the supernatural character 
+              of the Real Presence.
+            </p>
+          </div>
         </section>
 
         <section id="institution" className="section">
