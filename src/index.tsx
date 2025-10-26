@@ -260,38 +260,6 @@ app.get('/', (c) => {
               is teaching it. The Real Presence becomes a test of faith in Christ's person and authority.
             </p>
           </div>
-
-          <div className="card">
-            <h3>Addressing John 6:63: "The flesh is of no avail"</h3>
-            <div className="scripture-box">
-              <p className="verse">"It is the Spirit that gives life; the flesh is of no avail. The words that I 
-              have spoken to you are spirit and life." — John 6:63</p>
-            </div>
-            <p>
-              This is the primary objection to the Real Presence from John 6. Critics argue Jesus is saying His 
-              previous literal language was wrong—that "the flesh" profits nothing.
-            </p>
-            <p className="rebuttal">
-              <strong>The Refutation:</strong>
-            </p>
-            <ol>
-              <li><strong>Internal Contradiction:</strong> Jesus cannot say His flesh is true food (v. 55) and then 
-              say His flesh profits nothing (v. 63). That would make Him incoherent.</li>
-              <li><strong>Biblical Usage of "Flesh vs. Spirit":</strong> Throughout Scripture (especially John and 
-              Paul), "flesh" doesn't mean "literal" versus "symbolic." It means the fallen, natural human perspective 
-              versus the supernatural, grace-filled perspective. "You judge according to the flesh" (John 8:15) means 
-              judging by worldly standards.</li>
-              <li><strong>The Diagnosis:</strong> Jesus is explaining why they can't accept His teaching—they're 
-              understanding it "according to the flesh" (carnally, naturalistically) rather than "according to the 
-              Spirit" (by supernatural faith). The verse explains the requirement for acceptance, not the nature of 
-              the teaching.</li>
-            </ol>
-            <p className="insight">
-              His words are "spirit and life" not because they're symbolic, but because they're divine truths that 
-              require the Holy Spirit's grace to believe. This verse actually reinforces the supernatural character 
-              of the Real Presence.
-            </p>
-          </div>
         </section>
 
         <section id="institution" className="section">
@@ -1114,11 +1082,76 @@ app.get('/', (c) => {
 
             <div className="timeline-period card">
               <h3>1215-1517: Eucharistic Devotion Flourishes</h3>
+              <p>
+                Following the Fourth Lateran Council's formal definition of transubstantiation, the medieval Church 
+                experienced an unprecedented flowering of Eucharistic devotion. This wasn't the creation of a new 
+                doctrine, but the natural outpouring of love and adoration for the Real Presence that had always 
+                been believed.
+              </p>
+              
+              <h4>St. Thomas Aquinas (1225-1274)</h4>
+              <p>
+                The greatest theologian of the medieval period devoted much of his scholarly work to articulating 
+                and defending the Real Presence. His contributions include:
+              </p>
               <ul className="timeline-list">
-                <li><strong>Thomas Aquinas (1264):</strong> Writes "Pange Lingua" and Summa on Eucharist</li>
-                <li><strong>Feast of Corpus Christi (1264):</strong> Established by Urban IV</li>
-                <li><strong>Eucharistic Adoration:</strong> Benediction and Exposition become common</li>
+                <li><strong>Summa Theologica (1266-1273):</strong> Provides the most comprehensive philosophical 
+                and theological explanation of transubstantiation using Aristotelian categories of substance and 
+                accidents. Thomas explains how Christ's Body and Blood become truly present while the appearances 
+                of bread and wine remain.</li>
+                <li><strong>Pange Lingua (1264):</strong> Composed this sublime Eucharistic hymn at Pope Urban IV's 
+                request for the new Feast of Corpus Christi. The final two stanzas, "Tantum Ergo," remain one of 
+                the Church's most beloved hymns of adoration.</li>
+                <li><strong>Adoro Te Devote:</strong> A deeply personal prayer expressing faith in Christ's hidden 
+                presence: "Seeing, touching, tasting are in thee deceived; How says trusty hearing? That shall be 
+                believed; What God's Son has told me, take for truth I do; Truth himself speaks truly or there's 
+                nothing true."</li>
               </ul>
+              
+              <h4>Feast of Corpus Christi (Established 1264)</h4>
+              <p>
+                Pope Urban IV established this universal feast day in response to a Eucharistic miracle at Bolsena 
+                (1263) and the visions of St. Juliana of Liège. The feast celebrates the Real Presence with:
+              </p>
+              <ul className="timeline-list">
+                <li><strong>Solemn Processions:</strong> The Blessed Sacrament is carried through streets in a 
+                monstrance, allowing public adoration and demonstrating the Church's belief that Christ Himself 
+                is present in the consecrated Host.</li>
+                <li><strong>Liturgical Office:</strong> Thomas Aquinas composed the entire liturgy, including the 
+                sequence "Lauda Sion" and the hymns "Pange Lingua," "Sacris Solemniis," and "Verbum Supernum."</li>
+                <li><strong>Popular Devotion:</strong> The feast became one of the most elaborate celebrations in 
+                the Church's calendar, with entire cities participating in honoring Christ in the Eucharist.</li>
+              </ul>
+              
+              <h4>Eucharistic Adoration Practices</h4>
+              <p>
+                The late medieval period saw the development and spread of devotional practices that could only 
+                make sense if the Real Presence were true:
+              </p>
+              <ul className="timeline-list">
+                <li><strong>Benediction of the Blessed Sacrament:</strong> The practice of exposing the consecrated 
+                Host in a monstrance for public veneration, concluding with the priest blessing the people with 
+                the Sacrament itself. This demonstrates belief that Christ's presence continues beyond the Mass.</li>
+                <li><strong>Perpetual Adoration:</strong> Communities of religious (especially women) dedicated 
+                themselves to continuous prayer before the exposed Blessed Sacrament, believing they were literally 
+                keeping vigil before the living Christ.</li>
+                <li><strong>Tabernacle Devotion:</strong> Elaborate tabernacles were constructed to house the 
+                reserved Sacrament, with perpetual lamps burning to signify Christ's presence. Churches were left 
+                unlocked so the faithful could visit Christ at any hour.</li>
+                <li><strong>Eucharistic Miracles:</strong> Reports of visible manifestations—hosts bleeding, 
+                transforming into visible flesh—occurred across Europe. Whether or not one accepts specific miracle 
+                claims, their very existence proves the universal belief that the substance of Christ's Body was 
+                truly present.</li>
+              </ul>
+              
+              <p className="insight">
+                <strong>The Significance:</strong> This explosion of Eucharistic devotion demonstrates that 
+                transubstantiation wasn't an abstract theological novelty imposed from above, but the formal 
+                articulation of what Christians had always believed and increasingly wanted to express through 
+                worship and devotion. You don't compose love songs to a symbol. You don't spend hours in adoration 
+                before a metaphor. These practices reveal the heart of medieval faith: the absolute conviction that 
+                Jesus Christ, true God and true man, is really, truly, and substantially present in the Eucharist.
+              </p>
             </div>
 
             <div className="timeline-period card">
@@ -1127,8 +1160,74 @@ app.get('/', (c) => {
                 <strong>Reaffirmation Against Protestant Denials</strong>
               </p>
               <p>
-                Trent reaffirms transubstantiation, the Real Presence, and Eucharistic sacrifice in response to 
-                Reformation challenges. The doctrine remains unchanged—only reasserted with renewed clarity.
+                The Protestant Reformation brought the first major challenge to the doctrine of the Real Presence 
+                in over a millennium. Various reformers proposed different understandings—from Luther's 
+                consubstantiation to Zwingli's pure symbolism. In response, the Council of Trent (1545-1563) 
+                solemnly reaffirmed the ancient faith.
+              </p>
+              
+              <h4>What Trent Defined (Sessions 13 & 22)</h4>
+              <div className="scripture-box">
+                <p><strong>Canon 1:</strong> "If anyone denies that in the sacrament of the most Holy Eucharist 
+                are contained truly, really and substantially the body and blood together with the soul and divinity 
+                of our Lord Jesus Christ, and consequently the whole Christ, but says that He is in it only as in 
+                a sign, or figure or force, let him be anathema."</p>
+              </div>
+              
+              <ul className="timeline-list">
+                <li><strong>Real Presence:</strong> Christ is present "truly, really, and substantially"—not 
+                symbolically, not spiritually only, but in His full divine and human nature.</li>
+                <li><strong>Transubstantiation:</strong> The Council explicitly used this term, defining it as the 
+                conversion of the whole substance of bread into Christ's Body and the whole substance of wine into 
+                His Blood, while only the accidents (appearances) of bread and wine remain.</li>
+                <li><strong>Eucharistic Sacrifice:</strong> The Mass is not merely a memorial but a true propitiatory 
+                sacrifice, the same sacrifice as Calvary, re-presented (made present again) in an unbloody manner.</li>
+                <li><strong>Adoration:</strong> The Eucharist is to be adored with latria—the worship due to God 
+                alone—because Christ Himself is present. This directly refuted Protestant claims that Eucharistic 
+                adoration was idolatry.</li>
+                <li><strong>Reservation and Procession:</strong> The practice of reserving the Blessed Sacrament 
+                and carrying it in procession was defended as an ancient and laudable custom flowing from belief 
+                in the Real Presence.</li>
+              </ul>
+              
+              <h4>Key Clarifications</h4>
+              <p>
+                Trent carefully explained what the Church had always taught:
+              </p>
+              <ul className="timeline-list">
+                <li><strong>Whole Christ in Each Species:</strong> Christ is entirely present under the appearance 
+                of bread alone and entirely under the appearance of wine alone. The faithful receive the whole 
+                Christ even when receiving under one kind only.</li>
+                <li><strong>Permanence of Presence:</strong> Christ remains present as long as the Eucharistic 
+                species remain. The Real Presence doesn't depend on the moment of consumption or the faith of the 
+                recipient.</li>
+                <li><strong>Objective Reality:</strong> The Eucharist is Christ's Body and Blood because of the 
+                consecration and Christ's promise—not because of the recipient's faith or the minister's worthiness.</li>
+              </ul>
+              
+              <div className="card highlight">
+                <h4>The Critical Point: Nothing New</h4>
+                <p>
+                  Trent did not invent new doctrine. The Council fathers explicitly stated they were defining what 
+                  had "always been believed in the Church of God." Every doctrine Trent proclaimed can be traced 
+                  directly through the medieval theologians, back through the Church Fathers, to the Apostles 
+                  themselves.
+                </p>
+                <p className="insight">
+                  <strong>The Nature of the Challenge:</strong> Protestant reformers claimed they were recovering 
+                  "biblical Christianity" from medieval corruption. But Trent demonstrated that the Catholic doctrine 
+                  of the Real Presence was not a late medieval innovation but the consistent, unbroken teaching of 
+                  the Church from the beginning. The question was not "Is this in Scripture?" (Trent showed it 
+                  clearly was) but rather "Will we accept what Scripture and Tradition consistently teach, or will 
+                  we reinterpret them according to our own judgment?"
+                </p>
+              </div>
+              
+              <p>
+                The Council of Trent's definitions on the Eucharist remain binding Catholic doctrine to this day. 
+                They represent not innovation but the Church's solemn, definitive articulation of the apostolic 
+                faith concerning the greatest of all mysteries: the Real Presence of Jesus Christ in the Most Holy 
+                Eucharist.
               </p>
             </div>
           </div>
