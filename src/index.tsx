@@ -24,6 +24,7 @@ app.get('/', (c) => {
         <a href="#reservation">Reservation</a>
         <a href="#transubstantiation">Transubstantiation</a>
         <a href="#timeline">Timeline</a>
+        <a href="#reformation">Reformation</a>
       </nav>
 
       <main className="content">
@@ -1233,6 +1234,243 @@ app.get('/', (c) => {
           </div>
         </section>
 
+
+        <section id="reformation" className="section">
+          <h2>Unity Then Division: The Reformation Challenge</h2>
+          
+          <div className="intro-card card">
+            <p className="lead">
+              For fifteen centuries—from the Apostles through the medieval period—the Christian Church maintained 
+              remarkable unity on the Real Presence. East and West, through schism and controversy, never disputed 
+              this central truth. The first major fracture came in the 16th century with the Protestant Reformation.
+            </p>
+          </div>
+
+          <div className="card highlight">
+            <h3>The Unbroken Consensus (30-1517 AD)</h3>
+            <p>
+              Despite countless theological debates over Christology, the Trinity, grace, and ecclesiology, no 
+              major Christian body before the 16th century denied the Real Presence:
+            </p>
+            <ul className="consensus-list">
+              <li><strong>The Apostolic Fathers</strong> uniformly testified to Christ's true flesh and blood in 
+              the Eucharist</li>
+              <li><strong>The Great Schism (1054 AD)</strong> between Rome and Constantinople involved authority, 
+              the Filioque, and liturgical practices—but both sides affirmed the Real Presence and continue to 
+              do so today</li>
+              <li><strong>Medieval Heresies</strong> challenged papal authority, priestly celibacy, and Church 
+              corruption—but even the Waldensians, Albigensians, and pre-Reformation reformers like Wycliffe and 
+              Hus, despite their criticisms, did not universally deny transubstantiation</li>
+              <li><strong>East and West</strong> used different philosophical language (the East generally avoiding 
+              Aristotelian terminology), but both traditions celebrated the Divine Liturgy believing the bread and 
+              wine truly became the Body and Blood of Christ</li>
+            </ul>
+            <p className="insight">
+              <strong>The Significance:</strong> This remarkable consensus across fifteen centuries, multiple 
+              languages, diverse cultures, and even ecclesiastical division demonstrates that the Real Presence 
+              was not one theological opinion among many—it was the faith of the Church, believed everywhere, 
+              by everyone, always.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>The 16th Century Shift: New Theological Starting Points</h3>
+            <p>
+              The Protestant Reformation brought the first systematic challenge to the Real Presence. This wasn't 
+              primarily a matter of discovering "new evidence" but rather applying different theological principles, 
+              especially <em>Sola Scriptura</em> (Scripture Alone), which led reformers to re-evaluate traditional 
+              doctrines.
+            </p>
+          </div>
+
+          <div className="timeline-container">
+            <div className="timeline-item card">
+              <h3>1. Sola Scriptura vs. Philosophical Definition</h3>
+              <p>
+                Reformers like Huldrych Zwingli and John Calvin insisted all doctrine must be explicitly stated 
+                in Scripture, not derived from tradition or philosophy.
+              </p>
+              <p className="analysis">
+                <strong>Their Argument:</strong> Transubstantiation relies on Aristotelian categories of "substance" 
+                and "accidents"—philosophical terms not found in Scripture. They viewed this as a "medieval invention" 
+                that obscured rather than clarified Christ's simple command to remember Him.
+              </p>
+              <blockquote>
+                "Do this in remembrance of me." — Luke 22:19
+              </blockquote>
+              <p>
+                The reformers shifted focus from a metaphysical change in the elements to the act of remembering 
+                and proclaiming Christ's finished work on the cross.
+              </p>
+            </div>
+
+            <div className="timeline-item card">
+              <h3>2. "Is" Means "Signifies"</h3>
+              <p>
+                At the Marburg Colloquy (1529), Zwingli famously debated Luther on the meaning of Christ's words 
+                of institution.
+              </p>
+              <p className="analysis">
+                <strong>Zwingli's Position:</strong> The verb "is" (<em>estin</em>) in "This is my body" should 
+                be understood as "signifies" or "represents," just as in other biblical passages:
+              </p>
+              <ul>
+                <li>"I am the vine" (John 15:5) — Jesus isn't literally a plant</li>
+                <li>"The seed is the word of God" (Luke 8:11) — The seed represents the word</li>
+                <li>"The seven heads are seven mountains" (Revelation 17:9) — Symbolic language</li>
+              </ul>
+              <p>
+                For Zwingli and Anabaptists, the bread and wine are <strong>symbols</strong> that direct believers' 
+                hearts toward Christ's sacrifice—a memorial and public profession of faith, not physical reception 
+                of Christ.
+              </p>
+            </div>
+
+            <div className="timeline-item card">
+              <h3>3. The Ascended Body of Christ</h3>
+              <p>
+                Both Zwingli and Calvin raised a Christological objection based on the Ascension:
+              </p>
+              <div className="scripture-box">
+                <p className="verse">
+                  "He sat down at the right hand of God... waiting until his enemies should be made a footstool 
+                  for his feet." — Hebrews 10:12-13
+                </p>
+              </div>
+              <p className="analysis">
+                <strong>Their Argument:</strong> Christ's true human body is in heaven, seated at the Father's 
+                right hand. A genuine human body must be <em>localized</em>—it cannot simultaneously be in heaven 
+                and physically present on thousands of altars on earth. To claim otherwise would:
+              </p>
+              <ul>
+                <li>Deny the reality of Christ's human nature</li>
+                <li>Confuse His human and divine natures (a form of Eutychianism)</li>
+                <li>Attribute the divine quality of omnipresence to His human body</li>
+              </ul>
+              <p className="insight">
+                <strong>Calvin's Solution:</strong> Christ is truly present but remains bodily in heaven. During 
+                communion, the Holy Spirit "lifts up" the believer's soul through faith to heaven to spiritually 
+                feast on Christ. The presence is real but spiritual, not physical.
+              </p>
+            </div>
+
+            <div className="timeline-item card">
+              <h3>4. Reinterpreting John 6</h3>
+              <p>
+                The reformers inverted the Catholic interpretation of the Bread of Life discourse:
+              </p>
+              <div className="scripture-box critical">
+                <p className="verse">
+                  "It is the Spirit that gives life; the flesh is of no avail. The words that I have spoken to 
+                  you are spirit and life." — John 6:63
+                </p>
+              </div>
+              <p className="analysis">
+                <strong>Protestant Reading:</strong> This verse is the interpretive key to the entire chapter. 
+                Jesus deliberately corrected the crowd's "carnal, cannibalistic" misunderstanding. The "eating" 
+                He described is not physical consumption but the spiritual act of believing in Him.
+              </p>
+              <p>
+                <strong>Faith as the Mouth:</strong> For Calvin, "eating" Christ's flesh means believing in Him. 
+                The "food" is His atoning work, which the soul receives through faith alone. Physical eating of 
+                consecrated bread is merely the external sign of this interior, spiritual reality.
+              </p>
+            </div>
+
+            <div className="timeline-item card">
+              <h3>5. Rejection of Ex Opere Operato</h3>
+              <p>
+                The reformers universally rejected the doctrine that sacraments confer grace <em>ex opere operato</em> 
+                ("by the work having been worked")—the teaching that the sacrament is effective through Christ's 
+                instituted action, regardless of the minister's worthiness.
+              </p>
+              <p className="analysis">
+                <strong>Their Concern:</strong> This seemed to make the sacrament work "automatically," like magic, 
+                undermining <em>Sola Fide</em> (Faith Alone). They insisted:
+              </p>
+              <ul>
+                <li>The benefits of communion are received <strong>only through personal faith</strong></li>
+                <li>Without faith, the participant receives only bread and wine, not Christ</li>
+                <li>The believer's disposition is more critical than the minister's words of consecration</li>
+                <li>The sacrament confirms and strengthens faith but doesn't create it or work independently of it</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="card highlight">
+            <h3>A Note on Martin Luther</h3>
+            <p>
+              It's important to note that Luther himself never denied the Real Presence. He fiercely defended 
+              it against Zwingli at Marburg, insisting Christ's words "This is my body" must be taken literally.
+            </p>
+            <p>
+              Luther's position, called <strong>Sacramental Union</strong> or sometimes <strong>Consubstantiation</strong> 
+              (though he disliked the term), taught that Christ's body and blood are present "in, with, and under" 
+              the bread and wine—truly present but without the substance of the bread and wine ceasing to exist.
+            </p>
+            <p className="insight">
+              Even Luther's affirmation of Real Presence, however, differed from Catholic teaching by rejecting 
+              transubstantiation and the sacrificial nature of the Mass. His view represents a middle position 
+              between Catholic and Reformed theology but still marks a departure from the consistent teaching 
+              of the previous fifteen centuries.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>The Catholic Response</h3>
+            <p>
+              The Council of Trent (1545-1563) responded to these Protestant challenges by solemnly reaffirming 
+              what the Church had always taught:
+            </p>
+            <ul className="conclusion-list">
+              <li><strong>Scripture and Tradition:</strong> The Church receives divine revelation from both 
+              Scripture and Sacred Tradition, with the Church's teaching authority (Magisterium) guided by the 
+              Holy Spirit to interpret both correctly.</li>
+              
+              <li><strong>Literal Interpretation:</strong> Christ's words "This is my body" must be taken at 
+              face value, as the Church Fathers uniformly did. Philosophical terminology (like transubstantiation) 
+              doesn't add to Scripture but clarifies and defends what Scripture teaches.</li>
+              
+              <li><strong>The Whole Christ:</strong> Christ can make Himself sacramentally present while 
+              remaining bodily in heaven because His mode of sacramental presence transcends physical laws. 
+              He is not "located" in the Host but truly, really, and substantially present under the appearances 
+              of bread and wine.</li>
+              
+              <li><strong>John 6 Vindicated:</strong> The chapter cannot mean "believe in me" because Jesus 
+              already used "believe" earlier (v. 35) and then deliberately switched to the graphic language of 
+              eating and drinking (v. 53-56). The Spirit gives life precisely through the flesh of Christ that 
+              we consume.</li>
+              
+              <li><strong>Grace and Faith:</strong> The sacrament is effective through Christ's promise and 
+              power, not human faith. However, to receive its benefits <em>fruitfully</em>, one must be in a 
+              state of grace and receive with faith and reverence. The sacrament doesn't work "magically"—it 
+              works because Christ instituted it and promised to work through it.</li>
+            </ul>
+          </div>
+
+          <div className="card summary-box">
+            <h3>The Critical Question</h3>
+            <p className="lead">
+              The Reformation challenge forces us to ask: Does the unanimous testimony of the Church for fifteen 
+              centuries carry weight? When every Church Father, every ecumenical council before Trent, both 
+              Eastern and Western traditions, and the consistent practice of the faithful all agree—can we 
+              confidently set aside this witness based on a new theological system?
+            </p>
+            <p>
+              The Catholic Church answers: No. The faith "once for all delivered to the saints" (Jude 3) has 
+              been carefully guarded and faithfully transmitted. To accept the Reformation's reinterpretation 
+              would mean that the Holy Spirit allowed the entire Church—including those who learned directly 
+              from the Apostles—to fundamentally misunderstand the Eucharist for 1,500 years.
+            </p>
+            <p className="insight">
+              The Real Presence is not a "Roman Catholic invention" or a "medieval corruption." It is the 
+              apostolic faith, believed by the undivided Church, affirmed by the Fathers, celebrated in the 
+              liturgy, and now challenged for the first time in history. The question is not whether we will 
+              follow Scripture, but whether we will follow Scripture as the Church has always understood it, 
+              guided by the Holy Spirit through the centuries.
+            </p>
+          </div>
+        </section>
         <section id="conclusion" className="section conclusion">
           <h2>Conclusion: The Unbroken Thread</h2>
           
