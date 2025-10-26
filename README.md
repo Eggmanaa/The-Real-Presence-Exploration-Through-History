@@ -30,8 +30,9 @@
 
 ## URLs
 
+- **Production URL**: https://therealpresence.pages.dev
+- **GitHub Repository**: https://github.com/Eggmanaa/The-Real-Presence-Exploration-Through-History
 - **Development URL**: https://3000-i3t9v6vk18ui97kv6v0tn-de59bda9.sandbox.novita.ai
-- **GitHub**: (To be added after deployment)
 
 ## Currently Completed Features
 
@@ -145,7 +146,7 @@ Recommended reading path for maximum impact:
 **Cloudflare Pages** - Edge-deployed static site with global CDN
 
 ### Status
-✅ **Active** - Currently running on development server
+✅ **LIVE** - Deployed to Cloudflare Pages at https://therealpresence.pages.dev
 
 ### Tech Stack
 - **Backend**: Hono framework (TypeScript)
@@ -156,6 +157,13 @@ Recommended reading path for maximum impact:
 
 ### Last Updated
 2025-10-26
+
+### Deployment Information
+- **Platform**: Cloudflare Pages
+- **Project Name**: therealpresence
+- **Production URL**: https://therealpresence.pages.dev
+- **Deployment Date**: 2025-10-26
+- **Status**: ✅ Live and Active
 
 ### Recent Updates (2025-10-26)
 - **Complete color scheme redesign**: Replaced school branding with liturgical palette better suited to theological content
