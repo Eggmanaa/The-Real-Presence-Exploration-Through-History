@@ -18,7 +18,6 @@ app.get('/', (c) => {
       <nav className="main-nav">
         <a href="#introduction">Introduction</a>
         <a href="#old-testament">Old Testament</a>
-        <a href="#didache">Didache</a>
         <a href="#john-6">John 6</a>
         <a href="#institution">Institution</a>
         <a href="#church-fathers">Church Fathers</a>
@@ -133,129 +132,6 @@ app.get('/', (c) => {
             </p>
           </div>
         </section>
-        <section id="didache" className="section">
-          <h2>The Didache: The Earliest Liturgical Witness</h2>
-          
-          <div className="intro-card card">
-            <p className="lead">
-              The Didache, or "Teaching of the Twelve Apostles," provides our earliest extant liturgical prayers 
-              for the Eucharist (c. 50-125 AD). This first or early second-century document offers an invaluable 
-              window into how the immediate post-apostolic Church understood and celebrated the sacred mysteries.
-            </p>
-          </div>
-
-          <div className="card">
-            <h3>Liturgical Prayers: Eucharistia as Thanksgiving</h3>
-            <p>
-              The prayers prescribed in the Didache center on the concept of <em>eucharistia</em>—thanksgiving. 
-              This is not merely gratitude for food, but a profound recognition of God's salvific work:
-            </p>
-            <blockquote>
-              "Celebrate the Eucharist as follows: Say over the cup: 'We give you thanks, Father, for the holy 
-              vine of David, your servant, which you made known to us through Jesus your servant. To you be glory 
-              for ever.'"
-              <cite>— Didache 9:2</cite>
-            </blockquote>
-            <blockquote>
-              "Over the broken bread: 'We give you thanks, Father, for the life and the knowledge which you have 
-              revealed to us through Jesus your servant. To you be glory for ever.'"
-              <cite>— Didache 9:3</cite>
-            </blockquote>
-            <p className="analysis">
-              <strong>Analysis:</strong> The prayers emphasize what God has accomplished—creation and, preeminently, 
-              salvation through Jesus. The meal is framed as grateful response to grace, not a means to earn favor. 
-              This establishes the Eucharist as fundamentally oriented toward God's action, not human merit.
-            </p>
-          </div>
-
-          <div className="card">
-            <h3>The Eucharist as the "Pure Sacrifice"</h3>
-            <div className="scripture-box">
-              <p className="verse">"On the Lord's day, when you have been gathered together, break bread and 
-              celebrate the Eucharist. But first confess your sins so that your offering may be pure... In this 
-              regard, the Lord has said: In every place and time offer me a pure sacrifice." — Didache 14:1-3</p>
-            </div>
-            <p>
-              The Didache is the <strong>earliest Christian text outside the New Testament</strong> to explicitly 
-              identify the Eucharistic celebration as a "sacrifice" (Greek: <em>thysia</em>). It directly applies 
-              the prophecy of Malachi 1:11 to the weekly Sunday gathering.
-            </p>
-            <p className="insight">
-              <strong>The "Pure" Sacrifice:</strong> The purity of this sacrifice is linked to the moral and 
-              spiritual state of the worshipers. Reconciliation is mandatory before participation: "If anyone has 
-              a quarrel with his neighbor, that person should not join you until he has been reconciled. Your 
-              sacrifice must not be defiled" (Didache 14:2).
-            </p>
-            <p>
-              This reveals that the "pure sacrifice" encompasses both the sacred elements and the entire act of 
-              worship offered by a purified and reconciled community. The horizontal (reconciliation with neighbor) 
-              is inseparable from the vertical (acceptable worship to God).
-            </p>
-          </div>
-
-          <div className="card">
-            <h3>Unity Through the Eucharist</h3>
-            <blockquote>
-              "As this broken bread scattered on the mountains was gathered and became one, so too, may your Church 
-              be gathered together from the ends of the earth into your kingdom."
-              <cite>— Didache 9:4</cite>
-            </blockquote>
-            <p className="analysis">
-              <strong>Analysis:</strong> This powerful image draws on the agricultural process—grain harvested from 
-              scattered fields, ground into flour, and baked into a single loaf. The Eucharist is presented as both 
-              symbol and agent of the Church's unity. The meal constitutes the community as one body, making visible 
-              the spiritual reality of our union in Christ.
-            </p>
-          </div>
-
-          <div className="card highlight">
-            <h3>Baptism as Gateway to the Eucharist</h3>
-            <div className="scripture-box critical">
-              <p className="verse">"Do not let anyone eat or drink of your eucharist except those who have been 
-              baptized in the name of the Lord. For the statement of the Lord applies here also: Do not give to 
-              dogs what is holy." — Didache 9:5</p>
-            </div>
-            <p>
-              From the very beginning, access to the Eucharist was strictly regulated. The sacrament is reserved 
-              for the initiated—those incorporated into Christ's body through baptism. This isn't arbitrary 
-              exclusion but recognition that the Eucharist presupposes sacramental union with Christ.
-            </p>
-            <p className="insight">
-              <strong>Spiritual Food:</strong> The text refers to the Eucharist as "spiritual food and drink" 
-              which God has favored the Church with, granting "eternal life" (Didache 10:3). This language points 
-              to the supernatural effect of the meal—it nourishes the soul for immortality, not merely the body 
-              for earthly life.
-            </p>
-          </div>
-
-          <div className="card">
-            <h3>Significance for the Real Presence</h3>
-            <p>
-              While the Didache's language is primarily liturgical and devotional rather than explicitly doctrinal, 
-              several elements point toward belief in the Real Presence:
-            </p>
-            <ol>
-              <li><strong>Sacrificial Language:</strong> Calling the Eucharist a "sacrifice" implies it's more 
-              than a memorial meal—it's a sacred offering to God</li>
-              <li><strong>Strict Access Control:</strong> The emphasis on purity and baptismal requirement suggests 
-              something holy and powerful is being handled</li>
-              <li><strong>Life-Giving Effect:</strong> Attributing eternal life to the "spiritual food" indicates 
-              supernatural reality beyond mere symbolism</li>
-              <li><strong>Unity-Creating Power:</strong> The Eucharist doesn't just symbolize unity—it effects it, 
-              gathering scattered members into one body</li>
-              <li><strong>Fulfillment of Prophecy:</strong> Applying Malachi 1:11 to the Eucharist suggests this 
-              is the new and perfect sacrifice God foretold</li>
-            </ol>
-            <p className="analysis">
-              <strong>Historical Context:</strong> The Didache represents the Church's worship before theological 
-              controversies forced explicit doctrinal formulations. Its matter-of-fact treatment of Eucharistic 
-              worship reveals what the earliest Christians simply did and believed, before they needed to defend 
-              or explain it against heretics. This makes it an invaluable witness to the apostolic faith in its 
-              most pristine form.
-            </p>
-          </div>
-        </section>
-
         <section id="john-6" className="section">
           <h2>The Promise: John Chapter 6</h2>
           

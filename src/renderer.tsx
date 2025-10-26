@@ -17,26 +17,20 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           :root {
-            /* Rich liturgical color palette */
-            --burgundy: #7C1D2E;
-            --deep-red: #9B2226;
+            /* School branding colors */
+            --primary-red: #a20927;
             --white: #FFFFFF;
+            --black: #000000;
+            --light-grey: #DDDDDD;
             --off-white: #FAF9F6;
-            --warm-black: #1A1A1A;
-            --charcoal: #2C2C2C;
-            --light-grey: #E8E8E8;
-            --medium-grey: #C0C0C0;
-            --gold: #C9A961;
-            --rich-gold: #B8860B;
-            --bronze: #8C6A4A;
-            --cream: #F5F1E8;
-            --parchment: #F0EBD8;
+            --cream: #FAF9F6;
+            --gold: #D4AF37;
             --light-blue: #E3F2FD;
             --soft-green: #E8F5E9;
             --soft-purple: #F3E5F5;
             --soft-orange: #FFF3E0;
-            --shadow: rgba(124, 29, 46, 0.15);
-            --shadow-dark: rgba(26, 26, 26, 0.2);
+            --shadow: rgba(162, 9, 39, 0.15);
+            --shadow-dark: rgba(0, 0, 0, 0.2);
           }
 
           html {
@@ -46,14 +40,14 @@ export const renderer = jsxRenderer(({ children }) => {
           body {
             font-family: 'Georgia', 'Garamond', serif;
             line-height: 1.8;
-            color: var(--warm-black);
-            background-color: var(--parchment);
+            color: var(--black);
+            background-color: var(--cream);
           }
 
           /* Hero Section */
           .hero {
-            background: linear-gradient(135deg, var(--burgundy) 0%, var(--deep-red) 100%);
-            color: var(--off-white);
+            background: linear-gradient(135deg, var(--primary-red) 0%, #8B0721 100%);
+            color: var(--white);
             padding: 4rem 2rem;
             text-align: center;
             box-shadow: 0 8px 16px var(--shadow-dark);
@@ -90,17 +84,17 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           .main-nav a {
-            color: var(--burgundy);
+            color: var(--primary-red);
             text-decoration: none;
             padding: 0.5rem 1rem;
-            border: 2px solid var(--burgundy);
+            border: 2px solid var(--primary-red);
             border-radius: 4px;
             font-weight: 600;
             transition: all 0.3s ease;
           }
 
           .main-nav a:hover {
-            background-color: var(--burgundy);
+            background-color: var(--primary-red);
             color: var(--off-white);
             border-color: var(--gold);
           }
@@ -118,22 +112,22 @@ export const renderer = jsxRenderer(({ children }) => {
 
           .section h2 {
             font-size: 2.5rem;
-            color: var(--burgundy);
+            color: var(--primary-red);
             margin-bottom: 1.5rem;
-            border-bottom: 3px solid var(--rich-gold);
+            border-bottom: 3px solid var(--gold);
             padding-bottom: 0.5rem;
           }
 
           .section h3 {
             font-size: 1.8rem;
-            color: var(--charcoal);
+            color: var(--black);
             margin-top: 2rem;
             margin-bottom: 1rem;
           }
 
           .section h4 {
             font-size: 1.4rem;
-            color: var(--deep-red);
+            color: var(--primary-red);
             margin-top: 1.5rem;
             margin-bottom: 0.8rem;
           }
@@ -145,18 +139,18 @@ export const renderer = jsxRenderer(({ children }) => {
             margin-bottom: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 8px var(--shadow);
-            border-left: 5px solid var(--burgundy);
+            border-left: 5px solid var(--primary-red);
           }
 
           .card.highlight {
             background-color: var(--cream);
-            border-left-color: var(--rich-gold);
+            border-left-color: var(--gold);
             box-shadow: 0 4px 8px var(--shadow), 0 0 0 1px var(--gold) inset;
           }
 
           .intro-card {
             background: linear-gradient(135deg, var(--white) 0%, var(--cream) 100%);
-            border-left-color: var(--rich-gold);
+            border-left-color: var(--gold);
           }
 
           /* Typography */
@@ -164,7 +158,7 @@ export const renderer = jsxRenderer(({ children }) => {
             font-size: 1.3rem;
             font-weight: 500;
             margin-bottom: 1.5rem;
-            color: var(--deep-red);
+            color: var(--primary-red);
           }
 
           p {
@@ -189,8 +183,8 @@ export const renderer = jsxRenderer(({ children }) => {
 
           /* Scripture Boxes */
           .scripture-box {
-            background: linear-gradient(135deg, var(--cream) 0%, var(--parchment) 100%);
-            border-left: 4px solid var(--rich-gold);
+            background: linear-gradient(135deg, var(--cream) 0%, #FFF5E6 100%);
+            border-left: 4px solid var(--gold);
             padding: 1.5rem;
             margin: 1.5rem 0;
             border-radius: 4px;
@@ -198,16 +192,16 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           .scripture-box.critical {
-            border-left-color: var(--deep-red);
+            border-left-color: var(--primary-red);
             background: linear-gradient(135deg, #FFF5F5 0%, #FFEBE8 100%);
-            box-shadow: 0 2px 4px var(--shadow), 0 0 0 1px var(--deep-red) inset;
+            box-shadow: 0 2px 4px var(--shadow), 0 0 0 1px var(--primary-red) inset;
           }
 
           .verse {
             font-size: 1.15rem;
             font-style: italic;
             line-height: 1.6;
-            color: var(--charcoal);
+            color: var(--black);
           }
 
           /* Blockquotes */
@@ -230,8 +224,8 @@ export const renderer = jsxRenderer(({ children }) => {
 
           .key-quote {
             font-size: 1.25rem;
-            background: linear-gradient(135deg, var(--cream) 0%, var(--parchment) 100%);
-            border-left-color: var(--rich-gold);
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream) 100%);
+            border-left-color: var(--gold);
             border-width: 5px;
             text-align: center;
             box-shadow: 0 4px 8px var(--shadow);
@@ -240,7 +234,7 @@ export const renderer = jsxRenderer(({ children }) => {
           .final-quote {
             font-size: 1.4rem;
             text-align: center;
-            background: linear-gradient(135deg, var(--burgundy) 0%, var(--deep-red) 100%);
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red) 100%);
             color: var(--off-white);
             border: 3px solid var(--gold);
             padding: 2rem;
@@ -248,7 +242,7 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           .final-quote cite {
-            color: var(--rich-gold);
+            color: var(--gold);
           }
 
           /* Insight Boxes */
@@ -310,7 +304,7 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           th {
-            background-color: var(--burgundy);
+            background-color: var(--primary-red);
             color: var(--off-white);
             padding: 1rem;
             text-align: left;
@@ -335,7 +329,7 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           .comparison-table strong {
-            color: var(--deep-red);
+            color: var(--primary-red);
             font-size: 1.1rem;
           }
 
@@ -355,7 +349,7 @@ export const renderer = jsxRenderer(({ children }) => {
 
           .greek-text strong {
             font-size: 1.5rem;
-            color: var(--burgundy);
+            color: var(--primary-red);
           }
 
           .greek-text em {
@@ -365,8 +359,8 @@ export const renderer = jsxRenderer(({ children }) => {
 
           /* Definition Box */
           .definition-box {
-            background: linear-gradient(135deg, var(--cream) 0%, var(--parchment) 100%);
-            border: 3px solid var(--burgundy);
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream) 100%);
+            border: 3px solid var(--primary-red);
             padding: 2rem;
             margin: 2rem 0;
             border-radius: 8px;
@@ -374,7 +368,7 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           .definition-box h4 {
-            color: var(--burgundy);
+            color: var(--primary-red);
             margin-top: 0;
           }
 
@@ -401,7 +395,7 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           .concept h5 {
-            color: var(--burgundy);
+            color: var(--primary-red);
             font-size: 1.3rem;
             margin-bottom: 1rem;
           }
@@ -430,12 +424,12 @@ export const renderer = jsxRenderer(({ children }) => {
             top: 0;
             width: 4px;
             height: 100%;
-            background: linear-gradient(to bottom, var(--burgundy) 0%, var(--rich-gold) 100%);
+            background: linear-gradient(to bottom, var(--primary-red) 0%, var(--gold) 100%);
           }
 
           .date {
             display: inline-block;
-            background-color: var(--burgundy);
+            background-color: var(--primary-red);
             color: var(--off-white);
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
@@ -458,7 +452,7 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           .timeline-period h3 {
-            color: var(--burgundy);
+            color: var(--primary-red);
             font-size: 1.6rem;
           }
 
@@ -477,27 +471,27 @@ export const renderer = jsxRenderer(({ children }) => {
             content: '✓';
             position: absolute;
             left: 0;
-            color: var(--burgundy);
+            color: var(--primary-red);
             font-weight: bold;
           }
 
           .major-event {
             font-size: 1.3rem;
             font-weight: 600;
-            color: var(--burgundy);
+            color: var(--primary-red);
             text-align: center;
             margin: 1rem 0;
           }
 
           /* Summary Box */
           .summary-box {
-            background: linear-gradient(135deg, var(--cream) 0%, var(--parchment) 100%);
-            border: 3px solid var(--rich-gold);
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream) 100%);
+            border: 3px solid var(--gold);
             box-shadow: 0 4px 8px var(--shadow);
           }
 
           .summary-box h3 {
-            color: var(--burgundy);
+            color: var(--primary-red);
             margin-top: 0;
           }
 
@@ -508,7 +502,7 @@ export const renderer = jsxRenderer(({ children }) => {
 
           .reflection-box {
             background-color: var(--cream);
-            border: 2px solid var(--rich-gold);
+            border: 2px solid var(--gold);
             padding: 1.5rem;
             margin: 2rem 0;
             border-radius: 8px;
@@ -516,7 +510,7 @@ export const renderer = jsxRenderer(({ children }) => {
 
           .reflection-box p {
             font-weight: 600;
-            color: var(--deep-red);
+            color: var(--primary-red);
             margin-bottom: 1rem;
           }
 
@@ -547,12 +541,12 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           .resources-list strong {
-            color: var(--burgundy);
+            color: var(--primary-red);
           }
 
           /* Footer */
           .site-footer {
-            background: linear-gradient(135deg, var(--burgundy) 0%, var(--deep-red) 100%);
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red) 100%);
             color: var(--off-white);
             text-align: center;
             padding: 2rem;
@@ -612,7 +606,7 @@ export const renderer = jsxRenderer(({ children }) => {
             }
 
             .hero {
-              background: var(--burgundy);
+              background: var(--primary-red);
               -webkit-print-color-adjust: exact;
               print-color-adjust: exact;
             }
