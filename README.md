@@ -14,9 +14,14 @@
 - **Institution Narratives**: Examination of the Last Supper accounts and their covenantal context
 - **Apostolic Teaching**: Paul's teaching on the Real Presence in 1 Corinthians
 
+### Early Liturgical Witness
+- **The Didache (50-125 AD)**: Earliest Christian liturgical document with Eucharistic prayers, sacrifice terminology, and unity theology
+- **Reservation Practices**: Historical evidence from Justin Martyr (carrying to the sick), Tertullian (home reservation), Cyprian (casket of fire miracles), and Basil (golden dove)
+
 ### Historical Church Testimony
 - **Chronological Survey**: From c. 110 AD (St. Ignatius) through 1215 AD (Fourth Lateran Council)
 - **Primary Source Quotations**: Direct citations from Church Fathers with analysis
+- **Enhanced Patristic Coverage**: Multiple quotes per Father including St. Cyprian on the lapsi crisis
 - **Timeline**: Visual representation of doctrinal development
 
 ### Theological Explanation
@@ -35,6 +40,12 @@
 - [x] Sticky navigation menu with smooth scrolling
 - [x] Introduction with project overview
 - [x] Old Testament types section (4 major prefigurements)
+- [x] **NEW: Didache section (50-125 AD)**
+  - [x] Earliest liturgical prayers
+  - [x] Pure sacrifice theology
+  - [x] Unity through Eucharist
+  - [x] Baptismal requirement for reception
+  - [x] Fulfillment of Malachi 1:11
 - [x] Complete John 6 exegesis
   - [x] Liturgical context
   - [x] Discourse progression analysis
@@ -47,18 +58,33 @@
   - [x] St. Justin Martyr
   - [x] St. Irenaeus of Lyons
   - [x] Origen
+  - [x] **NEW: St. Cyprian of Carthage (comprehensive)**
+    - [x] Lapsi crisis context
+    - [x] Unworthy communion as sacrilege
+    - [x] Violence to Christ's Body and Blood
+    - [x] Multiple quotations from On the Lapsed and Epistles
   - [x] St. Cyril of Jerusalem
   - [x] St. Ambrose
   - [x] St. Augustine
   - [x] St. John Chrysostom
   - [x] St. John of Damascus
+- [x] **NEW: Reservation Practices section**
+  - [x] Justin Martyr (carrying to the sick)
+  - [x] Tertullian (home reservation)
+  - [x] Cyprian (casket of fire miracles - 2 stories)
+  - [x] Basil the Great (golden dove/peristerium)
+  - [x] Historical development table
 - [x] Transubstantiation doctrine explanation
 - [x] Historical timeline (30-1563 AD)
 - [x] Conclusion with reflection questions
 - [x] Resources and further reading
 
 ### ✅ Design Features
-- [x] Custom color scheme using school branding (red: #a20927, white: #FFFFFF, black: #000000, light grey: #DDDDDD)
+- [x] **NEW: Liturgical color scheme** (replaced school branding)
+  - [x] Burgundy (#7C1D2E) and Deep Red (#9B2226) - Rich, traditional liturgical tones
+  - [x] Gold (#C9A961) and Rich Gold (#B8860B) - Warmth and sacred emphasis
+  - [x] Bronze (#8C6A4A) - Earthy, historical grounding
+  - [x] Parchment (#F0EBD8) and Cream (#F5F1E8) - Gentle, readable backgrounds
 - [x] Scholarly serif typography (Georgia, Garamond)
 - [x] Responsive design for mobile and desktop
 - [x] Print-friendly styling
@@ -97,12 +123,14 @@
 Recommended reading path for maximum impact:
 1. **Introduction** - Understand the scope and methodology
 2. **Old Testament** - See the prophetic foundation
-3. **John 6** - Examine Christ's explicit promise
-4. **Institution** - Study the Last Supper accounts
-5. **Church Fathers** - Witness the apostolic testimony
-6. **Transubstantiation** - Understand the theological explanation
-7. **Timeline** - See the historical continuity
-8. **Conclusion** - Reflect on the evidence
+3. **Didache** - Witness the earliest liturgical practice (50-125 AD)
+4. **John 6** - Examine Christ's explicit promise
+5. **Institution** - Study the Last Supper accounts
+6. **Church Fathers** - Witness the apostolic testimony
+7. **Reservation** - See early practices revealing belief in Real Presence
+8. **Transubstantiation** - Understand the theological explanation
+9. **Timeline** - See the historical continuity
+10. **Conclusion** - Reflect on the evidence
 
 ### Key Features
 - **Comparison Tables**: Side-by-side analysis of Eucharistic vs. metaphorical statements
@@ -127,7 +155,14 @@ Recommended reading path for maximum impact:
 - **Process Manager**: PM2 (development)
 
 ### Last Updated
-2025-01-26
+2025-10-26
+
+### Recent Updates (2025-10-26)
+- **Complete color scheme redesign**: Replaced school branding with liturgical palette better suited to theological content
+- **New Didache section**: Comprehensive coverage of the earliest Christian liturgical document (50-125 AD)
+- **New Reservation Practices section**: Historical evidence from Justin Martyr, Tertullian, St. Cyprian's casket of fire miracles, and Basil's golden dove
+- **Enhanced St. Cyprian coverage**: Full treatment of the lapsi crisis with multiple quotations showing his belief in Real Presence
+- **Improved navigation**: Updated menu to include Didache and Reservation sections
 
 ## Development
 
@@ -194,13 +229,16 @@ npm run deploy:prod
 - **Git Integration**: Deploy directly from GitHub
 
 ### Color Branding
-All colors match the school branding requirements:
-- Primary Red: `#a20927` - Used for headers, navigation, emphasis
-- White: `#FFFFFF` - Background for cards and content
-- Black: `#000000` - Primary text color
-- Light Grey: `#DDDDDD` - Borders and subtle elements
-- Cream: `#FAF9F6` - Page background for reduced eye strain
-- Gold: `#D4AF37` - Accent color for special emphasis
+Liturgical color palette designed for theological content:
+- **Burgundy**: `#7C1D2E` - Primary headers, navigation, rich traditional tone
+- **Deep Red**: `#9B2226` - Accent headers, emphasis, liturgical richness
+- **Gold**: `#C9A961` - Sacred emphasis, timeline dates, special highlights
+- **Rich Gold**: `#B8860B` - Deeper gold accents, borders, warm emphasis
+- **Bronze**: `#8C6A4A` - Historical grounding, secondary accents
+- **Parchment**: `#F0EBD8` - Gentle card backgrounds, reduced eye strain
+- **Cream**: `#F5F1E8` - Page background, subtle warmth
+- **White**: `#FFFFFF` - Content areas, contrast
+- **Black**: `#2C2C2C` - Primary text (softened for readability)
 
 ### Typography Philosophy
 - Serif fonts (Georgia, Garamond) chosen for scholarly, traditional feel
