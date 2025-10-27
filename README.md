@@ -167,13 +167,22 @@ Recommended reading path for maximum impact:
 - **Platform**: Cloudflare Pages
 - **Project Name**: therealpresence
 - **Production URL**: https://therealpresence.pages.dev
-- **Latest Deployment**: https://c7b0c2a9.therealpresence.pages.dev
+- **Latest Deployment**: https://ac3f6a5d.therealpresence.pages.dev
 - **Deployment Date**: 2025-10-27
 - **Status**: ✅ Live and Active
 
 ### Recent Updates (2025-10-27)
 
-**Latest Enhancement:**
+**Latest Enhancement - Text-to-Speech Audio Player:**
+- **🔊 Read Aloud Feature**: Full text-to-speech functionality with natural-sounding male voice
+- **🎮 Playback Controls**: Play/Pause, Stop, Previous Section, Next Section buttons
+- **📍 Section Navigation Timeline**: Clickable timeline bar to jump to any of the 9 major sections
+- **💫 Floating Toggle Button**: Minimalist speaker icon in bottom-right corner to show/hide player
+- **📱 Mobile Optimized**: Fully responsive controls that work on all devices
+- **♿ Accessibility**: Auto-advances through sections, visual feedback for current section
+- **🎯 Smart Voice Selection**: Automatically selects best available male English voice
+
+**Previous Enhancements:**
 - **✝️ Added Back "Call to Faith" Section**: Restored the three-response framework from John 6 with Peter's confession
 - **📜 Comprehensive Primary Sources List**: Added complete list of 13 primary sources cited throughout the treatise:
   - **The Didache** (c. 50-125 AD) - Teaching of the Twelve Apostles, earliest liturgical document
