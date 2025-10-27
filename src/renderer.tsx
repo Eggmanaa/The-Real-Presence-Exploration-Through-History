@@ -88,7 +88,7 @@ export const renderer = jsxRenderer(({ children }) => {
 
           /* Hero Section */
           .hero {
-            background-image: url('/static/raphael-disputation.jpg');
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/74/Sanzio%2C_Raffaello_-_Disputa_del_Sacramento_-_1508-1511_-_hi_res.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
