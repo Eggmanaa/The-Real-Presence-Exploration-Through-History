@@ -88,7 +88,7 @@ export const renderer = jsxRenderer(({ children }) => {
 
           /* Hero Section */
           .hero {
-            background: linear-gradient(135deg, var(--burgundy) 0%, var(--deep-red) 100%);
+            background: linear-gradient(135deg, #a20927 0%, #8b0721 100%);
             color: var(--white);
             padding: 6rem 2rem;
             text-align: center;
