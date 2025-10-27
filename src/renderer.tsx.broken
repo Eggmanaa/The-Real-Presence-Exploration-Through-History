@@ -1427,73 +1427,10 @@ export const renderer = jsxRenderer(({ children }) => {
 
             // Text-to-Speech Audio Player - Continuous playback with seekable progress
             function initAudioPlayer() {
-              // Check for speech synthesis support
               if (!('speechSynthesis' in window)) {
-                console.log('Text-to-Speech not supported in this browser');
-                return;
-              }
-
-              // Section definitions
-              const sections = [
-                { id: 'introduction', name: 'Introduction' },
-                { id: 'old-testament', name: 'Old Testament Types' },
-                { id: 'new-testament', name: 'New Testament Fulfillment' },
-                { id: 'early-church', name: 'Early Church Fathers' },
-                { id: 'ante-nicene', name: 'Ante-Nicene Period' },
-                { id: 'post-nicene', name: 'Post-Nicene Period' },
-                { id: 'scholastic', name: 'Scholastic Development' },
-                { id: 'trent', name: 'Council of Trent' },
-                { id: 'conclusion', name: 'Conclusion' }
-              ];
-
-              // State variables
-              let isPlaying = false;
-              let isPaused = false;
-              let currentChunkIndex = 0;
-              let textChunks = [];
-              let totalDuration = 0;
-              let startTime = 0;
-              let pausedTime = 0;
-              let progressInterval = null;
-
-              // Create toggle button
-              const toggleBtn = document.createElement('button');
-              toggleBtn.className = 'audio-toggle-btn';
-              toggleBtn.innerHTML = '🔊';
-              toggleBtn.setAttribute('aria-label', 'Toggle Audio Player');
-              document.body.appendChild(toggleBtn);
-
-              // Create audio player container
-              const audioPlayer = document.createElement('div');
-              audioPlayer.className = 'audio-player';
-              audioPlayer.innerHTML = '<div class="audio-controls">' +
-                '<div class="audio-controls-top">' +
-                  '<button class="audio-button primary" id="playPauseBtn">' +
-                    '<span id="playIcon">▶</span> <span id="playText">Play Full Treatise</span>' +
-                  '</button>' +
-                  '<button class="audio-button" id="stopBtn">⏹ Stop</button>' +
-                  '<div class="audio-status">' +
-                    '<strong>Now Playing:</strong>' +
-                    '<span id="currentSection">Ready to start</span>' +
-                  '</div>' +
-                '</div>' +
-                '<div class="progress-container">' +
-                  '<div class="progress-info">' +
-                    '<span class="progress-time" id="currentTime">0:00</span>' +
-                    '<span class="progress-time" id="totalTime">--:--</span>' +
-                  '</div>' +
-                  '<input type="range" class="progress-slider" id="progressSlider" min="0" max="1000" value="0" />' +
-                '</div>' +
-                '<div class="audio-timeline" id="audioTimeline"></div>' +
-              '</div>';
-              document.body.appendChild(audioPlayer);
-
-              // Toggle player visibility
-              toggleBtn.onclick = () => {
-                audioPlayer.classList.toggle('active');
-                toggleBtn.classList.toggle('active');
-              };
-
+                console.log('Text-to-Speech not supported');
+              // New continuous audio player with progress bar and seek functionality
+              
               // Get DOM elements
               const playPauseBtn = document.getElementById('playPauseBtn');
               const stopBtn = document.getElementById('stopBtn');
@@ -1504,7 +1441,7 @@ export const renderer = jsxRenderer(({ children }) => {
               const currentTimeLabel = document.getElementById('currentTime');
               const totalTimeLabel = document.getElementById('totalTime');
               const timeline = document.getElementById('audioTimeline');
-
+              
               // Get the best natural-sounding voice
               function getBestVoice() {
                 const voices = speechSynthesis.getVoices();
@@ -1530,34 +1467,30 @@ export const renderer = jsxRenderer(({ children }) => {
                 const englishVoice = voices.find(v => v.lang.startsWith('en'));
                 return englishVoice || voices[0];
               }
-
-              // Get text content from a section
-              function getTextContent(sectionId) {
-                const section = document.getElementById(sectionId);
-                if (!section) return '';
-                
-                const clone = section.cloneNode(true);
-                const unwanted = clone.querySelectorAll('nav, script, style, .main-nav, .audio-player, .audio-toggle-btn');
-                unwanted.forEach(el => el.remove());
-                
-                return clone.textContent
-                  .replace(/\s+/g, ' ')
-                  .replace(/—/g, ' - ')
-                  .trim();
-              }
-
+              
               // Get all text content as one continuous stream
               function getAllText() {
                 let fullText = '';
                 sections.forEach(section => {
-                  const text = getTextContent(section.id);
-                  if (text) {
-                    fullText += text + '. ';
+                  const sectionElement = document.getElementById(section.id);
+                  if (sectionElement) {
+                    const clone = sectionElement.cloneNode(true);
+                    const unwanted = clone.querySelectorAll('nav, script, style, .main-nav, .audio-player, .audio-toggle-btn');
+                    unwanted.forEach(el => el.remove());
+                    
+                    const text = clone.textContent
+                      .replace(/\s+/g, ' ')
+                      .replace(/—/g, ' - ')
+                      .trim();
+                    
+                    if (text) {
+                      fullText += text + '. ';
+                    }
                   }
                 });
                 return fullText;
               }
-
+              
               // Split text into manageable chunks for speech synthesis
               function splitIntoChunks(text, maxLength = 200) {
                 const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
@@ -1579,7 +1512,7 @@ export const renderer = jsxRenderer(({ children }) => {
                 
                 return chunks;
               }
-
+              
               // Calculate which section we're in based on chunk index
               function getCurrentSection(chunkIndex) {
                 let totalChunks = 0;
@@ -1593,14 +1526,28 @@ export const renderer = jsxRenderer(({ children }) => {
                 }
                 return sections.length - 1;
               }
-
+              
+              function getTextContent(sectionId) {
+                const section = document.getElementById(sectionId);
+                if (!section) return '';
+                
+                const clone = section.cloneNode(true);
+                const unwanted = clone.querySelectorAll('nav, script, style, .main-nav');
+                unwanted.forEach(el => el.remove());
+                
+                return clone.textContent
+                  .replace(/\s+/g, ' ')
+                  .replace(/—/g, ' - ')
+                  .trim();
+              }
+              
               // Format time in MM:SS
               function formatTime(seconds) {
                 const mins = Math.floor(seconds / 60);
                 const secs = Math.floor(seconds % 60);
                 return mins + ':' + (secs < 10 ? '0' : '') + secs;
               }
-
+              
               // Update progress bar
               function updateProgress() {
                 if (!isPlaying || isPaused) return;
@@ -1621,7 +1568,7 @@ export const renderer = jsxRenderer(({ children }) => {
                   btn.classList.toggle('active', index === currentSectionIndex);
                 });
               }
-
+              
               // Speak the next chunk
               function speakChunk(index) {
                 if (index >= textChunks.length) {
@@ -1658,7 +1605,7 @@ export const renderer = jsxRenderer(({ children }) => {
                 
                 speechSynthesis.speak(utterance);
               }
-
+              
               // Play function
               function play() {
                 if (!textChunks.length) {
@@ -1692,7 +1639,7 @@ export const renderer = jsxRenderer(({ children }) => {
                 
                 updatePlayPauseButton();
               }
-
+              
               // Pause function
               function pause() {
                 if (isPlaying) {
@@ -1702,7 +1649,7 @@ export const renderer = jsxRenderer(({ children }) => {
                   updatePlayPauseButton();
                 }
               }
-
+              
               // Stop function
               function stop() {
                 speechSynthesis.cancel();
@@ -1725,7 +1672,7 @@ export const renderer = jsxRenderer(({ children }) => {
                 
                 updatePlayPauseButton();
               }
-
+              
               // Update play/pause button
               function updatePlayPauseButton() {
                 if (isPlaying && !isPaused) {
@@ -1736,7 +1683,7 @@ export const renderer = jsxRenderer(({ children }) => {
                   playText.textContent = isPlaying ? 'Resume' : 'Play Full Treatise';
                 }
               }
-
+              
               // Seek to position
               function seekToPosition(percent) {
                 const targetChunk = Math.floor((percent / 1000) * textChunks.length);
@@ -1752,7 +1699,7 @@ export const renderer = jsxRenderer(({ children }) => {
                   currentChunkIndex = targetChunk;
                 }
               }
-
+              
               // Jump to specific section
               function jumpToSection(index) {
                 // Calculate which chunk starts this section
@@ -1772,7 +1719,7 @@ export const renderer = jsxRenderer(({ children }) => {
                   play();
                 }
               }
-
+              
               // Event listeners
               playPauseBtn.onclick = () => {
                 if (isPlaying && !isPaused) {
@@ -1781,13 +1728,13 @@ export const renderer = jsxRenderer(({ children }) => {
                   play();
                 }
               };
-
+              
               stopBtn.onclick = stop;
-
+              
               progressSlider.oninput = () => {
                 seekToPosition(parseInt(progressSlider.value));
               };
-
+              
               // Create timeline buttons
               sections.forEach((section, index) => {
                 const btn = document.createElement('button');
@@ -1796,14 +1743,87 @@ export const renderer = jsxRenderer(({ children }) => {
                 btn.onclick = () => jumpToSection(index);
                 timeline.appendChild(btn);
               });
-
+              
               // Load voices
               if (speechSynthesis.onvoiceschanged !== undefined) {
                 speechSynthesis.onvoiceschanged = getBestVoice;
               }
-
+              
               // Initialize
               getBestVoice();
+                  isPaused = false;
+                } else if (!speechSynthesis.speaking) {
+                  const text = getTextContent(sections[currentSection].id);
+                  speak(text);
+                }
+                updatePlayPauseButton();
+                updateUI();
+              }
+
+              function pause() {
+                if (speechSynthesis.speaking) {
+                  speechSynthesis.pause();
+                  isPaused = true;
+                  updatePlayPauseButton();
+                }
+              }
+
+              function stop() {
+                speechSynthesis.cancel();
+                isPaused = false;
+                currentUtterance = null;
+                updatePlayPauseButton();
+              }
+
+              function next() {
+                if (currentSection < sections.length - 1) {
+                  stop();
+                  currentSection++;
+                  updateUI();
+                  play();
+                }
+              }
+
+              function prev() {
+                if (currentSection > 0) {
+                  stop();
+                  currentSection--;
+                  updateUI();
+                  play();
+                }
+              }
+
+              function jumpToSection(index) {
+                if (index >= 0 && index < sections.length) {
+                  stop();
+                  currentSection = index;
+                  updateUI();
+                  play();
+                }
+              }
+
+              // Event listeners
+              playPauseBtn.onclick = () => {
+                if (speechSynthesis.speaking && !speechSynthesis.paused) {
+                  pause();
+                } else {
+                  play();
+                }
+              };
+
+              stopBtn.onclick = stop;
+              nextBtn.onclick = next;
+              prevBtn.onclick = prev;
+
+              // Load voices (Chrome requires this)
+              if (speechSynthesis.onvoiceschanged !== undefined) {
+                speechSynthesis.onvoiceschanged = () => {
+                  getMaleVoice();
+                };
+              }
+
+              // Initialize UI
+              updateUI();
             }
           `
         }} />
