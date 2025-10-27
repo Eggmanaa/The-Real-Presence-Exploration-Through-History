@@ -9,6 +9,7 @@ app.get('/', (c) => {
   return c.render(
     <div className="home-page">
       <header className="hero">
+        <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1>"My Flesh is True Food"</h1>
           <p className="subtitle">A Journey Through Scripture and Tradition to the Real Presence of Christ in the Eucharist</p>

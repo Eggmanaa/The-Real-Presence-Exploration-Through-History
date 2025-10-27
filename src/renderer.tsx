@@ -88,27 +88,55 @@ export const renderer = jsxRenderer(({ children }) => {
 
           /* Hero Section */
           .hero {
-            background: linear-gradient(135deg, var(--primary-red) 0%, #8B0721 100%);
+            background-image: url('https://page.gensparksite.com/v1/base64_upload/24b027766fa2a263abe5628c0a4f04d9');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: var(--white);
-            padding: 4rem 2rem;
+            padding: 6rem 2rem;
             text-align: center;
             box-shadow: 0 8px 16px var(--shadow-dark);
             border-bottom: 4px solid var(--gold);
+            position: relative;
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(162, 9, 39, 0.85) 0%, rgba(139, 7, 33, 0.90) 100%);
+            z-index: 1;
+          }
+
+          .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
           }
 
           .hero-content h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 1.5rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            line-height: 1.2;
           }
 
           .subtitle {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-style: italic;
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
-            opacity: 0.95;
+            opacity: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            line-height: 1.5;
           }
 
           /* Navigation */
@@ -927,17 +955,19 @@ export const renderer = jsxRenderer(({ children }) => {
           /* Small phones (up to 480px) */
           @media (max-width: 480px) {
             .hero {
-              padding: 2rem 1rem;
+              padding: 3rem 1rem;
+              min-height: 300px;
             }
 
             .hero-content h1 {
-              font-size: 1.5rem;
-              line-height: 1.2;
+              font-size: 1.75rem;
+              line-height: 1.3;
+              margin-bottom: 1rem;
             }
 
             .subtitle {
-              font-size: 0.95rem;
-              line-height: 1.4;
+              font-size: 1rem;
+              line-height: 1.5;
             }
 
             /* Mobile Navigation - Hamburger Menu */
@@ -1177,15 +1207,18 @@ export const renderer = jsxRenderer(({ children }) => {
           /* Tablets and larger phones (481px to 768px) */
           @media (min-width: 481px) and (max-width: 768px) {
             .hero {
-              padding: 3rem 1.5rem;
+              padding: 4rem 1.5rem;
+              min-height: 350px;
             }
 
             .hero-content h1 {
-              font-size: 2rem;
+              font-size: 2.5rem;
+              line-height: 1.2;
             }
 
             .subtitle {
-              font-size: 1.1rem;
+              font-size: 1.2rem;
+              line-height: 1.5;
             }
 
             /* Mobile Navigation - Hamburger Menu */
