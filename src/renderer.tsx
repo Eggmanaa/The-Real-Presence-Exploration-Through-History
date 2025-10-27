@@ -789,28 +789,35 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           .audio-toggle-btn {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: var(--primary-red);
-            color: var(--white);
-            border: 3px solid var(--gold);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.5rem;
-            box-shadow: 0 4px 15px rgba(162, 9, 39, 0.5);
-            z-index: 999;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            position: fixed !important;
+            bottom: 2rem !important;
+            right: 2rem !important;
+            background: var(--primary-red) !important;
+            color: var(--white) !important;
+            border: 3px solid var(--gold) !important;
+            width: 60px !important;
+            height: 60px !important;
+            border-radius: 50% !important;
+            cursor: pointer !important;
+            font-size: 1.5rem !important;
+            box-shadow: 0 4px 15px rgba(162, 9, 39, 0.5) !important;
+            z-index: 9999 !important;
+            transition: all 0.3s ease !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            pointer-events: auto !important;
           }
 
           .audio-toggle-btn:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 20px rgba(162, 9, 39, 0.7);
+          }
+
+          .audio-toggle-btn:active {
+            transform: scale(0.95);
           }
 
           /* Responsive Design - Mobile First Approach */
@@ -1023,11 +1030,13 @@ export const renderer = jsxRenderer(({ children }) => {
             }
 
             .audio-toggle-btn {
-              width: 50px;
-              height: 50px;
-              bottom: 1.5rem;
-              right: 1.5rem;
-              font-size: 1.3rem;
+              width: 56px !important;
+              height: 56px !important;
+              bottom: 1.5rem !important;
+              right: 1.5rem !important;
+              font-size: 1.4rem !important;
+              z-index: 9999 !important;
+              display: flex !important;
             }
           }
 
@@ -1270,11 +1279,13 @@ export const renderer = jsxRenderer(({ children }) => {
             }
 
             .audio-toggle-btn {
-              bottom: 1rem;
-              right: 1rem;
-              width: 56px;
-              height: 56px;
-              font-size: 1.3rem;
+              bottom: 1rem !important;
+              right: 1rem !important;
+              width: 56px !important;
+              height: 56px !important;
+              font-size: 1.3rem !important;
+              display: flex !important;
+              z-index: 9999 !important;
             }
 
             .timeline-section {
