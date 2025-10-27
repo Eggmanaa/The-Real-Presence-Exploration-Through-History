@@ -752,6 +752,68 @@ export const renderer = jsxRenderer(({ children }) => {
             margin-bottom: 0.25rem;
           }
 
+          .progress-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin: 0.75rem 0;
+          }
+
+          .progress-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            opacity: 0.9;
+          }
+
+          .progress-time {
+            font-weight: 600;
+            color: var(--gold);
+          }
+
+          .progress-slider {
+            width: 100%;
+            height: 8px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            outline: none;
+            cursor: pointer;
+          }
+
+          .progress-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            background: var(--gold);
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid var(--white);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          }
+
+          .progress-slider::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            background: var(--gold);
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid var(--white);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          }
+
+          .progress-slider::-webkit-slider-runnable-track {
+            height: 8px;
+            border-radius: 10px;
+          }
+
+          .progress-slider::-moz-range-track {
+            height: 8px;
+            border-radius: 10px;
+          }
+
           .audio-timeline {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -1363,63 +1425,317 @@ export const renderer = jsxRenderer(({ children }) => {
               initAudioPlayer();
             });
 
-            // Text-to-Speech Audio Player
+            // Text-to-Speech Audio Player - Continuous playback with seekable progress
             function initAudioPlayer() {
               if (!('speechSynthesis' in window)) {
                 console.log('Text-to-Speech not supported');
-                return;
-              }
-
-              const sections = [
-                { id: 'introduction', name: 'Introduction' },
-                { id: 'old-testament', name: 'Old Testament' },
-                { id: 'john-6', name: 'John 6' },
-                { id: 'institution', name: 'Institution' },
-                { id: 'church-fathers', name: 'Church Fathers' },
-                { id: 'reservation', name: 'Reservation' },
-                { id: 'transubstantiation', name: 'Transubstantiation' },
-                { id: 'timeline', name: 'Timeline' },
-                { id: 'reformation', name: 'Reformation' }
-              ];
-
-              let currentSection = 0;
-              let isPaused = false;
-              let currentUtterance = null;
-
-              // Create audio player UI
-              const audioPlayer = document.createElement('div');
-              audioPlayer.className = 'audio-player';
-              audioPlayer.innerHTML = \`
-                <div class="audio-controls">
-                  <div class="audio-controls-top">
-                    <button class="audio-button primary" id="playPauseBtn">
-                      <span id="playIcon">▶</span> <span id="playText">Play</span>
-                    </button>
-                    <button class="audio-button" id="stopBtn">⏹ Stop</button>
-                    <button class="audio-button" id="prevBtn">⏮ Previous</button>
-                    <button class="audio-button" id="nextBtn">⏭ Next</button>
-                    <div class="audio-status">
-                      <strong>Reading:</strong>
-                      <span id="currentSection">Not started</span>
-                    </div>
-                  </div>
-                  <div class="audio-timeline" id="audioTimeline"></div>
-                </div>
-              \`;
-              document.body.appendChild(audioPlayer);
-
-              // Create toggle button
-              const toggleBtn = document.createElement('button');
-              toggleBtn.className = 'audio-toggle-btn';
-              toggleBtn.innerHTML = '🔊';
-              toggleBtn.title = 'Toggle Audio Player';
-              toggleBtn.onclick = () => {
-                audioPlayer.classList.toggle('active');
-              };
-              document.body.appendChild(toggleBtn);
-
-              // Create timeline buttons
+              // New continuous audio player with progress bar and seek functionality
+              
+              // Get DOM elements
+              const playPauseBtn = document.getElementById('playPauseBtn');
+              const stopBtn = document.getElementById('stopBtn');
+              const playIcon = document.getElementById('playIcon');
+              const playText = document.getElementById('playText');
+              const currentSectionLabel = document.getElementById('currentSection');
+              const progressSlider = document.getElementById('progressSlider');
+              const currentTimeLabel = document.getElementById('currentTime');
+              const totalTimeLabel = document.getElementById('totalTime');
               const timeline = document.getElementById('audioTimeline');
+              
+              // Get the best natural-sounding voice
+              function getBestVoice() {
+                const voices = speechSynthesis.getVoices();
+                
+                // Priority list for most natural-sounding voices
+                const preferredVoices = [
+                  'Samantha',  // macOS - most natural female
+                  'Alex',      // macOS - natural male
+                  'Google US English',  // Chrome - very natural
+                  'Microsoft David - English (United States)',  // Windows
+                  'Microsoft Zira - English (United States)',   // Windows  
+                  'Google UK English Female',
+                  'Google UK English Male'
+                ];
+              
+                // Try preferred voices first
+                for (const preferred of preferredVoices) {
+                  const voice = voices.find(v => v.name === preferred || v.name.includes(preferred));
+                  if (voice) return voice;
+                }
+              
+                // Fallback: find any English voice
+                const englishVoice = voices.find(v => v.lang.startsWith('en'));
+                return englishVoice || voices[0];
+              }
+              
+              // Get all text content as one continuous stream
+              function getAllText() {
+                let fullText = '';
+                sections.forEach(section => {
+                  const sectionElement = document.getElementById(section.id);
+                  if (sectionElement) {
+                    const clone = sectionElement.cloneNode(true);
+                    const unwanted = clone.querySelectorAll('nav, script, style, .main-nav, .audio-player, .audio-toggle-btn');
+                    unwanted.forEach(el => el.remove());
+                    
+                    const text = clone.textContent
+                      .replace(/\s+/g, ' ')
+                      .replace(/—/g, ' - ')
+                      .trim();
+                    
+                    if (text) {
+                      fullText += text + '. ';
+                    }
+                  }
+                });
+                return fullText;
+              }
+              
+              // Split text into manageable chunks for speech synthesis
+              function splitIntoChunks(text, maxLength = 200) {
+                const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+                const chunks = [];
+                let currentChunk = '';
+                
+                sentences.forEach(sentence => {
+                  if ((currentChunk + sentence).length > maxLength && currentChunk) {
+                    chunks.push(currentChunk.trim());
+                    currentChunk = sentence;
+                  } else {
+                    currentChunk += ' ' + sentence;
+                  }
+                });
+                
+                if (currentChunk.trim()) {
+                  chunks.push(currentChunk.trim());
+                }
+                
+                return chunks;
+              }
+              
+              // Calculate which section we're in based on chunk index
+              function getCurrentSection(chunkIndex) {
+                let totalChunks = 0;
+                for (let i = 0; i < sections.length; i++) {
+                  const sectionText = getTextContent(sections[i].id);
+                  const sectionChunks = splitIntoChunks(sectionText);
+                  totalChunks += sectionChunks.length;
+                  if (chunkIndex < totalChunks) {
+                    return i;
+                  }
+                }
+                return sections.length - 1;
+              }
+              
+              function getTextContent(sectionId) {
+                const section = document.getElementById(sectionId);
+                if (!section) return '';
+                
+                const clone = section.cloneNode(true);
+                const unwanted = clone.querySelectorAll('nav, script, style, .main-nav');
+                unwanted.forEach(el => el.remove());
+                
+                return clone.textContent
+                  .replace(/\s+/g, ' ')
+                  .replace(/—/g, ' - ')
+                  .trim();
+              }
+              
+              // Format time in MM:SS
+              function formatTime(seconds) {
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return mins + ':' + (secs < 10 ? '0' : '') + secs;
+              }
+              
+              // Update progress bar
+              function updateProgress() {
+                if (!isPlaying || isPaused) return;
+                
+                const elapsed = (Date.now() - startTime + pausedTime) / 1000;
+                const progress = Math.min((elapsed / totalDuration) * 1000, 1000);
+                
+                progressSlider.value = progress;
+                currentTimeLabel.textContent = formatTime(elapsed);
+                
+                // Update current section display
+                const currentSectionIndex = getCurrentSection(currentChunkIndex);
+                currentSectionLabel.textContent = sections[currentSectionIndex]?.name || 'Playing';
+                
+                // Highlight active section button
+                const timelineBtns = timeline.querySelectorAll('.timeline-section');
+                timelineBtns.forEach((btn, index) => {
+                  btn.classList.toggle('active', index === currentSectionIndex);
+                });
+              }
+              
+              // Speak the next chunk
+              function speakChunk(index) {
+                if (index >= textChunks.length) {
+                  stop();
+                  return;
+                }
+                
+                currentChunkIndex = index;
+                const utterance = new SpeechSynthesisUtterance(textChunks[index]);
+                const voice = getBestVoice();
+                
+                if (voice) {
+                  utterance.voice = voice;
+                }
+                
+                utterance.lang = 'en-US';
+                utterance.rate = 1.0;  // Natural speed
+                utterance.pitch = 1.0; // Natural pitch
+                utterance.volume = 1.0;
+                
+                utterance.onend = () => {
+                  if (isPlaying && !isPaused) {
+                    speakChunk(index + 1);
+                  }
+                };
+                
+                utterance.onerror = (event) => {
+                  console.error('Speech error:', event);
+                  // Try next chunk on error
+                  if (isPlaying) {
+                    speakChunk(index + 1);
+                  }
+                };
+                
+                speechSynthesis.speak(utterance);
+              }
+              
+              // Play function
+              function play() {
+                if (!textChunks.length) {
+                  // First time playing - prepare all content
+                  const fullText = getAllText();
+                  textChunks = splitIntoChunks(fullText);
+                  
+                  // Estimate duration (150 words per minute average)
+                  const wordCount = fullText.split(' ').length;
+                  totalDuration = (wordCount / 150) * 60;
+                  totalTimeLabel.textContent = formatTime(totalDuration);
+                }
+                
+                if (isPaused) {
+                  // Resume from pause
+                  speechSynthesis.resume();
+                  pausedTime += Date.now() - startTime;
+                  startTime = Date.now();
+                  isPaused = false;
+                } else if (!isPlaying) {
+                  // Start fresh
+                  isPlaying = true;
+                  startTime = Date.now();
+                  pausedTime = 0;
+                  speakChunk(currentChunkIndex);
+                }
+                
+                if (!progressInterval) {
+                  progressInterval = setInterval(updateProgress, 100);
+                }
+                
+                updatePlayPauseButton();
+              }
+              
+              // Pause function
+              function pause() {
+                if (isPlaying) {
+                  speechSynthesis.pause();
+                  isPaused = true;
+                  pausedTime = (Date.now() - startTime);
+                  updatePlayPauseButton();
+                }
+              }
+              
+              // Stop function
+              function stop() {
+                speechSynthesis.cancel();
+                isPlaying = false;
+                isPaused = false;
+                currentChunkIndex = 0;
+                pausedTime = 0;
+                
+                if (progressInterval) {
+                  clearInterval(progressInterval);
+                  progressInterval = null;
+                }
+                
+                progressSlider.value = 0;
+                currentTimeLabel.textContent = '0:00';
+                currentSectionLabel.textContent = 'Ready to start';
+                
+                const timelineBtns = timeline.querySelectorAll('.timeline-section');
+                timelineBtns.forEach(btn => btn.classList.remove('active'));
+                
+                updatePlayPauseButton();
+              }
+              
+              // Update play/pause button
+              function updatePlayPauseButton() {
+                if (isPlaying && !isPaused) {
+                  playIcon.textContent = '⏸';
+                  playText.textContent = 'Pause';
+                } else {
+                  playIcon.textContent = '▶';
+                  playText.textContent = isPlaying ? 'Resume' : 'Play Full Treatise';
+                }
+              }
+              
+              // Seek to position
+              function seekToPosition(percent) {
+                const targetChunk = Math.floor((percent / 1000) * textChunks.length);
+                
+                if (isPlaying) {
+                  speechSynthesis.cancel();
+                  currentChunkIndex = targetChunk;
+                  const elapsed = (percent / 1000) * totalDuration;
+                  pausedTime = elapsed * 1000;
+                  startTime = Date.now();
+                  speakChunk(targetChunk);
+                } else {
+                  currentChunkIndex = targetChunk;
+                }
+              }
+              
+              // Jump to specific section
+              function jumpToSection(index) {
+                // Calculate which chunk starts this section
+                let chunkOffset = 0;
+                for (let i = 0; i < index; i++) {
+                  const sectionText = getTextContent(sections[i].id);
+                  const sectionChunks = splitIntoChunks(sectionText);
+                  chunkOffset += sectionChunks.length;
+                }
+                
+                if (isPlaying) {
+                  speechSynthesis.cancel();
+                  currentChunkIndex = chunkOffset;
+                  speakChunk(chunkOffset);
+                } else {
+                  currentChunkIndex = chunkOffset;
+                  play();
+                }
+              }
+              
+              // Event listeners
+              playPauseBtn.onclick = () => {
+                if (isPlaying && !isPaused) {
+                  pause();
+                } else {
+                  play();
+                }
+              };
+              
+              stopBtn.onclick = stop;
+              
+              progressSlider.oninput = () => {
+                seekToPosition(parseInt(progressSlider.value));
+              };
+              
+              // Create timeline buttons
               sections.forEach((section, index) => {
                 const btn = document.createElement('button');
                 btn.className = 'timeline-section';
@@ -1427,122 +1743,14 @@ export const renderer = jsxRenderer(({ children }) => {
                 btn.onclick = () => jumpToSection(index);
                 timeline.appendChild(btn);
               });
-
-              // Get DOM elements
-              const playPauseBtn = document.getElementById('playPauseBtn');
-              const stopBtn = document.getElementById('stopBtn');
-              const prevBtn = document.getElementById('prevBtn');
-              const nextBtn = document.getElementById('nextBtn');
-              const playIcon = document.getElementById('playIcon');
-              const playText = document.getElementById('playText');
-              const currentSectionLabel = document.getElementById('currentSection');
-
-              // Get or select the best male voice
-              function getMaleVoice() {
-                const voices = speechSynthesis.getVoices();
-                // Prefer natural-sounding US English male voices
-                const preferredVoices = [
-                  'Google US English Male',
-                  'Microsoft David - English (United States)',
-                  'Alex',
-                  'Google US English',
-                  'Microsoft Mark - English (United States)'
-                ];
-
-                for (const preferred of preferredVoices) {
-                  const voice = voices.find(v => v.name.includes(preferred));
-                  if (voice) return voice;
-                }
-
-                // Fallback: any male or default English voice
-                return voices.find(v => 
-                  v.lang.startsWith('en') && 
-                  (v.name.toLowerCase().includes('male') || v.name.toLowerCase().includes('david') || v.name.toLowerCase().includes('mark'))
-                ) || voices.find(v => v.lang.startsWith('en')) || voices[0];
+              
+              // Load voices
+              if (speechSynthesis.onvoiceschanged !== undefined) {
+                speechSynthesis.onvoiceschanged = getBestVoice;
               }
-
-              function getTextContent(sectionId) {
-                const section = document.getElementById(sectionId);
-                if (!section) return '';
-                
-                // Clone the section to avoid modifying the original
-                const clone = section.cloneNode(true);
-                
-                // Remove navigation, scripts, and style elements
-                const unwanted = clone.querySelectorAll('nav, script, style, .main-nav');
-                unwanted.forEach(el => el.remove());
-                
-                // Get text content
-                return clone.textContent
-                  .replace(/\\s+/g, ' ')
-                  .replace(/—/g, ' ')
-                  .trim();
-              }
-
-              function updateUI() {
-                const timelineBtns = timeline.querySelectorAll('.timeline-section');
-                timelineBtns.forEach((btn, index) => {
-                  btn.classList.toggle('active', index === currentSection);
-                });
-
-                currentSectionLabel.textContent = sections[currentSection]?.name || 'Not started';
-              }
-
-              function speak(text) {
-                if (!text) return;
-
-                // Cancel any ongoing speech
-                speechSynthesis.cancel();
-
-                const utterance = new SpeechSynthesisUtterance(text);
-                const voice = getMaleVoice();
-                
-                if (voice) {
-                  utterance.voice = voice;
-                }
-                
-                utterance.lang = 'en-US';
-                utterance.rate = 1.0;
-                utterance.pitch = 1.0;
-                utterance.volume = 1.0;
-
-                utterance.onend = () => {
-                  // Auto-advance to next section
-                  if (currentSection < sections.length - 1) {
-                    currentSection++;
-                    updateUI();
-                    const nextText = getTextContent(sections[currentSection].id);
-                    speak(nextText);
-                  } else {
-                    // Finished all sections
-                    stop();
-                  }
-                };
-
-                utterance.onerror = (event) => {
-                  console.error('Speech error:', event);
-                  stop();
-                };
-
-                currentUtterance = utterance;
-                speechSynthesis.speak(utterance);
-                isPaused = false;
-                updatePlayPauseButton();
-              }
-
-              function updatePlayPauseButton() {
-                if (speechSynthesis.speaking && !speechSynthesis.paused) {
-                  playIcon.textContent = '⏸';
-                  playText.textContent = 'Pause';
-                } else {
-                  playIcon.textContent = '▶';
-                  playText.textContent = 'Play';
-                }
-              }
-
-              function play() {
-                if (speechSynthesis.paused) {
-                  speechSynthesis.resume();
+              
+              // Initialize
+              getBestVoice();
                   isPaused = false;
                 } else if (!speechSynthesis.speaking) {
                   const text = getTextContent(sections[currentSection].id);
