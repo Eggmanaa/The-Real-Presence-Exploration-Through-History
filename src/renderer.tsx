@@ -90,8 +90,9 @@ export const renderer = jsxRenderer(({ children }) => {
           .hero {
             background-image: url('https://page.gensparksite.com/v1/base64_upload/24b027766fa2a263abe5628c0a4f04d9');
             background-size: cover;
-            background-position: center;
+            background-position: center top;
             background-repeat: no-repeat;
+            background-color: #7C1D2E;
             color: var(--white);
             padding: 6rem 2rem;
             text-align: center;
@@ -102,6 +103,7 @@ export const renderer = jsxRenderer(({ children }) => {
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
           }
 
           .hero-overlay {
@@ -110,8 +112,10 @@ export const renderer = jsxRenderer(({ children }) => {
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(162, 9, 39, 0.60) 0%, rgba(139, 7, 33, 0.75) 100%);
+            background: linear-gradient(160deg, rgba(124, 29, 46, 0.35) 0%, rgba(155, 34, 38, 0.6) 60%, rgba(44, 24, 13, 0.65) 100%);
             z-index: 1;
+            mix-blend-mode: multiply;
+            pointer-events: none;
           }
 
           .hero-content {
@@ -119,6 +123,13 @@ export const renderer = jsxRenderer(({ children }) => {
             z-index: 2;
             max-width: 1000px;
             margin: 0 auto;
+            background: rgba(12, 9, 15, 0.55);
+            border: 1px solid rgba(201, 169, 97, 0.45);
+            padding: 2rem 2.5rem;
+            border-radius: 18px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
           }
 
           .hero-content h1 {
@@ -959,6 +970,13 @@ export const renderer = jsxRenderer(({ children }) => {
               min-height: 300px;
             }
 
+            .hero-content {
+              padding: 1.5rem;
+              border-radius: 12px;
+              background: rgba(12, 9, 15, 0.6);
+              box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+            }
+
             .hero-content h1 {
               font-size: 1.75rem;
               line-height: 1.3;
@@ -1209,6 +1227,13 @@ export const renderer = jsxRenderer(({ children }) => {
             .hero {
               padding: 4rem 1.5rem;
               min-height: 350px;
+            }
+
+            .hero-content {
+              padding: 1.75rem 2rem;
+              border-radius: 16px;
+              background: rgba(12, 9, 15, 0.58);
+              box-shadow: 0 12px 30px rgba(0, 0, 0, 0.42);
             }
 
             .hero-content h1 {
