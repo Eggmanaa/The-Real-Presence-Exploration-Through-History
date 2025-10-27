@@ -1578,6 +1578,17 @@ app.get('/', (c) => {
               </li>
             </ol>
 
+            <h3>The Call to Faith</h3>
+            <p>
+              Like the disciples in John 6, we're presented with a teaching that transcends natural understanding. 
+              We can respond in three ways:
+            </p>
+            <ol>
+              <li><strong>Reject it as impossible</strong> (like the crowd in John 6:52)</li>
+              <li><strong>Find it too hard and walk away</strong> (like the disciples in John 6:66)</li>
+              <li><strong>Accept it through faith in Christ</strong> (like Peter in John 6:68-69)</li>
+            </ol>
+            
             <blockquote className="final-quote">
               "Lord, to whom shall we go? You have the words of eternal life. We have come to believe and to know 
               that you are the Holy One of God."
@@ -1587,13 +1598,13 @@ app.get('/', (c) => {
             <p>
               The Real Presence is not a peripheral doctrine but the beating heart of Christian worship. It's where 
               heaven touches earth, where the Incarnation continues, where we are fed with the Bread of Life. 
-              Transubstantiation is simply a theological framework for understanding what Christ promised and what 
-              Christians have always believed: "This is my body... This is my blood."
+              Transubstantiation is simply the Church's careful explanation of what Christ promised and what the 
+              Church has always believed: "This is my body... This is my blood."
             </p>
 
             <p className="closing">
-              May this exploration of Scripture, history, and reason lead us all to deeper faith in—and more 
-              profound reverence for—the Real Presence of our Lord Jesus Christ in the Eucharist.
+              May this exploration of Scripture, Tradition, and reason lead us all to deeper faith in—and more 
+              profound reverence for—the Real Presence of our Lord in the Eucharist.
             </p>
           </div>
         </section>
@@ -1607,6 +1618,23 @@ app.get('/', (c) => {
               <li><strong>Jesus and the Jewish Roots of the Eucharist</strong> by Brant Pitre — An excellent scholarly 
               exploration of how Jewish Passover traditions illuminate Christ's institution of the Eucharist and the 
               early Christian understanding of the Real Presence.</li>
+            </ul>
+
+            <h3>Primary Sources</h3>
+            <p>The following primary sources are quoted throughout this treatise and provide direct testimony to the early Church's belief in the Real Presence:</p>
+            <ul className="resources-list">
+              <li><strong>St. Ignatius of Antioch</strong> — <em>Letter to the Smyrnaeans</em> and <em>Letter to the Romans</em> (c. 110 AD)</li>
+              <li><strong>St. Justin Martyr</strong> — <em>First Apology</em> (c. 155 AD)</li>
+              <li><strong>St. Irenaeus of Lyons</strong> — <em>Against Heresies</em> (c. 189 AD)</li>
+              <li><strong>Tertullian</strong> — <em>On the Resurrection of the Flesh</em> (c. 210 AD)</li>
+              <li><strong>Origen of Alexandria</strong> — <em>Homilies on Exodus</em> (c. 248 AD)</li>
+              <li><strong>St. Cyprian of Carthage</strong> — <em>On the Lapsed</em> and <em>Epistles</em> (c. 251 AD)</li>
+              <li><strong>St. Cyril of Jerusalem</strong> — <em>Mystagogical Catecheses</em> (c. 350 AD)</li>
+              <li><strong>St. Basil the Great</strong> — <em>Letter to Caesaria</em> (c. 372 AD)</li>
+              <li><strong>St. Ambrose of Milan</strong> — <em>On the Mysteries</em> (c. 390 AD)</li>
+              <li><strong>St. Augustine of Hippo</strong> — <em>Explanations of the Psalms</em> and <em>Sermons</em> (c. 400 AD)</li>
+              <li><strong>St. John Chrysostom</strong> — <em>Homilies on John</em> and <em>Homilies on 1 Corinthians</em> (c. 400 AD)</li>
+              <li><strong>St. John of Damascus</strong> — <em>Exposition of the Orthodox Faith</em> (c. 749 AD)</li>
             </ul>
           </div>
         </section>
