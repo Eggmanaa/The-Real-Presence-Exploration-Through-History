@@ -927,8 +927,8 @@ app.get('/', (c) => {
               <h4>The Definition</h4>
               <p>
                 "The change of the whole substance of bread into the substance of the Body of Christ and of the 
-                whole substance of wine into the substance of the Blood of Christ. This change the holy Catholic 
-                Church has fittingly and properly called transubstantiation."
+                whole substance of wine into the substance of the Blood of Christ. This change has been fittingly 
+                and properly called transubstantiation."
                 <cite>— Council of Trent, Session 13</cite>
               </p>
             </div>
@@ -1276,25 +1276,21 @@ app.get('/', (c) => {
                 <h4>The Critical Point: Nothing New</h4>
                 <p>
                   Trent did not invent new doctrine. The Council fathers explicitly stated they were defining what 
-                  had "always been believed in the Church of God." Every doctrine Trent proclaimed can be traced 
+                  had "always been believed" from the beginning. Every doctrine Trent proclaimed can be traced 
                   directly through the medieval theologians, back through the Church Fathers, to the Apostles 
                   themselves.
                 </p>
                 <p className="insight">
-                  <strong>The Nature of the Challenge:</strong> Protestant reformers claimed they were recovering 
-                  "biblical Christianity" from medieval corruption. But Trent demonstrated that the Catholic doctrine 
-                  of the Real Presence was not a late medieval innovation but the consistent, unbroken teaching of 
-                  the Church from the beginning. The question was not "Is this in Scripture?" (Trent showed it 
-                  clearly was) but rather "Will we accept what Scripture and Tradition consistently teach, or will 
-                  we reinterpret them according to our own judgment?"
+                  <strong>The Historical Reality:</strong> The evidence demonstrates that the Real Presence was not 
+                  a late medieval innovation but the consistent, unbroken teaching from the beginning. The question 
+                  was not "Is this in Scripture?" (the evidence clearly shows it is) but rather "Will we accept 
+                  what Scripture and early Christian Tradition consistently teach?"
                 </p>
               </div>
               
               <p>
-                The Council of Trent's definitions on the Eucharist remain binding Catholic doctrine to this day. 
-                They represent not innovation but the Church's solemn, definitive articulation of the apostolic 
-                faith concerning the greatest of all mysteries: the Real Presence of Jesus Christ in the Most Holy 
-                Eucharist.
+                The Council of Trent's definitions represent the historic Christian understanding of the apostolic 
+                faith concerning the greatest of all mysteries: the Real Presence of Jesus Christ in the Eucharist.
               </p>
             </div>
           </div>
@@ -1475,10 +1471,9 @@ app.get('/', (c) => {
               the bread and wine—truly present but without the substance of the bread and wine ceasing to exist.
             </p>
             <p className="insight">
-              Even Luther's affirmation of Real Presence, however, differed from Catholic teaching by rejecting 
-              transubstantiation and the sacrificial nature of the Mass. His view represents a middle position 
-              between Catholic and Reformed theology but still marks a departure from the consistent teaching 
-              of the previous fifteen centuries.
+              Even Luther's affirmation of Real Presence, however, differed from the historic understanding by 
+              rejecting transubstantiation and the sacrificial nature of the Mass. His view represents a middle 
+              position but still marks a departure from the consistent teaching of the previous fifteen centuries.
             </p>
           </div>
 
@@ -1583,33 +1578,6 @@ app.get('/', (c) => {
               </li>
             </ol>
 
-            <h3>Questions for Reflection</h3>
-            <div className="reflection-box">
-              <p>For our Protestant brothers and sisters who hold to a symbolic view:</p>
-              <ul>
-                <li>If Jesus intended a symbol, why did He let disciples leave rather than clarify?</li>
-                <li>Why did He switch to the graphic verb trōgein when challenged?</li>
-                <li>Why does not a single Church Father in 1,500 years teach your view?</li>
-                <li>Why did Ignatius, who learned from John, link it to the Incarnation?</li>
-                <li>Why did the early Church handle particles with such extreme care?</li>
-                <li>How do you explain Paul's teaching that unworthy reception profanes Christ's body?</li>
-                <li>When did the "symbolic view" first appear in Church history?</li>
-                <li>If the entire early Church was wrong about their central act of worship, how can we trust 
-                their testimony about anything—including which books belong in the Bible?</li>
-              </ul>
-            </div>
-
-            <h3>The Call to Faith</h3>
-            <p>
-              Like the disciples in John 6, we're presented with a teaching that transcends natural understanding. 
-              We can respond in three ways:
-            </p>
-            <ol>
-              <li><strong>Reject it as impossible</strong> (like the crowd in John 6:52)</li>
-              <li><strong>Find it too hard and walk away</strong> (like the disciples in John 6:66)</li>
-              <li><strong>Accept it through faith in Christ</strong> (like Peter in John 6:68-69)</li>
-            </ol>
-            
             <blockquote className="final-quote">
               "Lord, to whom shall we go? You have the words of eternal life. We have come to believe and to know 
               that you are the Holy One of God."
@@ -1619,44 +1587,26 @@ app.get('/', (c) => {
             <p>
               The Real Presence is not a peripheral doctrine but the beating heart of Christian worship. It's where 
               heaven touches earth, where the Incarnation continues, where we are fed with the Bread of Life. 
-              Transubstantiation is simply the Church's careful explanation of what Christ promised and what the 
-              Church has always believed: "This is my body... This is my blood."
+              Transubstantiation is simply a theological framework for understanding what Christ promised and what 
+              Christians have always believed: "This is my body... This is my blood."
             </p>
 
             <p className="closing">
-              May this exploration of Scripture, Tradition, and reason lead us all to deeper faith in—and more 
-              profound reverence for—the Real Presence of our Lord in the Blessed Sacrament.
+              May this exploration of Scripture, history, and reason lead us all to deeper faith in—and more 
+              profound reverence for—the Real Presence of our Lord Jesus Christ in the Eucharist.
             </p>
           </div>
         </section>
 
         <section id="resources" className="section">
-          <h2>Further Reading & Resources</h2>
+          <h2>Further Reading</h2>
           
           <div className="card">
-            <h3>Recommended Books</h3>
+            <h3>Recommended Book</h3>
             <ul className="resources-list">
-              <li><strong>Jesus and the Jewish Roots of the Eucharist</strong> by Brant Pitre</li>
-              <li><strong>The Lamb's Supper</strong> by Scott Hahn</li>
-              <li><strong>The Hidden Manna</strong> by James T. O'Connor</li>
-              <li><strong>Corpus Christi: An Encyclopedia of the Eucharist</strong> edited by Michael O'Carroll</li>
-            </ul>
-
-            <h3>Key Church Documents</h3>
-            <ul className="resources-list">
-              <li>Catechism of the Catholic Church, paragraphs 1322-1419</li>
-              <li>Council of Trent, Session 13 (On the Eucharist)</li>
-              <li>Pope Paul VI, <em>Mysterium Fidei</em> (1965)</li>
-              <li>Pope John Paul II, <em>Ecclesia de Eucharistia</em> (2003)</li>
-            </ul>
-
-            <h3>Primary Sources</h3>
-            <ul className="resources-list">
-              <li>The Letters of St. Ignatius of Antioch</li>
-              <li>St. Justin Martyr's First Apology</li>
-              <li>St. Irenaeus, <em>Against Heresies</em></li>
-              <li>St. Cyril of Jerusalem, <em>Mystagogical Catecheses</em></li>
-              <li>St. Augustine, <em>Explanations of the Psalms</em></li>
+              <li><strong>Jesus and the Jewish Roots of the Eucharist</strong> by Brant Pitre — An excellent scholarly 
+              exploration of how Jewish Passover traditions illuminate Christ's institution of the Eucharist and the 
+              early Christian understanding of the Real Presence.</li>
             </ul>
           </div>
         </section>
