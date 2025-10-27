@@ -173,12 +173,14 @@ Recommended reading path for maximum impact:
 
 ### Recent Updates (2025-10-27)
 
-**Latest Enhancement - Beautiful Hero Banner:**
-- **🎨 Religious Artwork Hero**: Added Raphael's "Disputation of the Holy Sacrament" as hero background
-- **Visual Theology**: Renaissance masterpiece depicts heavenly scene with Eucharistic symbolism
-- **Enhanced Design**: Overlay gradient ensures text readability while showcasing the art
+**Latest Enhancement - High-Resolution Wikimedia Commons Hero Image:**
+- **🎨 Authentic Raphael Artwork**: Downloaded high-resolution (2.5 MB, 1845×1459 px) version of "Disputation of the Holy Sacrament" from Wikimedia Commons
+- **Source**: https://commons.wikimedia.org/wiki/File:Sanzio,_Raffaello_-_Disputa_del_Sacramento_-_1508-1511_-_hi_res.jpg
+- **License**: Public Domain - faithful reproduction of Renaissance fresco (1508-1511) from Vatican's Stanza della Segnatura
+- **Visual Theology**: Renaissance masterpiece depicts heavenly scene with Christ, the Trinity, and Eucharistic symbolism
+- **Enhanced Design**: Reduced overlay opacity (60-75%) to showcase the beautiful artwork while maintaining text readability
 - **Responsive Layout**: Optimized for all screen sizes with proper scaling
-- **Dramatic Presentation**: Increased hero height creates powerful first impression
+- **Dramatic Presentation**: 450px minimum hero height creates powerful first impression
 - **Perfect Fit**: Artwork perfectly matches the site's theological content about the Real Presence
 
 **Previous Change - Audio Player Removed:**
