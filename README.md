@@ -167,11 +167,22 @@ Recommended reading path for maximum impact:
 - **Platform**: Cloudflare Pages
 - **Project Name**: therealpresence
 - **Production URL**: https://therealpresence.pages.dev
-- **Latest Deployment**: https://0d0d5816.therealpresence.pages.dev
+- **Latest Deployment**: https://98fe8f44.therealpresence.pages.dev
 - **Deployment Date**: 2025-10-27
 - **Status**: ✅ Live and Active
 
 ### Recent Updates (2025-10-27)
+
+**Content Enhancements:**
+- **📖 Didache Reference Added**: Introduction now mentions the Didache as the source of the term "Eucharist" used from the Church's beginning
+- **📅 Extended Timeline**: Changed "through 1215 AD" to "through 1517 AD" to reflect the full scope of unbroken Church Fathers testimony through the Reformation
+- **🐑 Expanded Passover Lamb Section**: 
+  - Added full Exodus 12:3-5, 7, 8a, 10, 13 passage with complete instructions
+  - In-depth commentary on household sizing of lamb and requirement for complete consumption
+  - Theological analysis of why remains must be burned (emphasizing covenant participation through eating)
+  - Strengthened connection between Passover pattern and Eucharistic fulfillment
+
+**Technical Improvements:**
 - **🎉 Mobile Navigation Fix**: Implemented collapsible hamburger menu for iPhone and mobile devices
   - Navigation no longer covers most of the screen on small devices
   - Smooth toggle animation with full-width links for easy tapping
