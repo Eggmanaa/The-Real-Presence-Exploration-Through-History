@@ -167,15 +167,21 @@ Recommended reading path for maximum impact:
 - **Platform**: Cloudflare Pages
 - **Project Name**: therealpresence
 - **Production URL**: https://therealpresence.pages.dev
-- **Latest Deployment**: https://092d3c74.therealpresence.pages.dev
+- **Latest Deployment**: https://e1fd8897.therealpresence.pages.dev
 - **Deployment Date**: 2025-10-27
 - **Status**: ✅ Live and Active
 
 ### Recent Updates (2025-10-27)
 
-**Latest Enhancement - Complete Audio Player Redesign with Continuous Playback:**
+**Latest Enhancement - Voice Selector for Audio Quality Control:**
+- **🎙️ Voice Selector Dropdown**: Choose from all available English voices on your device/browser
+- **⭐ Recommended Voices**: Top natural-sounding voices marked (Samantha, Alex, Google US English)
+- **🔄 Instant Voice Change**: Switch voices mid-playback - automatically restarts with new voice
+- **📱 Mobile-Responsive**: Voice selector adapts to mobile screens for easy selection
+- **🎯 Quality Control**: Find the best non-robotic voice for your specific browser/device
+
+**Previous Audio Player Enhancements:**
 - **🔊 Continuous Playback**: Plays entire treatise as one uninterrupted audio stream (instead of section-by-section)
-- **🎯 Natural Voice**: Auto-selects best natural-sounding voice (Samantha, Alex, Google US English)
 - **⏯️ Full Playback Controls**: Play/Pause, Stop, and seekable progress bar
 - **📊 Progress Tracking**: Real-time progress display with current/total time (MM:SS format)
 - **🎚️ Seekable Progress Bar**: Click or drag slider to jump to any position in the treatise
