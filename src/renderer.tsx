@@ -110,7 +110,7 @@ export const renderer = jsxRenderer(({ children }) => {
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(162, 9, 39, 0.85) 0%, rgba(139, 7, 33, 0.90) 100%);
+            background: linear-gradient(135deg, rgba(162, 9, 39, 0.60) 0%, rgba(139, 7, 33, 0.75) 100%);
             z-index: 1;
           }
 
