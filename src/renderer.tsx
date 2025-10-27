@@ -676,6 +676,9 @@ export const renderer = jsxRenderer(({ children }) => {
             z-index: 1000;
             display: none;
             border-top: 3px solid var(--gold);
+            max-height: 60vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
           }
 
           .audio-player.active {
@@ -987,46 +990,59 @@ export const renderer = jsxRenderer(({ children }) => {
 
             /* Audio Player - Mobile Optimizations */
             .audio-player {
-              width: 95%;
-              bottom: 1rem;
-              left: 2.5%;
-              padding: 1rem;
-              max-height: 80vh;
+              width: 92%;
+              bottom: 0.75rem;
+              left: 4%;
+              padding: 0.75rem;
+              max-height: 45vh;
               overflow-y: auto;
+              border-radius: 12px;
+            }
+
+            .audio-controls {
+              padding: 0;
             }
 
             .audio-controls-top {
               flex-direction: column;
-              gap: 0.5rem;
+              gap: 0.4rem;
             }
 
             .audio-button {
               width: 100%;
               justify-content: center;
-              padding: 0.75rem;
-              font-size: 0.95rem;
+              padding: 0.625rem;
+              font-size: 0.875rem;
+              min-height: 40px;
             }
 
             .audio-button.primary {
-              font-size: 1.05rem;
-              padding: 0.875rem;
+              font-size: 0.95rem;
+              padding: 0.7rem;
             }
 
             .audio-status {
               width: 100%;
               text-align: center;
-              font-size: 0.9rem;
+              font-size: 0.85rem;
+              padding: 0.4rem 0;
+            }
+
+            .audio-status strong {
+              font-size: 0.8rem;
             }
 
             .audio-timeline {
               grid-template-columns: repeat(2, 1fr);
-              gap: 0.4rem;
+              gap: 0.35rem;
+              padding: 0.5rem 0 0.25rem 0;
             }
 
             .timeline-section {
-              font-size: 0.8rem;
-              padding: 0.5rem 0.4rem;
-              min-height: 40px;
+              font-size: 0.75rem;
+              padding: 0.4rem 0.3rem;
+              min-height: 38px;
+              line-height: 1.2;
             }
 
             .audio-toggle-btn {
@@ -1124,19 +1140,22 @@ export const renderer = jsxRenderer(({ children }) => {
 
             /* Audio Player - Tablet Optimizations */
             .audio-player {
-              width: 90%;
-              left: 5%;
-              padding: 1.25rem;
+              width: 88%;
+              left: 6%;
+              padding: 1rem;
+              max-height: 55vh;
+              border-radius: 10px;
             }
 
             .audio-timeline {
               grid-template-columns: repeat(3, 1fr);
-              gap: 0.5rem;
+              gap: 0.45rem;
             }
 
             .timeline-section {
-              font-size: 0.85rem;
-              padding: 0.6rem 0.7rem;
+              font-size: 0.825rem;
+              padding: 0.55rem 0.65rem;
+              min-height: 40px;
             }
           }
 
