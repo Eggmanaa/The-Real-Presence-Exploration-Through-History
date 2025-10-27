@@ -1623,6 +1623,7 @@ app.get('/', (c) => {
             <h3>Primary Sources</h3>
             <p>The following primary sources are quoted throughout this treatise and provide direct testimony to the early Church's belief in the Real Presence:</p>
             <ul className="resources-list">
+              <li><strong>The Didache</strong> — <em>The Teaching of the Twelve Apostles</em> (c. 50-125 AD)</li>
               <li><strong>St. Ignatius of Antioch</strong> — <em>Letter to the Smyrnaeans</em> and <em>Letter to the Romans</em> (c. 110 AD)</li>
               <li><strong>St. Justin Martyr</strong> — <em>First Apology</em> (c. 155 AD)</li>
               <li><strong>St. Irenaeus of Lyons</strong> — <em>Against Heresies</em> (c. 189 AD)</li>
