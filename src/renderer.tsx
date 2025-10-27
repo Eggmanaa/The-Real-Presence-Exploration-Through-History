@@ -110,7 +110,7 @@ export const renderer = jsxRenderer(({ children }) => {
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(162, 9, 39, 0.60) 0%, rgba(139, 7, 33, 0.75) 100%);
+            background: linear-gradient(135deg, rgba(162, 9, 39, 0.30) 0%, rgba(139, 7, 33, 0.40) 100%);
             z-index: 1;
           }
 
@@ -125,7 +125,7 @@ export const renderer = jsxRenderer(({ children }) => {
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 4px 4px 12px rgba(0,0,0,0.6);
             line-height: 1.2;
           }
 
@@ -135,7 +135,7 @@ export const renderer = jsxRenderer(({ children }) => {
             max-width: 850px;
             margin: 0 auto;
             opacity: 1;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.8), 3px 3px 10px rgba(0,0,0,0.6);
             line-height: 1.5;
           }
 
