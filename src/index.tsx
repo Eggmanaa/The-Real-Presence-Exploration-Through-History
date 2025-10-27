@@ -40,7 +40,9 @@ app.get('/', (c) => {
             <p className="lead">
               For centuries, Christians have confessed that in the Eucharist, they receive not merely bread and wine, 
               but the true Body and Blood of Jesus Christ. This doctrine—known as the Real Presence—stands at the 
-              very heart of Christian worship and has been the consistent teaching of the Church from its earliest days.
+              very heart of Christian worship and has been the consistent teaching of the Church from its earliest days. 
+              The phrase "the Eucharist" comes from the Didache, an early collection of the apostles' teachings, and 
+              has been used in the Church from the start.
             </p>
             <p>
               This treatise presents a comprehensive case for the Real Presence and the theological understanding of 
@@ -50,7 +52,7 @@ app.get('/', (c) => {
               <li><strong>Scriptural Foundation:</strong> From Old Testament prefigurements to Christ's explicit 
               teaching in John 6 and the institution at the Last Supper</li>
               <li><strong>Apostolic Witness:</strong> The unbroken testimony of the Church Fathers from the 
-              first century through 1215 AD</li>
+              first century through 1517 AD</li>
               <li><strong>Doctrinal Development:</strong> The organic growth from lived practice to theological 
               precision in the doctrine of transubstantiation</li>
             </ul>
@@ -121,21 +123,46 @@ app.get('/', (c) => {
           <div className="card">
             <h3>4. The Passover Lamb</h3>
             <div className="scripture-box">
-              <p className="verse">"They shall eat the flesh that night, roasted on the fire... In this manner you 
-              shall eat it: with your belt fastened, your sandals on your feet, and your staff in your hand." 
-              — Exodus 12:8, 11</p>
+              <p className="verse">"Tell the whole congregation of Israel that on the tenth of this month they are to 
+              take a lamb for each family, a lamb for each household. If a household is too small for a whole lamb, it 
+              shall join its closest neighbor in obtaining one; the lamb shall be divided in proportion to the number 
+              of people who eat of it. Your lamb shall be without blemish, a year-old male; you may take it from the 
+              sheep or from the goats... They shall take some of the blood and put it on the two doorposts and the 
+              lintel of the houses in which they eat it. They shall eat the lamb that same night... You shall let none 
+              of it remain until the morning; anything that remains until the morning you shall burn... The blood shall 
+              be a sign for you on the houses where you live: when I see the blood, I will pass over you, and no plague 
+              shall destroy you when I strike the land of Egypt." — Exodus 12:3-5, 7, 8a, 10, 13</p>
             </div>
             <p>
               The original Passover required an unblemished lamb whose blood, applied to the doorposts, saved Israel 
               from death. But the sacrifice wasn't complete with the lamb's death—God commanded the flesh must be 
-              eaten by the covenant family.
+              eaten by the covenant family. The instructions are remarkably specific and reveal profound theological 
+              principles.
+            </p>
+            <p>
+              Notice God's concern that the lamb be properly proportioned to the household: "If a household is too 
+              small for a whole lamb, it shall join its closest neighbor in obtaining one; the lamb shall be divided 
+              in proportion to the number of people who eat of it." This wasn't merely practical advice—it ensured 
+              complete consumption. The command continues: "You shall let none of it remain until the morning; anything 
+              that remains until the morning you shall burn." Why this emphasis on total consumption? Because the lamb's 
+              saving power wasn't accessed through its death alone, but through eating its flesh. The blood on the 
+              doorposts marked participation in the covenant, but eating the lamb unified the family as covenant members.
+            </p>
+            <p>
+              This establishes a pattern that echoes through Scripture: covenant participation requires consumption of 
+              the sacrifice. The family was to size the lamb correctly so that nothing remained—every bit was to be 
+              consumed by the covenant community that very night. What couldn't be eaten was burned, never left to decay, 
+              for this was holy food that mediated God's saving action.
             </p>
             <p className="insight">
               <strong>The Pattern Established:</strong> This creates a biblical principle: participation in covenant 
-              sacrifice requires physical consumption. St. Paul explicitly calls Christ "our paschal lamb" 
-              (1 Corinthians 5:7). Therefore, when Jesus institutes the memorial of His sacrifice, the command to 
-              eat His Body and drink His Blood is the necessary fulfillment of the Passover pattern, not an optional 
-              symbol.
+              sacrifice requires physical consumption of the victim. The careful sizing of the lamb, the mandate for 
+              complete consumption, the prohibition against letting it remain until morning—all emphasize that the 
+              sacrifice is completed not just by death and blood, but by eating. St. Paul explicitly calls Christ "our 
+              paschal lamb" (1 Corinthians 5:7). Therefore, when Jesus institutes the memorial of His sacrifice, the 
+              command to eat His Body and drink His Blood is the necessary fulfillment of the Passover pattern, not an 
+              optional symbol. Just as the Israelites had to eat the lamb to participate in the covenant of deliverance, 
+              so we must eat Christ's flesh to participate in the New Covenant of eternal salvation.
             </p>
           </div>
         </section>
