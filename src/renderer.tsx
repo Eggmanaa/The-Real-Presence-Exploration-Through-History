@@ -752,6 +752,43 @@ export const renderer = jsxRenderer(({ children }) => {
             margin-bottom: 0.25rem;
           }
 
+          .voice-selector-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+          }
+
+          .voice-selector-container label {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+            white-space: nowrap;
+          }
+
+          .voice-selector {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+            padding: 0.5rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            min-height: 40px;
+          }
+
+          .voice-selector:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.15);
+          }
+
+          .voice-selector option {
+            background: var(--burgundy);
+            color: var(--white);
+          }
+
           .progress-container {
             display: flex;
             flex-direction: column;
@@ -1092,6 +1129,25 @@ export const renderer = jsxRenderer(({ children }) => {
 
             .audio-status strong {
               font-size: 0.8rem;
+            }
+
+            .voice-selector-container {
+              flex-direction: column;
+              align-items: stretch;
+              gap: 0.3rem;
+              margin-top: 0.4rem;
+            }
+
+            .voice-selector-container label {
+              font-size: 0.8rem;
+              text-align: left;
+            }
+
+            .voice-selector {
+              width: 100%;
+              font-size: 0.8rem;
+              padding: 0.4rem;
+              min-height: 36px;
             }
 
             .audio-timeline {
@@ -1475,6 +1531,12 @@ export const renderer = jsxRenderer(({ children }) => {
                   '<div class="audio-status">' +
                     '<strong>Now Playing:</strong>' +
                     '<span id="currentSection">Ready to start</span>' +
+                    '<div class="voice-selector-container">' +
+                      '<label for="voiceSelect">Voice:</label>' +
+                      '<select id="voiceSelect" class="voice-selector">' +
+                        '<option value="">Loading voices...</option>' +
+                      '</select>' +
+                    '</div>' +
                   '</div>' +
                 '</div>' +
                 '<div class="progress-container">' +
@@ -1504,9 +1566,84 @@ export const renderer = jsxRenderer(({ children }) => {
               const currentTimeLabel = document.getElementById('currentTime');
               const totalTimeLabel = document.getElementById('totalTime');
               const timeline = document.getElementById('audioTimeline');
+              const voiceSelect = document.getElementById('voiceSelect');
 
-              // Get the best natural-sounding voice
+              // Selected voice storage
+              let selectedVoice = null;
+
+              // Populate voice selector with available voices
+              function populateVoiceSelector() {
+                const voices = speechSynthesis.getVoices();
+                
+                if (voices.length === 0) {
+                  return; // Voices not loaded yet
+                }
+
+                // Filter to English voices only
+                const englishVoices = voices.filter(v => v.lang.startsWith('en'));
+                
+                // Clear existing options
+                voiceSelect.innerHTML = '';
+                
+                // Priority list for recommended voices
+                const recommendedVoices = [
+                  'Samantha',  // macOS - most natural female
+                  'Alex',      // macOS - natural male
+                  'Google US English',  // Chrome - very natural
+                  'Google UK English Female',
+                  'Google UK English Male',
+                  'Microsoft David - English (United States)',
+                  'Microsoft Zira - English (United States)'
+                ];
+
+                // Add recommended voices first
+                const addedVoices = new Set();
+                recommendedVoices.forEach(preferred => {
+                  const voice = englishVoices.find(v => v.name === preferred || v.name.includes(preferred));
+                  if (voice && !addedVoices.has(voice.name)) {
+                    const option = document.createElement('option');
+                    option.value = voice.name;
+                    option.textContent = voice.name + ' ⭐ (Recommended)';
+                    option.dataset.lang = voice.lang;
+                    voiceSelect.appendChild(option);
+                    addedVoices.add(voice.name);
+                  }
+                });
+
+                // Add separator if we have recommended voices
+                if (addedVoices.size > 0 && englishVoices.length > addedVoices.size) {
+                  const separator = document.createElement('option');
+                  separator.disabled = true;
+                  separator.textContent = '──────────────────';
+                  voiceSelect.appendChild(separator);
+                }
+
+                // Add all other English voices
+                englishVoices.forEach(voice => {
+                  if (!addedVoices.has(voice.name)) {
+                    const option = document.createElement('option');
+                    option.value = voice.name;
+                    option.textContent = voice.name + ' (' + voice.lang + ')';
+                    option.dataset.lang = voice.lang;
+                    voiceSelect.appendChild(option);
+                  }
+                });
+
+                // Set initial selection to first recommended voice
+                if (voiceSelect.options.length > 0) {
+                  const firstVoice = voices.find(v => v.name === voiceSelect.options[0].value);
+                  selectedVoice = firstVoice;
+                }
+              }
+
+              // Get the selected voice or best available
               function getBestVoice() {
+                // If user has selected a voice, use it
+                if (selectedVoice) {
+                  return selectedVoice;
+                }
+
+                // Otherwise find the best voice automatically
                 const voices = speechSynthesis.getVoices();
                 
                 // Priority list for most natural-sounding voices
@@ -1797,13 +1934,37 @@ export const renderer = jsxRenderer(({ children }) => {
                 timeline.appendChild(btn);
               });
 
-              // Load voices
+              // Voice selector change handler
+              voiceSelect.onchange = () => {
+                const voices = speechSynthesis.getVoices();
+                const selected = voices.find(v => v.name === voiceSelect.value);
+                if (selected) {
+                  selectedVoice = selected;
+                  
+                  // If currently playing, restart with new voice
+                  if (isPlaying) {
+                    const currentPosition = currentChunkIndex;
+                    speechSynthesis.cancel();
+                    speakChunk(currentPosition);
+                  }
+                }
+              };
+
+              // Load voices and populate selector
+              function loadVoices() {
+                populateVoiceSelector();
+                getBestVoice();
+              }
+
               if (speechSynthesis.onvoiceschanged !== undefined) {
-                speechSynthesis.onvoiceschanged = getBestVoice;
+                speechSynthesis.onvoiceschanged = loadVoices;
               }
 
               // Initialize
-              getBestVoice();
+              loadVoices();
+              
+              // Fallback: try loading voices after a short delay
+              setTimeout(loadVoices, 100);
             }
           `
         }} />
