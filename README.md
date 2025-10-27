@@ -167,7 +167,7 @@ Recommended reading path for maximum impact:
 - **Platform**: Cloudflare Pages
 - **Project Name**: therealpresence
 - **Production URL**: https://therealpresence.pages.dev
-- **Latest Deployment**: https://77486647.therealpresence.pages.dev
+- **Latest Deployment**: https://c79623c7.therealpresence.pages.dev
 - **Deployment Date**: 2025-10-27
 - **Status**: ✅ Live and Active
 
