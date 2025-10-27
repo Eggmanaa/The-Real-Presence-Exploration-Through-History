@@ -167,16 +167,23 @@ Recommended reading path for maximum impact:
 - **Platform**: Cloudflare Pages
 - **Project Name**: therealpresence
 - **Production URL**: https://therealpresence.pages.dev
-- **Latest Deployment**: https://5e1a7d19.therealpresence.pages.dev
+- **Latest Deployment**: https://c1b10f85.therealpresence.pages.dev
 - **Deployment Date**: 2025-10-27
 - **Status**: ✅ Live and Active
 
 ### Recent Updates (2025-10-27)
 
+**Latest Enhancement:**
+- **✝️ Added Back "Call to Faith" Section**: Restored the three-response framework from John 6 with Peter's confession
+- **📜 Comprehensive Primary Sources List**: Added complete list of 12 Church Fathers and their works cited throughout the treatise:
+  - St. Ignatius of Antioch, St. Justin Martyr, St. Irenaeus, Tertullian, Origen
+  - St. Cyprian of Carthage, St. Cyril of Jerusalem, St. Basil the Great
+  - St. Ambrose of Milan, St. Augustine of Hippo, St. John Chrysostom, St. John of Damascus
+  - Each entry includes the specific works quoted (letters, homilies, treatises)
+
 **Protestant-Friendly Revisions:**
 - **🤝 Ecumenical Language**: Revised content to focus on proving Real Presence through transubstantiation rather than Catholic vs. Protestant debate
 - **📚 Streamlined Resources**: Kept only "Jesus and the Jewish Roots of the Eucharist" by Brant Pitre as recommended reading
-- **❌ Removed Reflection Questions**: Eliminated confrontational questions section to maintain a more inviting tone
 - **✏️ Softened Language**: Changed references from "Catholic Church" to "historic Christian understanding" where appropriate
 - **🎯 Focus on Evidence**: Emphasis on Scripture, Church Fathers, and historical testimony rather than denominational positions
 
