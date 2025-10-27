@@ -167,7 +167,7 @@ Recommended reading path for maximum impact:
 - **Platform**: Cloudflare Pages
 - **Project Name**: therealpresence
 - **Production URL**: https://therealpresence.pages.dev
-- **Latest Deployment**: https://c1b10f85.therealpresence.pages.dev
+- **Latest Deployment**: https://c7b0c2a9.therealpresence.pages.dev
 - **Deployment Date**: 2025-10-27
 - **Status**: ✅ Live and Active
 
@@ -175,11 +175,11 @@ Recommended reading path for maximum impact:
 
 **Latest Enhancement:**
 - **✝️ Added Back "Call to Faith" Section**: Restored the three-response framework from John 6 with Peter's confession
-- **📜 Comprehensive Primary Sources List**: Added complete list of 12 Church Fathers and their works cited throughout the treatise:
-  - St. Ignatius of Antioch, St. Justin Martyr, St. Irenaeus, Tertullian, Origen
-  - St. Cyprian of Carthage, St. Cyril of Jerusalem, St. Basil the Great
-  - St. Ambrose of Milan, St. Augustine of Hippo, St. John Chrysostom, St. John of Damascus
-  - Each entry includes the specific works quoted (letters, homilies, treatises)
+- **📜 Comprehensive Primary Sources List**: Added complete list of 13 primary sources cited throughout the treatise:
+  - **The Didache** (c. 50-125 AD) - Teaching of the Twelve Apostles, earliest liturgical document
+  - 12 Church Fathers from St. Ignatius of Antioch (110 AD) through St. John of Damascus (749 AD)
+  - Each entry includes the specific works quoted (letters, homilies, treatises, catecheses)
+  - Spans 700 years of unbroken apostolic testimony to the Real Presence
 
 **Protestant-Friendly Revisions:**
 - **🤝 Ecumenical Language**: Revised content to focus on proving Real Presence through transubstantiation rather than Catholic vs. Protestant debate
