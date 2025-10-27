@@ -663,6 +663,153 @@ export const renderer = jsxRenderer(({ children }) => {
             opacity: 0.8;
           }
 
+          /* Audio Player Controls */
+          .audio-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to bottom, rgba(162, 9, 39, 0.98), rgba(162, 9, 39, 1));
+            color: var(--white);
+            padding: 1rem;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: none;
+            border-top: 3px solid var(--gold);
+          }
+
+          .audio-player.active {
+            display: block;
+          }
+
+          .audio-controls {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+          }
+
+          .audio-controls-top {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+          }
+
+          .audio-button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid var(--white);
+            color: var(--white);
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            min-height: 44px;
+          }
+
+          .audio-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+          }
+
+          .audio-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+          }
+
+          .audio-button.primary {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--black);
+            font-size: 1.1rem;
+            padding: 0.875rem 1.5rem;
+          }
+
+          .audio-button.primary:hover {
+            background: var(--white);
+            transform: scale(1.08);
+          }
+
+          .audio-status {
+            flex: 1;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            min-width: 200px;
+          }
+
+          .audio-status strong {
+            color: var(--gold);
+            display: block;
+            margin-bottom: 0.25rem;
+          }
+
+          .audio-timeline {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            overflow-x: auto;
+            padding: 0.5rem 0;
+            -webkit-overflow-scrolling: touch;
+          }
+
+          .timeline-section {
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+          }
+
+          .timeline-section:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: var(--gold);
+          }
+
+          .timeline-section.active {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--black);
+            font-weight: 600;
+          }
+
+          .audio-toggle-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary-red);
+            color: var(--white);
+            border: 3px solid var(--gold);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(162, 9, 39, 0.5);
+            z-index: 999;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .audio-toggle-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(162, 9, 39, 0.7);
+          }
+
           /* Responsive Design - Mobile First Approach */
           
           /* Small phones (up to 480px) */
@@ -1030,8 +1177,46 @@ export const renderer = jsxRenderer(({ children }) => {
             }
           }
 
+          /* Audio Player Mobile Styles */
+          @media (max-width: 768px) {
+            .audio-player {
+              padding: 0.75rem;
+            }
+
+            .audio-controls-top {
+              flex-direction: column;
+              align-items: stretch;
+            }
+
+            .audio-button {
+              width: 100%;
+              justify-content: center;
+            }
+
+            .audio-status {
+              text-align: center;
+            }
+
+            .audio-toggle-btn {
+              bottom: 1rem;
+              right: 1rem;
+              width: 56px;
+              height: 56px;
+              font-size: 1.3rem;
+            }
+
+            .timeline-section {
+              font-size: 0.85rem;
+              padding: 0.4rem 0.8rem;
+            }
+          }
+
           /* Print Styles */
           @media print {
+            .audio-player,
+            .audio-toggle-btn {
+              display: none !important;
+            }
             .main-nav {
               display: none;
             }
@@ -1071,7 +1256,265 @@ export const renderer = jsxRenderer(({ children }) => {
                   }
                 });
               });
+
+              // Initialize Text-to-Speech Audio Player
+              initAudioPlayer();
             });
+
+            // Text-to-Speech Audio Player
+            function initAudioPlayer() {
+              if (!('speechSynthesis' in window)) {
+                console.log('Text-to-Speech not supported');
+                return;
+              }
+
+              const sections = [
+                { id: 'introduction', name: 'Introduction' },
+                { id: 'old-testament', name: 'Old Testament' },
+                { id: 'john-6', name: 'John 6' },
+                { id: 'institution', name: 'Institution' },
+                { id: 'church-fathers', name: 'Church Fathers' },
+                { id: 'reservation', name: 'Reservation' },
+                { id: 'transubstantiation', name: 'Transubstantiation' },
+                { id: 'timeline', name: 'Timeline' },
+                { id: 'reformation', name: 'Reformation' }
+              ];
+
+              let currentSection = 0;
+              let isPaused = false;
+              let currentUtterance = null;
+
+              // Create audio player UI
+              const audioPlayer = document.createElement('div');
+              audioPlayer.className = 'audio-player';
+              audioPlayer.innerHTML = \`
+                <div class="audio-controls">
+                  <div class="audio-controls-top">
+                    <button class="audio-button primary" id="playPauseBtn">
+                      <span id="playIcon">▶</span> <span id="playText">Play</span>
+                    </button>
+                    <button class="audio-button" id="stopBtn">⏹ Stop</button>
+                    <button class="audio-button" id="prevBtn">⏮ Previous</button>
+                    <button class="audio-button" id="nextBtn">⏭ Next</button>
+                    <div class="audio-status">
+                      <strong>Reading:</strong>
+                      <span id="currentSection">Not started</span>
+                    </div>
+                  </div>
+                  <div class="audio-timeline" id="audioTimeline"></div>
+                </div>
+              \`;
+              document.body.appendChild(audioPlayer);
+
+              // Create toggle button
+              const toggleBtn = document.createElement('button');
+              toggleBtn.className = 'audio-toggle-btn';
+              toggleBtn.innerHTML = '🔊';
+              toggleBtn.title = 'Toggle Audio Player';
+              toggleBtn.onclick = () => {
+                audioPlayer.classList.toggle('active');
+              };
+              document.body.appendChild(toggleBtn);
+
+              // Create timeline buttons
+              const timeline = document.getElementById('audioTimeline');
+              sections.forEach((section, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'timeline-section';
+                btn.textContent = section.name;
+                btn.onclick = () => jumpToSection(index);
+                timeline.appendChild(btn);
+              });
+
+              // Get DOM elements
+              const playPauseBtn = document.getElementById('playPauseBtn');
+              const stopBtn = document.getElementById('stopBtn');
+              const prevBtn = document.getElementById('prevBtn');
+              const nextBtn = document.getElementById('nextBtn');
+              const playIcon = document.getElementById('playIcon');
+              const playText = document.getElementById('playText');
+              const currentSectionLabel = document.getElementById('currentSection');
+
+              // Get or select the best male voice
+              function getMaleVoice() {
+                const voices = speechSynthesis.getVoices();
+                // Prefer natural-sounding US English male voices
+                const preferredVoices = [
+                  'Google US English Male',
+                  'Microsoft David - English (United States)',
+                  'Alex',
+                  'Google US English',
+                  'Microsoft Mark - English (United States)'
+                ];
+
+                for (const preferred of preferredVoices) {
+                  const voice = voices.find(v => v.name.includes(preferred));
+                  if (voice) return voice;
+                }
+
+                // Fallback: any male or default English voice
+                return voices.find(v => 
+                  v.lang.startsWith('en') && 
+                  (v.name.toLowerCase().includes('male') || v.name.toLowerCase().includes('david') || v.name.toLowerCase().includes('mark'))
+                ) || voices.find(v => v.lang.startsWith('en')) || voices[0];
+              }
+
+              function getTextContent(sectionId) {
+                const section = document.getElementById(sectionId);
+                if (!section) return '';
+                
+                // Clone the section to avoid modifying the original
+                const clone = section.cloneNode(true);
+                
+                // Remove navigation, scripts, and style elements
+                const unwanted = clone.querySelectorAll('nav, script, style, .main-nav');
+                unwanted.forEach(el => el.remove());
+                
+                // Get text content
+                return clone.textContent
+                  .replace(/\\s+/g, ' ')
+                  .replace(/—/g, ' ')
+                  .trim();
+              }
+
+              function updateUI() {
+                const timelineBtns = timeline.querySelectorAll('.timeline-section');
+                timelineBtns.forEach((btn, index) => {
+                  btn.classList.toggle('active', index === currentSection);
+                });
+
+                currentSectionLabel.textContent = sections[currentSection]?.name || 'Not started';
+              }
+
+              function speak(text) {
+                if (!text) return;
+
+                // Cancel any ongoing speech
+                speechSynthesis.cancel();
+
+                const utterance = new SpeechSynthesisUtterance(text);
+                const voice = getMaleVoice();
+                
+                if (voice) {
+                  utterance.voice = voice;
+                }
+                
+                utterance.lang = 'en-US';
+                utterance.rate = 1.0;
+                utterance.pitch = 1.0;
+                utterance.volume = 1.0;
+
+                utterance.onend = () => {
+                  // Auto-advance to next section
+                  if (currentSection < sections.length - 1) {
+                    currentSection++;
+                    updateUI();
+                    const nextText = getTextContent(sections[currentSection].id);
+                    speak(nextText);
+                  } else {
+                    // Finished all sections
+                    stop();
+                  }
+                };
+
+                utterance.onerror = (event) => {
+                  console.error('Speech error:', event);
+                  stop();
+                };
+
+                currentUtterance = utterance;
+                speechSynthesis.speak(utterance);
+                isPaused = false;
+                updatePlayPauseButton();
+              }
+
+              function updatePlayPauseButton() {
+                if (speechSynthesis.speaking && !speechSynthesis.paused) {
+                  playIcon.textContent = '⏸';
+                  playText.textContent = 'Pause';
+                } else {
+                  playIcon.textContent = '▶';
+                  playText.textContent = 'Play';
+                }
+              }
+
+              function play() {
+                if (speechSynthesis.paused) {
+                  speechSynthesis.resume();
+                  isPaused = false;
+                } else if (!speechSynthesis.speaking) {
+                  const text = getTextContent(sections[currentSection].id);
+                  speak(text);
+                }
+                updatePlayPauseButton();
+                updateUI();
+              }
+
+              function pause() {
+                if (speechSynthesis.speaking) {
+                  speechSynthesis.pause();
+                  isPaused = true;
+                  updatePlayPauseButton();
+                }
+              }
+
+              function stop() {
+                speechSynthesis.cancel();
+                isPaused = false;
+                currentUtterance = null;
+                updatePlayPauseButton();
+              }
+
+              function next() {
+                if (currentSection < sections.length - 1) {
+                  stop();
+                  currentSection++;
+                  updateUI();
+                  play();
+                }
+              }
+
+              function prev() {
+                if (currentSection > 0) {
+                  stop();
+                  currentSection--;
+                  updateUI();
+                  play();
+                }
+              }
+
+              function jumpToSection(index) {
+                if (index >= 0 && index < sections.length) {
+                  stop();
+                  currentSection = index;
+                  updateUI();
+                  play();
+                }
+              }
+
+              // Event listeners
+              playPauseBtn.onclick = () => {
+                if (speechSynthesis.speaking && !speechSynthesis.paused) {
+                  pause();
+                } else {
+                  play();
+                }
+              };
+
+              stopBtn.onclick = stop;
+              nextBtn.onclick = next;
+              prevBtn.onclick = prev;
+
+              // Load voices (Chrome requires this)
+              if (speechSynthesis.onvoiceschanged !== undefined) {
+                speechSynthesis.onvoiceschanged = () => {
+                  getMaleVoice();
+                };
+              }
+
+              // Initialize UI
+              updateUI();
+            }
           `
         }} />
       </body>
