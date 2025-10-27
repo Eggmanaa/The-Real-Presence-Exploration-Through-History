@@ -88,7 +88,7 @@ export const renderer = jsxRenderer(({ children }) => {
 
           /* Hero Section */
           .hero {
-            background-image: url('/raphael-disputation.jpg');
+            background-image: url('/static/raphael-disputation.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
