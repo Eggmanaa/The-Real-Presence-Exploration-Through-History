@@ -1478,7 +1478,8 @@ export const renderer = jsxRenderer(({ children }) => {
               });
 
               // Initialize Text-to-Speech Audio Player
-              initAudioPlayer();
+              // DISABLED: Audio player feature removed due to poor voice quality
+              // initAudioPlayer();
             });
 
             // Text-to-Speech Audio Player - Continuous playback with seekable progress
