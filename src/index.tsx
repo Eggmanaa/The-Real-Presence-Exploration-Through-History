@@ -15,17 +15,23 @@ app.get('/', (c) => {
         </div>
       </header>
 
-      <nav className="main-nav">
-        <a href="#introduction">Introduction</a>
-        <a href="#old-testament">Old Testament</a>
-        <a href="#john-6">John 6</a>
-        <a href="#institution">Institution</a>
-        <a href="#church-fathers">Church Fathers</a>
-        <a href="#reservation">Reservation</a>
-        <a href="#transubstantiation">Transubstantiation</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#reformation">Reformation</a>
-      </nav>
+      <div className="nav-container">
+        <div className="nav-header">
+          <span className="nav-title">Navigation</span>
+          <button className="nav-toggle" onclick="toggleNav()" aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <nav className="main-nav">
+          <a href="#introduction">Introduction</a>
+          <a href="#old-testament">Old Testament</a>
+          <a href="#john-6">John 6</a>
+          <a href="#institution">Institution</a>
+          <a href="#church-fathers">Church Fathers</a>
+          <a href="#reservation">Reservation</a>
+          <a href="#transubstantiation">Transubstantiation</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#reformation">Reformation</a>
+        </nav>
+      </div>
 
       <main className="content">
         <section id="introduction" className="section">

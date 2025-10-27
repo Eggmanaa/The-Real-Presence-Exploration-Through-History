@@ -112,17 +112,56 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           /* Navigation */
-          .main-nav {
+          .nav-container {
             background-color: var(--white);
-            padding: 1rem;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 0.5rem;
             box-shadow: 0 2px 4px var(--shadow);
             position: sticky;
             top: 0;
             z-index: 100;
+          }
+
+          .nav-header {
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background-color: var(--white);
+          }
+
+          .nav-title {
+            font-weight: 700;
+            color: var(--primary-red);
+            font-size: 1rem;
+          }
+
+          .nav-toggle {
+            background: none;
+            border: 2px solid var(--primary-red);
+            color: var(--primary-red);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+          }
+
+          .nav-toggle:hover {
+            background-color: var(--primary-red);
+            color: var(--white);
+          }
+
+          .main-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding: 1rem;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
           }
 
           .main-nav a {
@@ -642,15 +681,40 @@ export const renderer = jsxRenderer(({ children }) => {
               line-height: 1.4;
             }
 
+            /* Mobile Navigation - Hamburger Menu */
+            .nav-header {
+              display: flex;
+            }
+
             .main-nav {
-              padding: 0.5rem;
-              gap: 0.3rem;
+              display: none;
+              flex-direction: column;
+              padding: 0;
+              gap: 0;
+              width: 100%;
+            }
+
+            .main-nav.open {
+              display: flex;
             }
 
             .main-nav a {
-              padding: 0.4rem 0.6rem;
-              font-size: 0.85rem;
-              width: calc(50% - 0.15rem);
+              padding: 0.875rem 1rem;
+              font-size: 1rem;
+              width: 100%;
+              border: none;
+              border-bottom: 1px solid var(--light-grey);
+              border-radius: 0;
+              text-align: left;
+            }
+
+            .main-nav a:last-child {
+              border-bottom: none;
+            }
+
+            .main-nav a:hover {
+              background-color: rgba(162, 9, 39, 0.05);
+              border-color: var(--light-grey);
             }
 
             .content {
@@ -779,14 +843,40 @@ export const renderer = jsxRenderer(({ children }) => {
               font-size: 1.1rem;
             }
 
+            /* Mobile Navigation - Hamburger Menu */
+            .nav-header {
+              display: flex;
+            }
+
             .main-nav {
-              padding: 0.75rem;
-              gap: 0.4rem;
+              display: none;
+              flex-direction: column;
+              padding: 0;
+              gap: 0;
+              width: 100%;
+            }
+
+            .main-nav.open {
+              display: flex;
             }
 
             .main-nav a {
-              padding: 0.5rem 0.8rem;
-              font-size: 0.9rem;
+              padding: 1rem 1.25rem;
+              font-size: 1.05rem;
+              width: 100%;
+              border: none;
+              border-bottom: 1px solid var(--light-grey);
+              border-radius: 0;
+              text-align: left;
+            }
+
+            .main-nav a:last-child {
+              border-bottom: none;
+            }
+
+            .main-nav a:hover {
+              background-color: rgba(162, 9, 39, 0.05);
+              border-color: var(--light-grey);
             }
 
             .content {
@@ -960,6 +1050,30 @@ export const renderer = jsxRenderer(({ children }) => {
       </head>
       <body>
         {children}
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            // Toggle mobile navigation menu
+            function toggleNav() {
+              const nav = document.querySelector('.main-nav');
+              if (nav) {
+                nav.classList.toggle('open');
+              }
+            }
+            
+            // Close menu when a link is clicked
+            document.addEventListener('DOMContentLoaded', function() {
+              const navLinks = document.querySelectorAll('.main-nav a');
+              navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                  const nav = document.querySelector('.main-nav');
+                  if (nav && nav.classList.contains('open')) {
+                    nav.classList.remove('open');
+                  }
+                });
+              });
+            });
+          `
+        }} />
       </body>
     </html>
   )
