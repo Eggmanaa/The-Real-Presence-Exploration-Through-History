@@ -132,12 +132,36 @@ app.get('/', (c) => {
               of it remain until the morning; anything that remains until the morning you shall burn... The blood shall 
               be a sign for you on the houses where you live: when I see the blood, I will pass over you, and no plague 
               shall destroy you when I strike the land of Egypt." — Exodus 12:3-5, 7, 8a, 10, 13</p>
+              <p className="verse">"This day will be a day of remembrance for you, which your future generations will celebrate 
+              with pilgrimage to the LORD; you will celebrate it as a statute forever." — Exodus 12:14</p>
             </div>
             <p>
               The original Passover required an unblemished lamb whose blood, applied to the doorposts, saved Israel 
               from death. But the sacrifice wasn't complete with the lamb's death—God commanded the flesh must be 
               eaten by the covenant family. The instructions are remarkably specific and reveal profound theological 
               principles.
+            </p>
+            <p>
+              Critically, God declares this Passover meal to be "a day of remembrance" that future generations must 
+              celebrate "as a statute forever." The Hebrew word for remembrance (<em>zikkaron</em>) carries far more 
+              weight than mere mental recollection—it signifies a liturgical memorial that makes the past salvific 
+              event present again. When Israel celebrated Passover in subsequent generations, they weren't simply 
+              thinking about the Exodus; they were participating in it anew, as if they themselves had been delivered 
+              from Egypt. This is the biblical pattern for liturgical memorial: not a mere reminder of what happened 
+              once, but a making-present of God's saving action.
+            </p>
+            <p className="insight">
+              <strong>The Eucharistic Connection:</strong> When Jesus institutes the New Covenant memorial at the Last 
+              Supper—itself a Passover meal—He uses identical language: "Do this in remembrance (<em>anamnesis</em>) 
+              of me" (Luke 22:19). The Greek <em>anamnesis</em> parallels the Hebrew <em>zikkaron</em>, signifying 
+              the same liturgical reality: not merely recalling the past, but making Christ's once-for-all sacrifice 
+              on Calvary sacramentally present in the celebration. Just as eating the Passover lamb made Israel's 
+              deliverance present across generations, so eating Christ's Body and drinking His Blood makes His 
+              redemptive sacrifice present to us. This is why the Church has always understood the Eucharist as both 
+              memorial and real presence—the memorial is real precisely because Christ Himself becomes present through 
+              the liturgical action. A symbolic memorial could not fulfill the biblical pattern established in Exodus 
+              12:14; only the Real Presence makes the Eucharist the true "statute forever" that brings Christ's saving 
+              death to every generation.
             </p>
             <p>
               Notice God's concern that the lamb be properly proportioned to the household: "If a household is too 
