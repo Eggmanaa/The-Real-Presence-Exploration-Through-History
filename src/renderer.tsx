@@ -750,32 +750,34 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           .audio-timeline {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            overflow-x: auto;
-            padding: 0.5rem 0;
-            -webkit-overflow-scrolling: touch;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.5rem;
+            padding: 0.75rem 0;
+            margin-top: 0.5rem;
           }
 
           .timeline-section {
             background: rgba(255, 255, 255, 0.15);
             border: 2px solid rgba(255, 255, 255, 0.3);
             color: var(--white);
-            padding: 0.5rem 1rem;
+            padding: 0.625rem 0.75rem;
             border-radius: 6px;
             cursor: pointer;
-            font-size: 0.9rem;
-            white-space: nowrap;
+            font-size: 0.85rem;
+            text-align: center;
             transition: all 0.2s ease;
             min-height: 44px;
             display: flex;
             align-items: center;
+            justify-content: center;
+            line-height: 1.3;
           }
 
           .timeline-section:hover {
             background: rgba(255, 255, 255, 0.25);
             border-color: var(--gold);
+            transform: translateY(-2px);
           }
 
           .timeline-section.active {
@@ -783,6 +785,7 @@ export const renderer = jsxRenderer(({ children }) => {
             border-color: var(--gold);
             color: var(--black);
             font-weight: 600;
+            box-shadow: 0 2px 8px rgba(221, 221, 221, 0.3);
           }
 
           .audio-toggle-btn {
@@ -974,6 +977,58 @@ export const renderer = jsxRenderer(({ children }) => {
               padding: 1.5rem 1rem;
               font-size: 0.9rem;
             }
+
+            /* Audio Player - Mobile Optimizations */
+            .audio-player {
+              width: 95%;
+              bottom: 1rem;
+              left: 2.5%;
+              padding: 1rem;
+              max-height: 80vh;
+              overflow-y: auto;
+            }
+
+            .audio-controls-top {
+              flex-direction: column;
+              gap: 0.5rem;
+            }
+
+            .audio-button {
+              width: 100%;
+              justify-content: center;
+              padding: 0.75rem;
+              font-size: 0.95rem;
+            }
+
+            .audio-button.primary {
+              font-size: 1.05rem;
+              padding: 0.875rem;
+            }
+
+            .audio-status {
+              width: 100%;
+              text-align: center;
+              font-size: 0.9rem;
+            }
+
+            .audio-timeline {
+              grid-template-columns: repeat(2, 1fr);
+              gap: 0.4rem;
+            }
+
+            .timeline-section {
+              font-size: 0.8rem;
+              padding: 0.5rem 0.4rem;
+              min-height: 40px;
+            }
+
+            .audio-toggle-btn {
+              width: 50px;
+              height: 50px;
+              bottom: 1.5rem;
+              right: 1.5rem;
+              font-size: 1.3rem;
+            }
           }
 
           /* Tablets and larger phones (481px to 768px) */
@@ -1056,6 +1111,23 @@ export const renderer = jsxRenderer(({ children }) => {
 
             th, td {
               padding: 0.6rem;
+            }
+
+            /* Audio Player - Tablet Optimizations */
+            .audio-player {
+              width: 90%;
+              left: 5%;
+              padding: 1.25rem;
+            }
+
+            .audio-timeline {
+              grid-template-columns: repeat(3, 1fr);
+              gap: 0.5rem;
+            }
+
+            .timeline-section {
+              font-size: 0.85rem;
+              padding: 0.6rem 0.7rem;
             }
           }
 
