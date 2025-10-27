@@ -88,7 +88,7 @@ export const renderer = jsxRenderer(({ children }) => {
 
           /* Hero Section */
           .hero {
-            background-image: url('https://page.gensparksite.com/v1/base64_upload/24b027766fa2a263abe5628c0a4f04d9');
+            background-image: url('/raphael-disputation.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
