@@ -167,30 +167,17 @@ Recommended reading path for maximum impact:
 - **Platform**: Cloudflare Pages
 - **Project Name**: therealpresence
 - **Production URL**: https://therealpresence.pages.dev
-- **Latest Deployment**: https://e1fd8897.therealpresence.pages.dev
+- **Latest Deployment**: https://97428607.therealpresence.pages.dev
 - **Deployment Date**: 2025-10-27
 - **Status**: ✅ Live and Active
 
 ### Recent Updates (2025-10-27)
 
-**Latest Enhancement - Voice Selector for Audio Quality Control:**
-- **🎙️ Voice Selector Dropdown**: Choose from all available English voices on your device/browser
-- **⭐ Recommended Voices**: Top natural-sounding voices marked (Samantha, Alex, Google US English)
-- **🔄 Instant Voice Change**: Switch voices mid-playback - automatically restarts with new voice
-- **📱 Mobile-Responsive**: Voice selector adapts to mobile screens for easy selection
-- **🎯 Quality Control**: Find the best non-robotic voice for your specific browser/device
-
-**Previous Audio Player Enhancements:**
-- **🔊 Continuous Playback**: Plays entire treatise as one uninterrupted audio stream (instead of section-by-section)
-- **⏯️ Full Playback Controls**: Play/Pause, Stop, and seekable progress bar
-- **📊 Progress Tracking**: Real-time progress display with current/total time (MM:SS format)
-- **🎚️ Seekable Progress Bar**: Click or drag slider to jump to any position in the treatise
-- **📍 Section Timeline**: Quick-jump buttons for all 9 sections (Introduction through Conclusion)
-- **🔄 Smart Text Chunking**: Breaks text into 200-character sentence-based chunks for reliable synthesis
-- **💫 Compact Toggle Button**: Floating speaker icon (🔊) in bottom-right corner
-- **📱 Mobile-Optimized**: Reduced from 80vh to 45vh on mobile for less intrusive experience
-- **🔧 Bug Fix**: Restored missing DOM creation code that caused player to disappear after redesign
-- **♿ Accessibility**: Visual feedback shows currently playing section with active state highlighting
+**Latest Change - Audio Player Removed:**
+- **🔇 Audio Feature Disabled**: Text-to-speech audio player has been removed from the site
+- **Reason**: Browser-based text-to-speech voices did not meet quality standards
+- **Result**: Clean, focused reading experience without distracting robotic audio
+- **Future**: May explore professional voice services (Google Cloud TTS, ElevenLabs) if needed
 
 **Content Enhancement - Exodus 12:14 Memorial Theology:**
 - **📜 Added Exodus 12:14**: "This day will be a day of remembrance for you, which your future generations will celebrate with pilgrimage to the LORD; you will celebrate it as a statute forever."
