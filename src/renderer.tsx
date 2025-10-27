@@ -5,15 +5,52 @@ export const renderer = jsxRenderer(({ children }) => {
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="theme-color" content="#a20927" />
         <title>My Flesh is True Food - The Real Presence in Scripture and Tradition</title>
         <meta name="description" content="A comprehensive scriptural and historical treatise on the Real Presence of Christ in the Eucharist, from Old Testament types through transubstantiation." />
+        
+        {/* Open Graph meta tags for social sharing */}
+        <meta property="og:title" content="The Real Presence: A Journey Through Scripture and Tradition" />
+        <meta property="og:description" content="Exploring the doctrine of transubstantiation from Old Testament types through Church Fathers to formal definition" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://therealpresence.pages.dev" />
+        
+        {/* Twitter Card meta tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="The Real Presence in Scripture and Tradition" />
+        <meta name="twitter:description" content="A comprehensive treatise on the Real Presence of Christ in the Eucharist" />
         <style>{`
           /* Reset and Base Styles */
           * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+          }
+
+          *::before,
+          *::after {
+            box-sizing: border-box;
+          }
+
+          img,
+          picture,
+          video,
+          canvas,
+          svg {
+            display: block;
+            max-width: 100%;
+            height: auto;
+          }
+
+          input,
+          button,
+          textarea,
+          select {
+            font: inherit;
           }
 
           :root {
@@ -42,6 +79,11 @@ export const renderer = jsxRenderer(({ children }) => {
             line-height: 1.8;
             color: var(--black);
             background-color: var(--cream);
+            -webkit-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            overflow-x: hidden;
+            min-height: 100vh;
           }
 
           /* Hero Section */
@@ -301,6 +343,7 @@ export const renderer = jsxRenderer(({ children }) => {
             margin: 1.5rem 0;
             background-color: var(--white);
             box-shadow: 0 2px 4px var(--shadow);
+            display: table;
           }
 
           th {
@@ -331,6 +374,24 @@ export const renderer = jsxRenderer(({ children }) => {
           .comparison-table strong {
             color: var(--primary-red);
             font-size: 1.1rem;
+          }
+
+          /* Table wrapper for horizontal scrolling on small screens */
+          @media (max-width: 768px) {
+            table {
+              display: block;
+              overflow-x: auto;
+              -webkit-overflow-scrolling: touch;
+              white-space: nowrap;
+            }
+
+            thead,
+            tbody,
+            tr {
+              display: table;
+              width: 100%;
+              table-layout: fixed;
+            }
           }
 
           /* Greek Text */
@@ -563,8 +624,153 @@ export const renderer = jsxRenderer(({ children }) => {
             opacity: 0.8;
           }
 
-          /* Responsive Design */
-          @media (max-width: 768px) {
+          /* Responsive Design - Mobile First Approach */
+          
+          /* Small phones (up to 480px) */
+          @media (max-width: 480px) {
+            .hero {
+              padding: 2rem 1rem;
+            }
+
+            .hero-content h1 {
+              font-size: 1.5rem;
+              line-height: 1.2;
+            }
+
+            .subtitle {
+              font-size: 0.95rem;
+              line-height: 1.4;
+            }
+
+            .main-nav {
+              padding: 0.5rem;
+              gap: 0.3rem;
+            }
+
+            .main-nav a {
+              padding: 0.4rem 0.6rem;
+              font-size: 0.85rem;
+              width: calc(50% - 0.15rem);
+            }
+
+            .content {
+              padding: 1rem 0.75rem;
+            }
+
+            .section {
+              margin-bottom: 2rem;
+            }
+
+            .section h2 {
+              font-size: 1.5rem;
+              margin-bottom: 1rem;
+            }
+
+            .section h3 {
+              font-size: 1.3rem;
+              margin-top: 1rem;
+            }
+
+            .section h4 {
+              font-size: 1.1rem;
+            }
+
+            .card {
+              padding: 1rem;
+              margin-bottom: 1rem;
+              border-left-width: 3px;
+            }
+
+            .lead {
+              font-size: 1.1rem;
+            }
+
+            p {
+              font-size: 0.95rem;
+              line-height: 1.6;
+            }
+
+            ul, ol {
+              margin-left: 1.25rem;
+            }
+
+            blockquote {
+              padding: 1rem;
+              font-size: 0.95rem;
+            }
+
+            .scripture-box,
+            .insight,
+            .reaction,
+            .rebuttal,
+            .analysis {
+              padding: 0.75rem 1rem;
+              margin: 1rem 0;
+            }
+
+            .verse {
+              font-size: 1rem;
+            }
+
+            table {
+              font-size: 0.8rem;
+              display: block;
+              overflow-x: auto;
+              -webkit-overflow-scrolling: touch;
+            }
+
+            th, td {
+              padding: 0.4rem;
+              font-size: 0.8rem;
+            }
+
+            .philosophy-box {
+              grid-template-columns: 1fr;
+              gap: 1rem;
+            }
+
+            .concept {
+              padding: 1rem;
+            }
+
+            .timeline-item {
+              padding-left: 1rem;
+            }
+
+            .date {
+              font-size: 0.85rem;
+              padding: 0.2rem 0.5rem;
+            }
+
+            .greek-text {
+              padding: 1rem;
+            }
+
+            .greek-text strong {
+              font-size: 1.2rem;
+            }
+
+            .greek-text em {
+              font-size: 1rem;
+            }
+
+            .definition-box,
+            .summary-box {
+              padding: 1rem;
+            }
+
+            .site-footer {
+              padding: 1.5rem 1rem;
+              font-size: 0.9rem;
+            }
+          }
+
+          /* Tablets and larger phones (481px to 768px) */
+          @media (min-width: 481px) and (max-width: 768px) {
+            .hero {
+              padding: 3rem 1.5rem;
+            }
+
             .hero-content h1 {
               font-size: 2rem;
             }
@@ -574,28 +780,163 @@ export const renderer = jsxRenderer(({ children }) => {
             }
 
             .main-nav {
-              flex-direction: column;
+              padding: 0.75rem;
+              gap: 0.4rem;
             }
 
             .main-nav a {
-              width: 100%;
-              text-align: center;
+              padding: 0.5rem 0.8rem;
+              font-size: 0.9rem;
+            }
+
+            .content {
+              padding: 1.5rem 1rem;
             }
 
             .section h2 {
               font-size: 2rem;
             }
 
+            .section h3 {
+              font-size: 1.5rem;
+            }
+
+            .card {
+              padding: 1.5rem;
+            }
+
             .philosophy-box {
               grid-template-columns: 1fr;
+              gap: 1.5rem;
             }
 
             table {
               font-size: 0.9rem;
+              display: block;
+              overflow-x: auto;
+              -webkit-overflow-scrolling: touch;
             }
 
             th, td {
+              padding: 0.6rem;
+            }
+          }
+
+          /* Tablets landscape and small desktops (769px to 1024px) */
+          @media (min-width: 769px) and (max-width: 1024px) {
+            .content {
+              max-width: 900px;
+              padding: 2rem 1.5rem;
+            }
+
+            .hero-content h1 {
+              font-size: 2.5rem;
+            }
+
+            .subtitle {
+              font-size: 1.2rem;
+            }
+
+            .main-nav a {
+              padding: 0.6rem 0.9rem;
+              font-size: 0.95rem;
+            }
+
+            table {
+              font-size: 0.95rem;
+            }
+          }
+
+          /* Large desktops (1025px and above) */
+          @media (min-width: 1025px) {
+            .content {
+              max-width: 1200px;
+            }
+
+            .hero-content h1 {
+              font-size: 3rem;
+            }
+
+            /* Enhance reading experience on large screens */
+            .card {
+              padding: 2.5rem;
+            }
+
+            .section {
+              margin-bottom: 5rem;
+            }
+          }
+
+          /* Ultra-wide displays (1440px and above) */
+          @media (min-width: 1440px) {
+            .content {
+              max-width: 1400px;
+            }
+
+            .hero-content h1 {
+              font-size: 3.5rem;
+            }
+
+            .subtitle {
+              font-size: 1.4rem;
+            }
+
+            .section h2 {
+              font-size: 2.8rem;
+            }
+          }
+
+          /* Touch device optimizations */
+          @media (hover: none) and (pointer: coarse) {
+            .main-nav a {
+              min-height: 44px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            /* Increase tap targets for touch devices */
+            a, button {
+              min-height: 44px;
+              min-width: 44px;
+            }
+
+            /* Remove hover effects on touch devices */
+            .main-nav a:hover {
+              background-color: transparent;
+              color: var(--primary-red);
+            }
+
+            /* Better spacing for touch interaction */
+            .main-nav {
+              gap: 0.75rem;
+            }
+          }
+
+          /* High DPI displays (Retina) */
+          @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            body {
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+            }
+          }
+
+          /* Landscape orientation adjustments */
+          @media (max-width: 768px) and (orientation: landscape) {
+            .hero {
+              padding: 2rem 1.5rem;
+            }
+
+            .hero-content h1 {
+              font-size: 1.8rem;
+            }
+
+            .main-nav {
               padding: 0.5rem;
+            }
+
+            .section {
+              margin-bottom: 2rem;
             }
           }
 
