@@ -88,10 +88,7 @@ export const renderer = jsxRenderer(({ children }) => {
 
           /* Hero Section */
           .hero {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/74/Sanzio%2C_Raffaello_-_Disputa_del_Sacramento_-_1508-1511_-_hi_res.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background: linear-gradient(135deg, var(--burgundy) 0%, var(--deep-red) 100%);
             color: var(--white);
             padding: 6rem 2rem;
             text-align: center;
@@ -104,15 +101,7 @@ export const renderer = jsxRenderer(({ children }) => {
             justify-content: center;
           }
 
-          .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(162, 9, 39, 0.30) 0%, rgba(139, 7, 33, 0.40) 100%);
-            z-index: 1;
-          }
+
 
           .hero-content {
             position: relative;
@@ -125,7 +114,7 @@ export const renderer = jsxRenderer(({ children }) => {
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 4px 4px 12px rgba(0,0,0,0.6);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             line-height: 1.2;
           }
 
@@ -135,7 +124,7 @@ export const renderer = jsxRenderer(({ children }) => {
             max-width: 850px;
             margin: 0 auto;
             opacity: 1;
-            text-shadow: 2px 2px 6px rgba(0,0,0,0.8), 3px 3px 10px rgba(0,0,0,0.6);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
             line-height: 1.5;
           }
 
