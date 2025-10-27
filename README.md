@@ -87,7 +87,12 @@
   - [x] Bronze (#8C6A4A) - Earthy, historical grounding
   - [x] Parchment (#F0EBD8) and Cream (#F5F1E8) - Gentle, readable backgrounds
 - [x] Scholarly serif typography (Georgia, Garamond)
-- [x] Responsive design for mobile and desktop
+- [x] **Responsive design for all devices**
+  - [x] Comprehensive mobile optimization with 6 breakpoints
+  - [x] **NEW: Hamburger menu for mobile navigation** (iPhone-optimized)
+  - [x] Touch-friendly tap targets (44px minimum)
+  - [x] Horizontal scrolling tables on small screens
+  - [x] Landscape mode adjustments
 - [x] Print-friendly styling
 - [x] Visual hierarchy with cards, blockquotes, and specialized boxes
 - [x] Color-coded insight boxes (blue: insights, orange: reactions, purple: rebuttals, green: analysis)
@@ -156,16 +161,24 @@ Recommended reading path for maximum impact:
 - **Process Manager**: PM2 (development)
 
 ### Last Updated
-2025-10-26
+2025-10-27
 
 ### Deployment Information
 - **Platform**: Cloudflare Pages
 - **Project Name**: therealpresence
 - **Production URL**: https://therealpresence.pages.dev
-- **Deployment Date**: 2025-10-26
+- **Latest Deployment**: https://0d0d5816.therealpresence.pages.dev
+- **Deployment Date**: 2025-10-27
 - **Status**: ✅ Live and Active
 
-### Recent Updates (2025-10-26)
+### Recent Updates (2025-10-27)
+- **🎉 Mobile Navigation Fix**: Implemented collapsible hamburger menu for iPhone and mobile devices
+  - Navigation no longer covers most of the screen on small devices
+  - Smooth toggle animation with full-width links for easy tapping
+  - Automatically closes menu after clicking a link
+  - Shows/hides based on screen size (mobile: hamburger, desktop: full nav)
+
+### Previous Updates (2025-10-26)
 - **Complete color scheme redesign**: Replaced school branding with liturgical palette better suited to theological content
 - **New Didache section**: Comprehensive coverage of the earliest Christian liturgical document (50-125 AD)
 - **New Reservation Practices section**: Historical evidence from Justin Martyr, Tertullian, St. Cyprian's casket of fire miracles, and Basil's golden dove
@@ -205,7 +218,6 @@ npm run deploy:prod
 
 ### Potential Future Enhancements
 - [ ] Search functionality to find specific Church Father quotes
-- [ ] Expandable/collapsible sections for easier navigation on mobile
 - [ ] Print-optimized version with page breaks
 - [ ] Downloadable PDF version
 - [ ] Interactive timeline with hover effects
