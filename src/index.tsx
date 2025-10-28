@@ -501,6 +501,48 @@ app.get('/', (c) => {
                 the earliest evidence for reservation—deacons carry the Eucharist to the absent, proving belief 
                 in an abiding presence.
               </p>
+              
+              <blockquote style="margin-top: 1.5rem;">
+                "On finishing the prayers we greet each other with a kiss. Then bread and a cup of water and mixed 
+                wine are brought to the president of the brethren and he, taking them, sends up praise and glory to 
+                the Father of the universe through the name of the Son and of the Holy Spirit, and offers thanksgiving 
+                at some length that we have been deemed worthy to receive these things from him. When he has finished 
+                the prayers and the thanksgiving, the whole congregation present assents, saying, 'Amen.' 'Amen' in the 
+                Hebrew language means, 'So be it.' When the president has given thanks and the whole congregation has 
+                assented, those whom we call deacons give to each of those present a portion of the consecrated bread 
+                and wine and water, and they take it to the absent.
+                <br/><br/>
+                This food we call Eucharist, of which no one is allowed to partake except one who believes that the 
+                things we teach are true, and has received the washing for forgiveness of sins and for rebirth, and who 
+                lives as Christ handed down to us. For we do not receive these things as common bread or common drink; 
+                but as Jesus Christ our Saviour being incarnate by God's word took flesh and blood for our salvation, 
+                so also we have been taught that the food consecrated by the word of prayer which comes from him, from 
+                which our flesh and blood are nourished by transformation, is the flesh and blood of that incarnate Jesus. 
+                For the apostles in the memoirs composed by them, which are called Gospels, thus handed down what was 
+                commanded them: that Jesus, taking bread and having given thanks, said, 'Do this for my memorial, this 
+                is my body'; and likewise taking the cup and giving thanks he said, 'This is my blood'; and gave it to 
+                them alone."
+                <cite>— First Apology 65-66</cite>
+              </blockquote>
+              
+              <p className="analysis" style="margin-top: 1rem;">
+                <strong>Extended Commentary:</strong> This fuller liturgical description from Justin Martyr provides 
+                critical early evidence for several doctrines:
+              </p>
+              <ul className="analysis">
+                <li><strong>Liturgical Structure:</strong> The Mass already has its essential form by 155 AD—prayers, 
+                thanksgiving (Eucharistic prayer), congregation's "Amen," distribution by deacons.</li>
+                <li><strong>Real Presence:</strong> Justin explicitly states the Eucharist is "not common bread or 
+                common drink" but "the flesh and blood of that incarnate Jesus."</li>
+                <li><strong>Transformation:</strong> He uses the language of change—"the food consecrated by the word 
+                of prayer" becomes Christ's flesh and blood, which then nourishes "our flesh and blood by transformation."</li>
+                <li><strong>Restricted Access:</strong> Only baptized believers living Christian lives may receive. This 
+                discipline makes sense only if this is truly the Body and Blood of Christ.</li>
+                <li><strong>Apostolic Tradition:</strong> Justin appeals to "the memoirs composed by [the apostles], which 
+                are called Gospels"—showing the written Gospels and Real Presence doctrine are equally apostolic.</li>
+                <li><strong>Reservation Practice:</strong> Deacons "take it to the absent"—proving the Church believed 
+                Christ remained truly present in the consecrated elements outside the liturgy.</li>
+              </ul>
             </div>
 
             <div className="timeline-item card">
