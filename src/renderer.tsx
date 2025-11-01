@@ -251,6 +251,36 @@ export const renderer = jsxRenderer(({ children }) => {
             border-left-color: var(--gold);
           }
 
+          /* Artwork Images */
+          .artwork-container {
+            margin: 2rem auto;
+            text-align: center;
+            max-width: 900px;
+          }
+
+          .artwork-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin-bottom: 1rem;
+          }
+
+          .artwork-caption {
+            font-size: 0.95rem;
+            font-style: italic;
+            color: #555;
+            text-align: center;
+            margin-top: 0.75rem;
+            line-height: 1.5;
+          }
+
+          .artwork-caption strong {
+            font-weight: 600;
+            font-style: normal;
+            color: var(--primary-red);
+          }
+
           /* Typography */
           .lead {
             font-size: 1.3rem;
@@ -1190,6 +1220,18 @@ export const renderer = jsxRenderer(({ children }) => {
               font-size: 1.4rem !important;
               z-index: 9999 !important;
               display: flex !important;
+            }
+
+            /* Artwork responsive */
+            .artwork-container {
+              margin: 1.5rem auto;
+              max-width: 100%;
+              padding: 0 0.5rem;
+            }
+
+            .artwork-caption {
+              font-size: 0.85rem;
+              padding: 0 0.5rem;
             }
           }
 

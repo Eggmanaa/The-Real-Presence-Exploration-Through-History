@@ -60,6 +60,18 @@ app.get('/', (c) => {
               "For my flesh is true food, and my blood is true drink. He who eats my flesh and drinks my blood 
               abides in me, and I in him." — John 6:55-56
             </blockquote>
+            
+            <div className="artwork-container">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/7/74/Sanzio%2C_Raffaello_-_Disputa_del_Sacramento_-_1508-1511_-_hi_res.jpg" 
+                alt="Raphael's Disputation of the Holy Sacrament" 
+                className="artwork-image"
+                loading="lazy"
+              />
+              <p className="artwork-caption">
+                <strong>Raphael</strong>, <em>Disputation of the Holy Sacrament</em> (c. 1509-1510)
+              </p>
+            </div>
           </div>
         </section>
 
@@ -82,6 +94,18 @@ app.get('/', (c) => {
               following Melchizedek's order, offers bread and wine—establishing the form of the Eucharistic sacrifice 
               from the very beginning of Scripture.
             </p>
+            
+            <div className="artwork-container">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/d/db/Melchizedek_Offering_Bread_and_Wine_to_Abraham_LACMA_M.88.91.21.jpg" 
+                alt="Melchizedek Offering Bread and Wine" 
+                className="artwork-image"
+                loading="lazy"
+              />
+              <p className="artwork-caption">
+                <strong>French School</strong>, <em>Melchizedek Offering Bread and Wine</em> (Baroque period)
+              </p>
+            </div>
           </div>
 
           <div className="card">
@@ -100,6 +124,18 @@ app.get('/', (c) => {
               sustaining bodily life temporarily, the antitype (Eucharist) must be something far greater—supernatural 
               food bestowing eternal life. A mere symbol would be less than the manna, not greater.
             </p>
+            
+            <div className="artwork-container">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Poussin%2C_Nicolas_-_The_Jews_Gathering_the_Manna_in_the_Desert_-1637_-_1639.jpg" 
+                alt="Nicolas Poussin - The Gathering of Manna" 
+                className="artwork-image"
+                loading="lazy"
+              />
+              <p className="artwork-caption">
+                <strong>Nicolas Poussin</strong>, <em>The Gathering of Manna</em> (c. 1637-1639)
+              </p>
+            </div>
           </div>
 
           <div className="card">
@@ -188,6 +224,30 @@ app.get('/', (c) => {
               optional symbol. Just as the Israelites had to eat the lamb to participate in the covenant of deliverance, 
               so we must eat Christ's flesh to participate in the New Covenant of eternal salvation.
             </p>
+            
+            <div className="artwork-container">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Josefa_de_Ayala_-_The_Sacrificial_Lamb_-_Walters_371193.jpg" 
+                alt="Josefa de Ayala - The Sacrificial Lamb" 
+                className="artwork-image"
+                loading="lazy"
+              />
+              <p className="artwork-caption">
+                <strong>Josefa de Ayala</strong>, <em>The Sacrificial Lamb</em> (c. 1670-1684)
+              </p>
+            </div>
+            
+            <div className="artwork-container">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Jan_van_Eyck_The_Ghent_Altarpiece_-_Adoration_of_the_Lamb.jpg" 
+                alt="Jan van Eyck - Adoration of the Mystic Lamb" 
+                className="artwork-image"
+                loading="lazy"
+              />
+              <p className="artwork-caption">
+                <strong>Jan van Eyck</strong>, <em>Adoration of the Mystic Lamb</em> (from the Ghent Altarpiece, 1432)
+              </p>
+            </div>
           </div>
         </section>
         <section id="john-6" className="section">
@@ -363,6 +423,30 @@ app.get('/', (c) => {
               Significantly, the Gospel accounts mention no lamb on the table. Jesus Himself is the Lamb whose 
               sacrifice is being initiated.
             </p>
+            
+            <div className="artwork-container">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/4/4b/%281%29_The_Last_Supper%2C_Leonardo_da_Vinci_-_High_Resolution_32x16.jpg" 
+                alt="Leonardo da Vinci - The Last Supper" 
+                className="artwork-image"
+                loading="lazy"
+              />
+              <p className="artwork-caption">
+                <strong>Leonardo da Vinci</strong>, <em>The Last Supper</em> (c. 1495-1498)
+              </p>
+            </div>
+            
+            <div className="artwork-container">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/9/97/Joan_de_Joanes_-_The_Last_Supper_-_WGA12058.jpg" 
+                alt="Juan de Juanes - The Last Supper" 
+                className="artwork-image"
+                loading="lazy"
+              />
+              <p className="artwork-caption">
+                <strong>Juan de Juanes</strong>, <em>The Last Supper</em> (16th century)
+              </p>
+            </div>
           </div>
 
           <div className="card highlight">
@@ -457,6 +541,18 @@ app.get('/', (c) => {
               The testimony of the early Church Fathers is crucial: these were men who learned directly from the 
               Apostles or their immediate successors. Their unanimous witness to the Real Presence demonstrates 
               this wasn't a medieval invention but the original, apostolic faith.
+            </p>
+          </div>
+          
+          <div className="artwork-container">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Jan_van_Kessel_%28I%29_-_Altar_niche_with_the_symbols_of_the_Eucharist_with_flowers_and_fruits.jpeg" 
+              alt="Jan van Kessel the Elder - The Eucharist" 
+              className="artwork-image"
+              loading="lazy"
+            />
+            <p className="artwork-caption">
+              <strong>Jan van Kessel the Elder</strong>, <em>The Eucharist</em> (c. 1626-1679)
             </p>
           </div>
 
@@ -950,6 +1046,18 @@ app.get('/', (c) => {
         </section>
         <section id="transubstantiation" className="section">
           <h2>The Doctrine of Transubstantiation</h2>
+          
+          <div className="artwork-container">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Thomas_Aquinas_by_Sandro_Botticelli.jpg" 
+              alt="Sandro Botticelli - St. Thomas Aquinas" 
+              className="artwork-image"
+              loading="lazy"
+            />
+            <p className="artwork-caption">
+              <strong>Sandro Botticelli</strong>, <em>St. Thomas Aquinas</em> (c. 1481)
+            </p>
+          </div>
           
           <div className="card">
             <h3>What Is Transubstantiation?</h3>
@@ -1569,6 +1677,18 @@ app.get('/', (c) => {
         </section>
         <section id="conclusion" className="section conclusion">
           <h2>Conclusion: The Unbroken Thread</h2>
+          
+          <div className="artwork-container">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Supper_at_Emmaus-Caravaggio_%281601%29.jpg" 
+              alt="Caravaggio - Supper at Emmaus" 
+              className="artwork-image"
+              loading="lazy"
+            />
+            <p className="artwork-caption">
+              <strong>Caravaggio</strong>, <em>Supper at Emmaus</em> (1601)
+            </p>
+          </div>
           
           <div className="card highlight">
             <p className="lead">
