@@ -256,14 +256,24 @@ export const renderer = jsxRenderer(({ children }) => {
             margin: 2rem auto;
             text-align: center;
             max-width: 900px;
+            padding: 0 1rem;
           }
 
           .artwork-image {
             width: 100%;
+            max-width: 100%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          .artwork-image[src=""],
+          .artwork-image:not([src]) {
+            display: none;
           }
 
           .artwork-caption {
@@ -273,12 +283,15 @@ export const renderer = jsxRenderer(({ children }) => {
             text-align: center;
             margin-top: 0.75rem;
             line-height: 1.5;
+            padding: 0 0.5rem;
           }
 
           .artwork-caption strong {
             font-weight: 600;
             font-style: normal;
             color: var(--primary-red);
+            display: block;
+            margin-bottom: 0.25rem;
           }
 
           /* Typography */
@@ -463,20 +476,28 @@ export const renderer = jsxRenderer(({ children }) => {
           }
 
           /* Table wrapper for horizontal scrolling on small screens */
+          .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 1rem 0;
+          }
+
           @media (max-width: 768px) {
             table {
+              min-width: 600px;
+              font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+              padding: 0.75rem 0.5rem;
+              font-size: 0.85rem;
+            }
+
+            .comparison-table {
               display: block;
               overflow-x: auto;
               -webkit-overflow-scrolling: touch;
-              white-space: nowrap;
-            }
-
-            thead,
-            tbody,
-            tr {
-              display: table;
-              width: 100%;
-              table-layout: fixed;
             }
           }
 

@@ -322,7 +322,8 @@ app.get('/', (c) => {
               Perhaps the most compelling evidence lies in the original Greek. When the crowd objects, Jesus makes 
               a deliberate change in vocabulary:
             </p>
-            <table className="comparison-table">
+            <div className="table-wrapper">
+              <table className="comparison-table">
               <thead>
                 <tr>
                   <th>Before v. 52</th>
@@ -347,7 +348,8 @@ app.get('/', (c) => {
                   <td>Often describes how animals eat</td>
                 </tr>
               </tbody>
-            </table>
+              </table>
+            </div>
             <p className="insight">
               <strong>Why This Matters:</strong> A teacher whose metaphor has been misunderstood would use softer, 
               more abstract language to clarify. Jesus does the opposite—He switches to a more graphic, undeniably 
@@ -480,7 +482,8 @@ app.get('/', (c) => {
             </ol>
 
             <h4>How This Differs from Clear Metaphors</h4>
-            <table className="comparison-table">
+            <div className="table-wrapper">
+              <table className="comparison-table">
               <thead>
                 <tr>
                   <th>Feature</th>
@@ -510,7 +513,8 @@ app.get('/', (c) => {
                   <td>Sometimes confusion, always explained</td>
                 </tr>
               </tbody>
-            </table>
+              </table>
+            </div>
           </div>
 
           <div className="card">
@@ -982,7 +986,8 @@ app.get('/', (c) => {
 
           <div className="card">
             <h3>From Necessity to Devotion: The Arc of Development</h3>
-            <table className="development-table">
+            <div className="table-wrapper">
+              <table className="development-table">
               <thead>
                 <tr>
                   <th>Period</th>
@@ -1017,7 +1022,8 @@ app.get('/', (c) => {
                   <td>Worship, adoration, Benediction</td>
                 </tr>
               </tbody>
-            </table>
+              </table>
+            </div>
           </div>
 
           <div className="card">
@@ -1098,7 +1104,8 @@ app.get('/', (c) => {
             </div>
 
             <h4>What Changes at Consecration</h4>
-            <table className="doctrine-table">
+            <div className="table-wrapper">
+              <table className="doctrine-table">
               <thead>
                 <tr>
                   <th>Aspect</th>
@@ -1123,7 +1130,8 @@ app.get('/', (c) => {
                   <td><strong>Christ Himself—Body, Blood, Soul, Divinity</strong></td>
                 </tr>
               </tbody>
-            </table>
+              </table>
+            </div>
           </div>
 
           <div className="card highlight">
@@ -1158,7 +1166,8 @@ app.get('/', (c) => {
               Critics claim transubstantiation is a "medieval invention." But consider the evidence:
             </p>
             
-            <table className="development-table">
+            <div className="table-wrapper">
+              <table className="development-table">
               <thead>
                 <tr>
                   <th>Century</th>
@@ -1193,7 +1202,8 @@ app.get('/', (c) => {
                   <td>"Transubstantiation" formally defined (Lateran IV, 1215)</td>
                 </tr>
               </tbody>
-            </table>
+              </table>
+            </div>
 
             <p className="insight">
               <strong>The Pattern of Development:</strong> The doctrine doesn't change—the reality believed is 
