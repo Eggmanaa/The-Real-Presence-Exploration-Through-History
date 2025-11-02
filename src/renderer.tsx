@@ -294,6 +294,75 @@ export const renderer = jsxRenderer(({ children }) => {
             margin-bottom: 0.25rem;
           }
 
+          .artwork-image {
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+          }
+
+          .artwork-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+          }
+
+          /* Image Modal */
+          .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+          }
+
+          .image-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .modal-content {
+            max-width: 95%;
+            max-height: 95%;
+            object-fit: contain;
+            margin: auto;
+          }
+
+          .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            line-height: 1;
+            z-index: 10001;
+          }
+
+          .modal-close:hover,
+          .modal-close:focus {
+            color: #ccc;
+          }
+
+          .modal-caption {
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 4px;
+            max-width: 80%;
+          }
+
           /* Typography */
           .lead {
             font-size: 1.3rem;
@@ -2052,6 +2121,59 @@ export const renderer = jsxRenderer(({ children }) => {
               // Fallback: try loading voices after a short delay
               setTimeout(loadVoices, 100);
             }
+
+            // Image Modal Functionality
+            document.addEventListener('DOMContentLoaded', function() {
+              // Create modal
+              const modal = document.createElement('div');
+              modal.className = 'image-modal';
+              modal.id = 'imageModal';
+              modal.innerHTML = \`
+                <button class="modal-close" id="modalClose">&times;</button>
+                <img class="modal-content" id="modalImage" />
+                <div class="modal-caption" id="modalCaption"></div>
+              \`;
+              document.body.appendChild(modal);
+
+              // Get elements
+              const modalEl = document.getElementById('imageModal');
+              const modalImg = document.getElementById('modalImage');
+              const modalCaption = document.getElementById('modalCaption');
+              const closeBtn = document.getElementById('modalClose');
+
+              // Add click handler to all artwork images
+              document.querySelectorAll('.artwork-image').forEach(img => {
+                img.addEventListener('click', function() {
+                  modalEl.classList.add('active');
+                  modalImg.src = this.src;
+                  modalImg.alt = this.alt;
+                  const caption = this.parentElement.querySelector('.artwork-caption');
+                  if (caption) {
+                    modalCaption.textContent = caption.textContent;
+                  }
+                  document.body.style.overflow = 'hidden';
+                });
+              });
+
+              // Close modal handlers
+              closeBtn.addEventListener('click', closeModal);
+              modalEl.addEventListener('click', function(e) {
+                if (e.target === modalEl) {
+                  closeModal();
+                }
+              });
+
+              document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modalEl.classList.contains('active')) {
+                  closeModal();
+                }
+              });
+
+              function closeModal() {
+                modalEl.classList.remove('active');
+                document.body.style.overflow = '';
+              }
+            });
           `
         }} />
       </body>

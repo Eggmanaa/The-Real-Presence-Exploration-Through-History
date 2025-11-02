@@ -97,7 +97,7 @@ app.get('/', (c) => {
             
             <div className="artwork-container">
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/d/db/Melchizedek_Offering_Bread_and_Wine_to_Abraham_LACMA_M.88.91.21.jpg" 
+                src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Melchizedek_Offering_Bread_and_Wine_to_Abraham_LACMA_M.88.91.21.jpg" 
                 alt="Melchizedek Offering Bread and Wine" 
                 className="artwork-image"
                 loading="lazy"
@@ -127,7 +127,7 @@ app.get('/', (c) => {
             
             <div className="artwork-container">
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Poussin%2C_Nicolas_-_The_Jews_Gathering_the_Manna_in_the_Desert_-1637_-_1639.jpg" 
+                src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Poussin%2C_Nicolas_-_The_Jews_Gathering_the_Manna_in_the_Desert_-1637_-_1639.jpg" 
                 alt="Nicolas Poussin - The Gathering of Manna" 
                 className="artwork-image"
                 loading="lazy"
@@ -227,7 +227,7 @@ app.get('/', (c) => {
             
             <div className="artwork-container">
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Josefa_de_Ayala_-_The_Sacrificial_Lamb_-_Walters_371193.jpg" 
+                src="https://upload.wikimedia.org/wikipedia/commons/9/97/Josefa_de_Ayala_-_The_Sacrificial_Lamb_-_Walters_371193.jpg" 
                 alt="Josefa de Ayala - The Sacrificial Lamb" 
                 className="artwork-image"
                 loading="lazy"
@@ -239,7 +239,7 @@ app.get('/', (c) => {
             
             <div className="artwork-container">
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Jan_van_Eyck_The_Ghent_Altarpiece_-_Adoration_of_the_Lamb.jpg" 
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Jan_van_Eyck_The_Ghent_Altarpiece_-_Adoration_of_the_Lamb.jpg" 
                 alt="Jan van Eyck - Adoration of the Mystic Lamb" 
                 className="artwork-image"
                 loading="lazy"
@@ -428,7 +428,7 @@ app.get('/', (c) => {
             
             <div className="artwork-container">
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/4/4b/%281%29_The_Last_Supper%2C_Leonardo_da_Vinci_-_High_Resolution_32x16.jpg" 
+                src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Leonardo_da_Vinci_-_The_Last_Supper_high_res.jpg" 
                 alt="Leonardo da Vinci - The Last Supper" 
                 className="artwork-image"
                 loading="lazy"
@@ -440,7 +440,7 @@ app.get('/', (c) => {
             
             <div className="artwork-container">
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/9/97/Joan_de_Joanes_-_The_Last_Supper_-_WGA12058.jpg" 
+                src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Última_Cena_-_Juan_de_Juanes.jpg" 
                 alt="Juan de Juanes - The Last Supper" 
                 className="artwork-image"
                 loading="lazy"
@@ -550,7 +550,7 @@ app.get('/', (c) => {
           
           <div className="artwork-container">
             <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Jan_van_Kessel_%28I%29_-_Altar_niche_with_the_symbols_of_the_Eucharist_with_flowers_and_fruits.jpeg" 
+              src="https://upload.wikimedia.org/wikipedia/commons/6/63/Jan_van_Kessel_%28I%29_-_Altar_niche_with_the_symbols_of_the_Eucharist_with_flowers_and_fruits.jpeg" 
               alt="Jan van Kessel the Elder - The Eucharist" 
               className="artwork-image"
               loading="lazy"
@@ -1055,7 +1055,7 @@ app.get('/', (c) => {
           
           <div className="artwork-container">
             <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Thomas_Aquinas_by_Sandro_Botticelli.jpg" 
+              src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Thomas_Aquinas_by_Sandro_Botticelli.jpg" 
               alt="Sandro Botticelli - St. Thomas Aquinas" 
               className="artwork-image"
               loading="lazy"
