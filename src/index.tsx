@@ -63,7 +63,7 @@ app.get('/', (c) => {
             
             <div className="artwork-container">
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/7/74/Sanzio%2C_Raffaello_-_Disputa_del_Sacramento_-_1508-1511_-_hi_res.jpg" 
+                src="https://upload.wikimedia.org/wikipedia/commons/6/61/Disputa_del_Sacramento_(Rafael).jpg" 
                 alt="Raphael's Disputation of the Holy Sacrament" 
                 className="artwork-image"
                 loading="lazy"
@@ -97,13 +97,13 @@ app.get('/', (c) => {
             
             <div className="artwork-container">
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Melchizedek_Offering_Bread_and_Wine_to_Abraham_LACMA_M.88.91.21.jpg" 
-                alt="Melchizedek Offering Bread and Wine" 
+                src="https://upload.wikimedia.org/wikipedia/commons/7/72/Sir_Peter_Paul_Rubens,_The_Meeting_of_Abraham_and_Melchizedek,_c._1626,_NGA_45640.jpg" 
+                alt="The Meeting of Abraham and Melchizedek by Peter Paul Rubens" 
                 className="artwork-image"
                 loading="lazy"
               />
               <p className="artwork-caption">
-                <strong>French School</strong>, <em>Melchizedek Offering Bread and Wine</em> (Baroque period)
+                <strong>Peter Paul Rubens</strong>, <em>The Meeting of Abraham and Melchizedek</em> (c. 1626)
               </p>
             </div>
           </div>
