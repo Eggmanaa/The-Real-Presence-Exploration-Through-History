@@ -248,10 +248,46 @@ app.get('/', (c) => {
                 <strong>Jan van Eyck</strong>, <em>Adoration of the Mystic Lamb</em> (from the Ghent Altarpiece, 1432)
               </p>
             </div>
+            
+            <div className="artwork-container">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Pietro_Lorenzetti-Crucifixion.jpg" 
+                alt="Pietro Lorenzetti - Crucifixion" 
+                className="artwork-image"
+                loading="lazy"
+              />
+              <p className="artwork-caption">
+                <strong>Pietro Lorenzetti</strong>, <em>Crucifixion</em> (c. 1340)
+              </p>
+            </div>
           </div>
         </section>
         <section id="john-6" className="section">
           <h2>The Promise: John Chapter 6</h2>
+          
+          <div className="artwork-container">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Brooklyn_Museum_-_The_Miracle_of_the_Loaves_and_Fishes_(La_multiplication_des_pains)_by_James_Tissot.jpg" 
+              alt="James Tissot - The Miracle of the Loaves and Fishes" 
+              className="artwork-image"
+              loading="lazy"
+            />
+            <p className="artwork-caption">
+              <strong>James Tissot</strong>, <em>The Miracle of the Loaves and Fishes</em> (c. 1886-1896), Brooklyn Museum
+            </p>
+          </div>
+          
+          <div className="artwork-container">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Paolo_Veronese_008.jpg" 
+              alt="Paolo Veronese - The Wedding at Cana" 
+              className="artwork-image"
+              loading="lazy"
+            />
+            <p className="artwork-caption">
+              <strong>Paolo Veronese</strong>, <em>The Wedding at Cana</em> (1563), Louvre Museum, Paris
+            </p>
+          </div>
           
           <div className="card">
             <h3>The Liturgical Stage: Passover, Manna, and New Exodus</h3>
@@ -447,6 +483,42 @@ app.get('/', (c) => {
               />
               <p className="artwork-caption">
                 <strong>Juan de Juanes</strong>, <em>The Last Supper</em> (16th century)
+              </p>
+            </div>
+            
+            <div className="artwork-container">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/4/46/Jacopo_Tintoretto_-_The_Last_Supper_-_WGA22649.jpg" 
+                alt="Tintoretto - The Last Supper" 
+                className="artwork-image"
+                loading="lazy"
+              />
+              <p className="artwork-caption">
+                <strong>Tintoretto</strong>, <em>The Last Supper</em> (1592-1594), Basilica of San Giorgio Maggiore, Venice
+              </p>
+            </div>
+            
+            <div className="artwork-container">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Ghirlandaio,_ultima_cena_di_san_marco.jpg" 
+                alt="Domenico Ghirlandaio - The Last Supper" 
+                className="artwork-image"
+                loading="lazy"
+              />
+              <p className="artwork-caption">
+                <strong>Domenico Ghirlandaio</strong>, <em>The Last Supper</em> (1480), San Marco, Florence
+              </p>
+            </div>
+            
+            <div className="artwork-container">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Jacopo_Bassano_Last_Supper_1542.jpeg" 
+                alt="Jacopo Bassano - The Last Supper" 
+                className="artwork-image"
+                loading="lazy"
+              />
+              <p className="artwork-caption">
+                <strong>Jacopo Bassano</strong>, <em>The Last Supper</em> (1542)
               </p>
             </div>
           </div>
